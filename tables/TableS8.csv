@@ -1,0 +1,12 @@
+Cell type,Cells assigned (n),Samples with a non-zero fraction (of 75),Inter-method kappa (layer 2),AUROC (gate >= 0.70),G4(i) AUROC,G4(ii) one-vs-rest,"Ambiguous fraction (delta = 0.05, gate <= 0.20)",G5 ambiguity,Verdict
+CD8 T cells,1748,51,0.981,0.659,FAIL,FAIL,0.896,FAIL,Not acceptable
+CD4 conventional T cells,266,57,0.864,0.921,PASS,PASS,0.177,PASS,Acceptable
+Regulatory T cells (FOXP3),398,65,0.835,0.672,FAIL,FAIL,0.166,PASS,Not acceptable
+NK cells,2361,74,0.955,0.469,FAIL,FAIL,0.023,PASS,Not acceptable
+B cells and plasma cells (pooled),498,66,0.950,0.449,FAIL,FAIL,0.062,PASS,Not acceptable
+Microglia (P2RY12/TMEM119),9169,75,0.904,0.868,PASS,PASS,0.033,PASS,Acceptable
+Monocyte-derived macrophages (CD163),3307,74,0.833,0.832,PASS,PASS,0.064,PASS,Acceptable
+Dendritic cells,504,60,0.691,0.758,PASS,PASS,0.159,PASS,Acceptable
+Neutrophils,104,33,0.660,0.794,PASS,PASS,0.308,FAIL,Not acceptable
+
+note,"STAGE 2. The pre-declared gate failed for 5 of the 9 types. Under Amendment v1.2 (locked before any second-stage estimate existed) that failure is a per-type annotation caveat rather than a study-level stop, so the §7.1 interaction model was fitted once on all nine evaluable types, each affected estimate carrying its caveat, and the pre-declared permutation null and minimum-detectable-effect simulation were run; the pre-declared sensitivity battery and the S11 equivalence test are in Table S14. The hard CD3 rule moved 21 cells off NK. Inter-method agreement passed at cohort level (layer-1 kappa = 0.952). The G6 continuity check was diagnostic and non-gating."

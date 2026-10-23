@@ -1,0 +1,100 @@
+Arm,Cell type / aggregate,Estimate (arcsin-sqrt),95% CI,p,SESOI (arcsin-sqrt),Decision (§7.5 / rule),Note
+S1_nonmalignant_denominator,CD8_T,0.010,-0.013 to 0.033,0.409,0.199,consistent_with_no_clinically_important_interaction,
+S1_nonmalignant_denominator,CD4_conv,0.012,-0.010 to 0.035,0.280,0.196,consistent_with_no_clinically_important_interaction,
+S1_nonmalignant_denominator,Treg_FOXP3,-0.002,-0.020 to 0.016,0.824,0.190,consistent_with_no_clinically_important_interaction,
+S1_nonmalignant_denominator,NK,-0.002,-0.057 to 0.054,0.953,0.146,consistent_with_no_clinically_important_interaction,
+S1_nonmalignant_denominator,B_plasma,0.022,-0.005 to 0.049,0.108,0.184,consistent_with_no_clinically_important_interaction,
+S1_nonmalignant_denominator,Microglia_P2RY12_TMEM119,-0.004,-0.110 to 0.102,0.937,0.103,inconclusive,
+S1_nonmalignant_denominator,MoMF_CD163,0.080,-0.008 to 0.169,0.075,0.137,inconclusive,
+S1_nonmalignant_denominator,DC,0.032,0.001 to 0.063,0.040,0.186,consistent_with_no_clinically_important_interaction,
+S1_nonmalignant_denominator,Neutrophils,-0.008,-0.025 to 0.008,0.310,0.208,consistent_with_no_clinically_important_interaction,
+S2_lineage_of_all_cells,T_NK__of_all_cells,-0.008,-0.051 to 0.034,0.702,0.138,consistent_with_no_clinically_important_interaction,
+S2_lineage_of_immune,T_NK__of_immune,-0.104,-0.280 to 0.072,0.247,0.058,inconclusive,
+S2_lineage_of_all_cells,Myeloid__of_all_cells,0.030,-0.044 to 0.104,0.424,0.093,inconclusive,
+S2_lineage_of_immune,Myeloid__of_immune,0.074,-0.109 to 0.257,0.426,0.059,inconclusive,
+S3_per_patient_delta,CD8_T_cells,1.976,,0.257,,descriptive,welch_p=0.2571; perm_p=0.2510
+S3_per_patient_delta,CD4_T_cells_conventional,3.585,,0.006,,descriptive,welch_p=0.0056; perm_p=0.0065
+S3_per_patient_delta,T_regulatory_cells_FOXP3,-1.330,,0.240,,descriptive,welch_p=0.2401; perm_p=0.2508
+S3_per_patient_delta,NK_cells,-0.318,,0.616,,descriptive,welch_p=0.6164; perm_p=0.5894
+S3_per_patient_delta,B_plasma,1.883,,0.089,,descriptive,welch_p=0.0887; perm_p=0.1029
+S3_per_patient_delta,Microglia_P2RY12_TMEM119,-0.063,,0.923,,descriptive,welch_p=0.9235; perm_p=0.9163
+S3_per_patient_delta,Monocyte_derived_macrophages_CD163,1.900,,0.024,,descriptive,welch_p=0.0245; perm_p=0.0143
+S3_per_patient_delta,Dendritic_cells,1.513,,0.328,,descriptive,welch_p=0.3279; perm_p=0.3351
+S3_per_patient_delta,Neutrophils,-1.845,,0.199,,descriptive,welch_p=0.1993; perm_p=0.2270
+S8_pseudocount_1e-4,CD8_T_cells,0.626,,0.352,,descriptive,pseudo=0.0001; perm_p=0.3399
+S8_pseudocount_1e-4,CD4_T_cells_conventional,0.926,,0.107,,descriptive,pseudo=0.0001; perm_p=0.1148
+S8_pseudocount_1e-4,T_regulatory_cells_FOXP3,-0.328,,0.484,,descriptive,pseudo=0.0001; perm_p=0.4921
+S8_pseudocount_1e-4,NK_cells,-0.301,,0.623,,descriptive,pseudo=0.0001; perm_p=0.5953
+S8_pseudocount_1e-4,B_plasma,0.755,,0.153,,descriptive,pseudo=0.0001; perm_p=0.1502
+S8_pseudocount_1e-4,Microglia_P2RY12_TMEM119,-0.074,,0.909,,descriptive,pseudo=0.0001; perm_p=0.9087
+S8_pseudocount_1e-4,Monocyte_derived_macrophages_CD163,1.509,,0.021,,descriptive,pseudo=0.0001; perm_p=0.0227
+S8_pseudocount_1e-4,Dendritic_cells,1.009,,0.155,,descriptive,pseudo=0.0001; perm_p=0.1532
+S8_pseudocount_1e-4,Neutrophils,-0.519,,0.288,,descriptive,pseudo=0.0001; perm_p=0.2815
+S8_pseudocount_1e-8,CD8_T_cells,3.357,,0.243,,descriptive,pseudo=1e-08; perm_p=0.2375
+S8_pseudocount_1e-8,CD4_T_cells_conventional,6.364,,0.002,,descriptive,pseudo=1e-08; perm_p=0.0030
+S8_pseudocount_1e-8,T_regulatory_cells_FOXP3,-2.392,,0.199,,descriptive,pseudo=1e-08; perm_p=0.2182
+S8_pseudocount_1e-8,NK_cells,-0.318,,0.616,,descriptive,pseudo=1e-08; perm_p=0.5881
+S8_pseudocount_1e-8,B_plasma,3.051,,0.083,,descriptive,pseudo=1e-08; perm_p=0.0997
+S8_pseudocount_1e-8,Microglia_P2RY12_TMEM119,-0.063,,0.924,,descriptive,pseudo=1e-08; perm_p=0.9178
+S8_pseudocount_1e-8,Monocyte_derived_macrophages_CD163,2.255,,0.042,,descriptive,pseudo=1e-08; perm_p=0.0139
+S8_pseudocount_1e-8,Dendritic_cells,1.957,,0.423,,descriptive,pseudo=1e-08; perm_p=0.4243
+S8_pseudocount_1e-8,Neutrophils,-3.243,,0.184,,descriptive,pseudo=1e-08; perm_p=0.2276
+S4_interval_adjusted,CD8_T,0.005,-0.012 to 0.022,0.543,0.199,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,CD4_conv,0.008,-0.008 to 0.025,0.332,0.196,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,Treg_FOXP3,-0.003,-0.018 to 0.011,0.641,0.190,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,NK,-0.013,-0.055 to 0.029,0.534,0.146,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,B_plasma,0.016,-0.004 to 0.035,0.113,0.184,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,Microglia_P2RY12_TMEM119,-0.003,-0.072 to 0.066,0.938,0.103,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,MoMF_CD163,0.060,0.008 to 0.113,0.023,0.137,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,DC,0.021,-0.001 to 0.044,0.064,0.186,consistent_with_no_clinically_important_interaction,
+S4_interval_adjusted,Neutrophils,-0.007,-0.019 to 0.005,0.256,0.208,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,CD8_T,0.002,-0.014 to 0.018,0.811,0.199,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,CD4_conv,0.007,-0.010 to 0.023,0.433,0.196,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,Treg_FOXP3,-0.004,-0.017 to 0.009,0.540,0.190,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,NK,-0.026,-0.065 to 0.014,0.202,0.146,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,B_plasma,0.012,-0.008 to 0.032,0.241,0.184,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,Microglia_P2RY12_TMEM119,-0.019,-0.088 to 0.050,0.586,0.103,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,MoMF_CD163,0.056,0.004 to 0.107,0.034,0.137,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,DC,0.017,-0.005 to 0.040,0.136,0.186,consistent_with_no_clinically_important_interaction,
+S10_batch_site_region,Neutrophils,-0.006,-0.019 to 0.006,0.303,0.208,consistent_with_no_clinically_important_interaction,
+S7_negative_controls,Oligodendrocytes_OPC,0.108,-0.032 to 0.247,0.130,0.053,inconclusive,
+S7_negative_controls,Endothelial_cells,-0.051,-0.111 to 0.009,0.094,0.119,consistent_with_no_clinically_important_interaction,
+S7_negative_controls,Astrocytes_non_malignant,-0.028,-0.173 to 0.117,0.709,0.065,inconclusive,
+S9_lopo_influence,CD8_T,0.005,,,,descriptive,max_abs_delta_beta=0.0048 (patient P107)
+S9_lopo_influence,CD4_conv,0.008,,,,descriptive,max_abs_delta_beta=0.0046 (patient P99)
+S9_lopo_influence,Treg_FOXP3,-0.003,,,,descriptive,max_abs_delta_beta=0.0030 (patient P107)
+S9_lopo_influence,NK,-0.013,,,,descriptive,max_abs_delta_beta=0.0156 (patient P107)
+S9_lopo_influence,B_plasma,0.016,,,,descriptive,max_abs_delta_beta=0.0059 (patient P107)
+S9_lopo_influence,Microglia_P2RY12_TMEM119,-0.004,,,,descriptive,max_abs_delta_beta=0.0212 (patient P91)
+S9_lopo_influence,MoMF_CD163,0.060,,,,descriptive,max_abs_delta_beta=0.0128 (patient P103)
+S9_lopo_influence,DC,0.021,,,,descriptive,max_abs_delta_beta=0.0101 (patient P16)
+S9_lopo_influence,Neutrophils,-0.007,,,,descriptive,max_abs_delta_beta=0.0046 (patient P107)
+S6_count_glmm,CD8_T,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,CD4_conv,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,Treg_FOXP3,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,NK,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,B_plasma,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,Microglia_P2RY12_TMEM119,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,MoMF_CD163,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,DC,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S6_count_glmm,Neutrophils,,,,,not_evaluable,"NOT EVALUABLE: the pre-declared binomial/beta-binomial count GLMM cannot be fitted with the locked software stack. statsmodels 0.15.0 BinomialBayesMixedGLM requires a strict 0/1 (Bernoulli) endog and rejects a two-column count endog by design; no alternative GLMM implementation (R/glmmTMB, pymer4, Stan) is installed. No substitute model was fitted."
+S5_interval_stratified_permutation,CD8_T_cells,0.005,,0.587,,descriptive,stratified perm_p=0.5868
+S5_interval_stratified_permutation,CD4_T_cells_conventional,0.008,,0.427,,descriptive,stratified perm_p=0.4268
+S5_interval_stratified_permutation,T_regulatory_cells_FOXP3,-0.003,,0.642,,descriptive,stratified perm_p=0.6418
+S5_interval_stratified_permutation,NK_cells,-0.013,,0.579,,descriptive,stratified perm_p=0.5788
+S5_interval_stratified_permutation,B_plasma,0.016,,0.122,,descriptive,stratified perm_p=0.1218
+S5_interval_stratified_permutation,Microglia_P2RY12_TMEM119,-0.004,,0.921,,descriptive,stratified perm_p=0.9208
+S5_interval_stratified_permutation,Monocyte_derived_macrophages_CD163,0.060,,0.044,,descriptive,stratified perm_p=0.0439
+S5_interval_stratified_permutation,Dendritic_cells,0.021,,0.119,,descriptive,stratified perm_p=0.1189
+S5_interval_stratified_permutation,Neutrophils,-0.007,,0.297,,descriptive,stratified perm_p=0.2975
+S11_TOST,CD8_T,0.005,-0.012 to 0.022,0.000,0.199,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI -0.009 to 0.019 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,CD4_conv,0.008,-0.009 to 0.025,0.000,0.196,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI -0.006 to 0.022 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,Treg_FOXP3,-0.003,-0.018 to 0.011,0.000,0.190,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI -0.016 to 0.009 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,NK,-0.013,-0.055 to 0.029,0.000,0.146,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI -0.049 to 0.022 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,B_plasma,0.016,-0.004 to 0.035,0.000,0.184,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI -0.001 to 0.032 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,Microglia_P2RY12_TMEM119,-0.004,-0.079 to 0.071,0.005,0.103,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0046, p_upper=0.0024, 90% CI -0.067 to 0.059 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,MoMF_CD163,0.060,0.008 to 0.113,0.002,0.137,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0019, 90% CI 0.017 to 0.104 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,DC,0.021,-0.001 to 0.044,0.000,0.186,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI 0.002 to 0.041 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+S11_TOST,Neutrophils,-0.007,-0.019 to 0.005,0.000,0.208,consistent_with_no_clinically_important_interaction,"TOST alpha=0.05: p_lower=0.0000, p_upper=0.0000, 90% CI -0.017 to 0.003 within band=True; equivalent at alpha=True; agrees with §7.5 rule 1=True"
+
+note,"STAGE 2 SENSITIVITY. Every arm is a pre-declared §6 alternative to the §7.1 model (S1-S10) or the §7 S11 classical TOST; none was tuned after seeing a Stage 2 estimate, and none may be used to promote any type to detected. The battery is reported unadjusted and does not form a second multiplicity family; the confirmatory BH family (K=9) is unchanged. Values read from outputs/intermediate/lmm_interaction_summary_stage2_sensitivity.csv and outputs/intermediate/jno/stage2_s11_tost_report.json."

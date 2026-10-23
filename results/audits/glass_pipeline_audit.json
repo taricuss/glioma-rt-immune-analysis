@@ -1,0 +1,43 @@
+{
+  "cohort": "GLASS RNA silver-set, IDH-mutant, RT-annotated, TP+R1 paired",
+  "n_samples": 108,
+  "n_cases": 54,
+  "arm_by_timepoint": {
+    "primary": {
+      "Any_RT": 45,
+      "No_RT": 9
+    },
+    "recurrent": {
+      "Any_RT": 45,
+      "No_RT": 9
+    }
+  },
+  "exclusions": {
+    "n_rna_paired_cases": 214,
+    "n_idh_mut_cases": 81,
+    "n_idh_conflicting_mut_wt_records": 0,
+    "n_rt_unknown_cases": 7,
+    "n_cases_excluded_non_idh_mut": 133,
+    "n_cases_excluded_rt_unknown": 1,
+    "n_cases_kept": 80,
+    "n_eligible_pairs_dropped_for_lack_of_true_TP": 26
+  },
+  "deconvolution_methods": {
+    "quantiseq": "TIL10 curated NNLS + canonical Plasma/Microglia extension, fractions in [0,1] -> LMM primary",
+    "epic": "EPIC curated NNLS, fractions in [0,1] -> LMM robustness",
+    "mcpcounter": "abundance scores (NOT fractions) -> robustness only, never LMM"
+  },
+  "purity": {
+    "source": "GLASS clinical tables carry no ESTIMATE/ABSOLUTE purity; the signature-mass proxy was near-degenerate (0.996-1.000), so a constant 0.62 (Johnson 2026 bulk median) is used. Being constant, the term is absorbed by the intercept and the LMM drops it.",
+    "identifiable": false,
+    "median": 0.62,
+    "min": 0.62,
+    "max": 0.62
+  },
+  "limitations": [
+    "GLASS has no matched snRNA-seq -> stock published signatures only, not the discovery custom CIBERSORTx signature.",
+    "treatment_radiotherapy is surgery-level and its ordering semantics differ across GLASS source cohorts; the patient-level 'ever RT' rule is order-invariant and matches the discovery Any_RT/No_RT operational rule.",
+    "GLASS cohort is grade-heterogeneous (II-IV) whereas discovery was grade II only; who_grade_initial is carried as a model covariate.",
+    "Discovery primary result was null; GLASS is a direction-consistency check only."
+  ]
+}

@@ -1,0 +1,21 @@
+Parameter,Pre-declared value
+Plan document,submission/supplementary/stage2_plan.md (+ addendum_1; lock record stage2_plan.lock.json)
+Analysis role,"Stage 2 - second-stage, post-hoc (NOT pre-specified)"
+Plan locked (UTC),2026-10-21T08:57:05Z
+Plan SHA-256,006d3e47198c8d9bd51170b8ac1ae3e9d9f4c1a2cbf9f2d8155560691ced5e48
+Gene space,"12,314 genes (full, non-highly-variable space)"
+Cells annotated,"221,016"
+Annotation,Treatment-blind hierarchical per-cell marker scoring (17 panels) with a 50-gene data-derived control set and an independent second method
+Ambiguity rule,delta = 0.05 (sensitivities 0.025 and 0.10)
+QC gates,"G1 panel completeness; G2 minimum cells; G3 inter-method agreement (layer-1 kappa >= 0.60, layer-2 kappa >= 0.50); G4(i) rank-based AUROC >= 0.70; G4(ii) one-vs-rest; G5 ambiguous fraction <= 0.20; G6 continuity (diagnostic, non-gating)"
+Evaluability rule,non-zero fraction in >= 10 of 75 samples
+Primary set,9 cell types (B cells and plasma cells pooled)
+Gate requirement,at least 6 of 9 types evaluable AND every specificity and ambiguity gate passed
+Model,unchanged from Stage 1: arcsin-sqrt(fraction) ~ timepoint * treatment arm + covariates + (1|patient)
+Multiplicity,Benjamini-Hochberg over K = 9
+Permutation null,"10,000 patient-level shuffles, seed 7331"
+Smallest effect size of interest,"5 percentage points (0.05 fraction units), converted per cell type to the arcsin-square-root scale"
+Cell-cap sensitivity,"1,000 cells per sample, seed 20260917"
+On gate failure,"stop; report the QC table; state a bounded null; do not adjust panels, thresholds, delta, resolutions or the model; no re-run"
+
+note,"Locked in advance, before any Stage 2 interaction estimate was computed or examined."

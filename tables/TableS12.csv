@@ -1,0 +1,8 @@
+Variant,Evaluable primary types (of 9),Non-evaluable types,Note
+"Primary (delta = 0.05, cap 3,000, all-cell denominator)",9,none,"Every pre-declared variant reached 9 of 9 evaluable types, so the residual limit is marker specificity rather than coverage."
+Ambiguity delta = 0.025,9,none,"Every pre-declared variant reached 9 of 9 evaluable types, so the residual limit is marker specificity rather than coverage."
+Ambiguity delta = 0.10,9,none,"Every pre-declared variant reached 9 of 9 evaluable types, so the residual limit is marker specificity rather than coverage."
+"Cell cap 1,000 (seed 20260917)",9,none,"Every pre-declared variant reached 9 of 9 evaluable types, so the residual limit is marker specificity rather than coverage."
+Immune-compartment denominator,9,none,"Every pre-declared variant reached 9 of 9 evaluable types, so the residual limit is marker specificity rather than coverage."
+
+note,SENSITIVITY. Variant evaluability read from outputs/intermediate/stage2_evaluability_variants.json.

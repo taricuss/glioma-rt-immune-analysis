@@ -1,0 +1,733 @@
+name,value,source_file,source_key
+cohorts.discovery.n_samples,71,outputs\intermediate\lmm_summary.json,n_samples
+cohorts.discovery.n_patients,33,outputs\intermediate\lmm_summary.json,n_patients
+cohorts.discovery.n_any_rt_patients,20,outputs\intermediate\clinical_canonical_adapter_audit.json,counts.n_any_rt_patients
+cohorts.discovery.n_no_rt_patients,13,outputs\intermediate\clinical_canonical_adapter_audit.json,counts.n_no_rt_patients
+cohorts.discovery.samples_input_snrna,75,outputs\intermediate\sn_pipeline_audit.json,n_samples_input
+cohorts.discovery.cells_final_postcap,221016,outputs\intermediate\sn_pipeline_audit.json,n_cells_postcap_total
+cohorts.discovery.cells_precap_total,437454,outputs\intermediate\sn_pipeline_audit.json,n_cells_after_qc_precap_total
+cohorts.discovery.n_samples_capped,67,outputs\intermediate\sn_pipeline_audit.json,n_samples_capped
+cohorts.discovery.cap_cells_per_sample,3000,outputs\intermediate\sn_pipeline_audit.json,max_cells_per_sample
+cohorts.discovery.n_hvg,2000,outputs\intermediate\sn_pipeline_audit.json,final_shape[1]
+cohorts.discovery.annotation_distribution,"{""Malignant_astrocytes_oligo"": 84907, ""Astrocytes_non_malignant"": 57647, ""Oligodendrocytes_OPC"": 37244, ""Microglia_P2RY12_TMEM119"": 21658, ""NK_cells"": 12475, ""Endothelial_cells"": 4495, ""Monocyte_derived_macrophages_CD163"": 1144, ""B_cells"": 1119, ""CD8_T_cells"": 300, ""Pericytes_Fibroblasts"": 27}",outputs\intermediate\sn_pipeline_audit.json,annotation_distribution
+cohorts.discovery.n_excluded_patients,2,outputs\intermediate\clinical_canonical_adapter_audit.json,counts.n_excluded_na_treatment
+cohorts.discovery.n_genes_full,36601,outputs\intermediate\_tmp_qc_survivor_diag.json,max(load_stats[*].genes_before_qc) over loaded samples
+cohorts.glass.n_samples,108,outputs\intermediate\lmm_summary_glass.json,n_samples
+cohorts.glass.n_cases,54,outputs\intermediate\lmm_summary_glass.json,n_patients
+cohorts.glass.anyrt_pairs,45,outputs\intermediate\glass_pipeline_audit.json,arm_by_timepoint.primary.Any_RT
+cohorts.glass.nort_pairs,9,outputs\intermediate\glass_pipeline_audit.json,arm_by_timepoint.primary.No_RT
+cohorts.glass.purity_identifiable,False,outputs\intermediate\glass_pipeline_audit.json,purity.identifiable
+cohorts.cgga.version,mRNAseq_693 (20200506),outputs\intermediate\cgga_pipeline_audit.json,cgga_version
+cohorts.cgga.samples_clinical_total,693,outputs\intermediate\cgga_pipeline_audit.json,samples_total_clinical
+cohorts.cgga.idh_mut_recurrent_total,148,outputs\intermediate\cgga_pipeline_audit.json,samples_idh_mut_recurrent_total
+cohorts.cgga.n_analysed,129,outputs\intermediate\cgga_pipeline_audit.json,samples_idh_mut_recurrent_treatment_nonna
+cohorts.cgga.anyrt_samples,106,outputs\intermediate\cgga_pipeline_audit.json,treatment_arm_counts.Any_RT
+cohorts.cgga.nort_samples,23,outputs\intermediate\cgga_pipeline_audit.json,treatment_arm_counts.No_RT
+cohorts.cgga.n_methods,3,outputs\intermediate\cgga_pipeline_audit.json,n_methods
+evaluability.n_samples_with_proportions,75,outputs\intermediate\sn_proportions_per_sample.csv,n rows
+evaluability.present_counts_by_column,"{""Astrocytes_non_malignant"": 75, ""B_cells"": 6, ""CD8_T_cells"": 1, ""Endothelial_cells"": 72, ""Malignant_astrocytes_oligo"": 75, ""Microglia_P2RY12_TMEM119"": 72, ""Monocyte_derived_macrophages_CD163"": 5, ""NK_cells"": 71, ""Oligodendrocytes_OPC"": 72, ""Pericytes_Fibroblasts"": 1}",outputs\intermediate\sn_proportions_per_sample.csv,non-zero cell counts per column
+evaluability.by_primary_cell_type,"{""CD8_T"": {""long_name"": ""CD8_T_cells"", ""present_samples"": 1, ""evaluable"": false, ""has_proportion_column"": true}, ""CD4_conv"": {""long_name"": ""CD4_T_cells_conventional"", ""present_samples"": 0, ""evaluable"": false, ""has_proportion_column"": false}, ""Treg_FOXP3"": {""long_name"": ""T_regulatory_cells_FOXP3"", ""present_samples"": 0, ""evaluable"": false, ""has_proportion_column"": false}, ""NK"": {""long_name"": ""NK_cells"", ""present_samples"": 71, ""evaluable"": true, ""has_proportion_column"": true}, ""B"": {""long_name"": ""B_cells"", ""present_samples"": 6, ""evaluable"": false, ""has_proportion_column"": true}, ""Plasma"": {""long_name"": ""Plasma_cells"", ""present_samples"": 0, ""evaluable"": false, ""has_proportion_column"": false}, ""Microglia_P2RY12_TMEM119"": {""long_name"": ""Microglia_P2RY12_TMEM119"", ""present_samples"": 72, ""evaluable"": true, ""has_proportion_column"": true}, ""MoMF_CD163"": {""long_name"": ""Monocyte_derived_macrophages_CD163"", ""present_samples"": 5, ""evaluable"": false, ""has_proportion_column"": true}, ""DC"": {""long_name"": ""Dendritic_cells"", ""present_samples"": 0, ""evaluable"": false, ""has_proportion_column"": false}, ""Neutrophils"": {""long_name"": ""Neutrophils"", ""present_samples"": 0, ""evaluable"": false, ""has_proportion_column"": false}}",outputs\intermediate\sn_proportions_per_sample.csv,derived
+evaluability.absent_cell_types_no_column,"[""CD4_T_cells_conventional"", ""T_regulatory_cells_FOXP3"", ""Plasma_cells"", ""Dendritic_cells"", ""Neutrophils""]",outputs\intermediate\sn_proportions_per_sample.csv,derived
+evaluability.threshold_samples,10,outputs\intermediate\sn_proportions_per_sample.csv,rule: present in >=10 of 75
+evaluability.n_primary_types,10,outputs\sec4_prespec.json,len(a_cell_types_primary)
+evaluability.n_primary_evaluable,2,outputs\intermediate\sn_proportions_per_sample.csv,derived >=10 samples
+evaluability.evaluable_cell_types,"[""Microglia_P2RY12_TMEM119"", ""NK""]",outputs\intermediate\sn_proportions_per_sample.csv,derived
+discovery.lmm_by_cell,"{""CD8_T"": {""long_name"": ""CD8_T_cells"", ""has_estimate"": true, ""beta"": -0.01577813446280154, ""ci_low"": -0.04991440914077174, ""ci_high"": 0.018358140215168663, ""asym_p"": 0.364980657929568, ""bh_q"": 0.45622582241196, ""perm_p"": 0.7295270472952705, ""evaluable"": false}, ""CD4_conv"": {""long_name"": ""CD4_T_cells_conventional"", ""has_estimate"": false, ""beta"": null, ""ci_low"": null, ""ci_high"": null, ""asym_p"": null, ""bh_q"": null, ""perm_p"": null, ""evaluable"": false}, ""Treg_FOXP3"": {""long_name"": ""T_regulatory_cells_FOXP3"", ""has_estimate"": false, ""beta"": null, ""ci_low"": null, ""ci_high"": null, ""asym_p"": null, ""bh_q"": null, ""perm_p"": null, ""evaluable"": false}, ""NK"": {""long_name"": ""NK_cells"", ""has_estimate"": true, ""beta"": -0.07344359319202912, ""ci_low"": -0.2052872633096643, ""ci_high"": 0.05840007692560606, ""asym_p"": 0.2749214241497726, ""bh_q"": 0.45622582241196, ""perm_p"": 0.35826417358264173, ""evaluable"": true}, ""B"": {""long_name"": ""B_cells"", ""has_estimate"": true, ""beta"": 0.008058683487865275, ""ci_low"": -0.05678536337752578, ""ci_high"": 0.07290273035325633, ""asym_p"": 0.807555922849885, ""bh_q"": 0.807555922849885, ""perm_p"": 0.7826217378262174, ""evaluable"": false}, ""Plasma"": {""long_name"": ""Plasma_cells"", ""has_estimate"": false, ""beta"": null, ""ci_low"": null, ""ci_high"": null, ""asym_p"": null, ""bh_q"": null, ""perm_p"": null, ""evaluable"": false}, ""Microglia_P2RY12_TMEM119"": {""long_name"": ""Microglia_P2RY12_TMEM119"", ""has_estimate"": true, ""beta"": 0.07577177148028941, ""ci_low"": -0.0276292917668457, ""ci_high"": 0.1791728347274245, ""asym_p"": 0.15093075922549268, ""bh_q"": 0.45622582241196, ""perm_p"": 0.1927807219278072, ""evaluable"": true}, ""MoMF_CD163"": {""long_name"": ""Monocyte_derived_macrophages_CD163"", ""has_estimate"": true, ""beta"": 0.032768470701261564, ""ci_low"": -0.032823234867705046, ""ci_high"": 0.09836017627022817, ""asym_p"": 0.32749906153952113, ""bh_q"": 0.45622582241196, ""perm_p"": 0.3003699630036996, ""evaluable"": false}, ""DC"": {""long_name"": ""Dendritic_cells"", ""has_estimate"": false, ""beta"": null, ""ci_low"": null, ""ci_high"": null, ""asym_p"": null, ""bh_q"": null, ""perm_p"": null, ""evaluable"": false}, ""Neutrophils"": {""long_name"": ""Neutrophils"", ""has_estimate"": false, ""beta"": null, ""ci_low"": null, ""ci_high"": null, ""asym_p"": null, ""bh_q"": null, ""perm_p"": null, ""evaluable"": false}}",outputs\intermediate\lmm_interaction_summary.csv + snrna_direct_perm_pvalues.csv,joined
+discovery.n_primary_with_estimate,5,outputs\intermediate\lmm_interaction_summary.csv,finite beta_interaction count
+discovery.n_primary_converged,6,outputs\intermediate\lmm_summary.json,n_converged
+power.nsim,800,outputs\intermediate\post_data_power_audit.json,nsim
+power.seed,7331,outputs\intermediate\post_data_power_audit.json,seed
+power.icc_set,"[0.4, 0.6, 0.7]",outputs\intermediate\post_data_power_audit.json,icc_set
+power.f2_anchors,"[0.28, 0.4]",outputs\intermediate\post_data_power_audit.json,f2_anchors
+power.design_anyrt,20,outputs\intermediate\post_data_power_audit.json,n_rt
+power.design_nort,13,outputs\intermediate\post_data_power_audit.json,n_nort
+power.n_patients,33,outputs\intermediate\post_data_power_audit.json,n_patients
+power.f2anchored_by_icc,"{""icc40"": {""f2028"": 0.63875, ""f2040"": 0.74625}, ""icc60"": {""f2028"": 0.61875, ""f2040"": 0.78}, ""icc70"": {""f2028"": 0.60875, ""f2040"": 0.775}}",outputs\intermediate\post_data_power_table.csv,power_f2028_/power_f2040_ columns
+power.headline_f2028_icc60,0.61875,outputs\intermediate\post_data_power_table.csv,power_f2028_icc60
+power.headline_f2040_icc60,0.78,outputs\intermediate\post_data_power_table.csv,power_f2040_icc60
+power.headline_label,UNDERPOWERED,outputs\intermediate\post_data_power_table.csv,headline_label_icc60
+glass.lmm_by_cell,"{""CD8_T"": {""long_name"": ""CD8_T_cells"", ""has_estimate"": true, ""beta"": 0.011487655164687055, ""ci_low"": -0.0083851666768602, ""ci_high"": 0.03136047700623431, ""asym_p"": 0.2572251733394275, ""bh_q"": 0.3674645333420393}, ""CD4_conv"": {""long_name"": ""CD4_T_cells_conventional"", ""has_estimate"": true, ""beta"": -0.008550778695305796, ""ci_low"": -0.05077621807612246, ""ci_high"": 0.03367466068551087, ""asym_p"": 0.691442227764674, ""bh_q"": 0.7682691419607489}, ""Treg_FOXP3"": {""long_name"": ""T_regulatory_cells_FOXP3"", ""has_estimate"": true, ""beta"": 0.00023110013309039654, ""ci_low"": -0.016618144859877275, ""ci_high"": 0.01708034512605807, ""asym_p"": 0.9785535409578766, ""bh_q"": 0.9785535409578766}, ""NK"": {""long_name"": ""NK_cells"", ""has_estimate"": true, ""beta"": 0.06485320615924005, ""ci_low"": -0.08295880296459955, ""ci_high"": 0.21266521528307963, ""asym_p"": 0.3898202929727904, ""bh_q"": 0.487275366215988}, ""B"": {""long_name"": ""B_cells"", ""has_estimate"": true, ""beta"": 0.029400096954914218, ""ci_low"": 0.007922939712508147, ""ci_high"": 0.05087725419732029, ""asym_p"": 0.0072965820371950745, ""bh_q"": 0.03648291018597537}, ""Plasma"": {""long_name"": ""Plasma_cells"", ""has_estimate"": true, ""beta"": 0.1018305441144265, ""ci_low"": -0.04785590472762473, ""ci_high"": 0.2515169929564777, ""asym_p"": 0.18241747119907048, ""bh_q"": 0.3040291186651175}, ""Microglia_P2RY12_TMEM119"": {""long_name"": ""Microglia_P2RY12_TMEM119"", ""has_estimate"": true, ""beta"": -0.11038222154094328, ""ci_low"": -0.18791270473837293, ""ci_high"": -0.032851738343513626, ""asym_p"": 0.0052634321918679046, ""bh_q"": 0.03648291018597537}, ""MoMF_CD163"": {""long_name"": ""Monocyte_derived_macrophages_CD163"", ""has_estimate"": true, ""beta"": -0.10456469759674558, ""ci_low"": -0.2162251617309593, ""ci_high"": 0.007095766537468115, ""asym_p"": 0.06644455359741648, ""bh_q"": 0.17952336082198636}, ""DC"": {""long_name"": ""Dendritic_cells"", ""has_estimate"": true, ""beta"": -0.025718413063739592, ""ci_low"": -0.053717338195364686, ""ci_high"": 0.0022805120678855047, ""asym_p"": 0.07180934432879454, ""bh_q"": 0.17952336082198636}, ""Neutrophils"": {""long_name"": ""Neutrophils"", ""has_estimate"": true, ""beta"": -0.0598562036700592, ""ci_low"": -0.13472635554189863, ""ci_high"": 0.01501394820178023, ""asym_p"": 0.11713194005396045, ""bh_q"": 0.2342638801079209}}",outputs\intermediate\lmm_interaction_summary_glass.csv,all rows
+glass.n_primary_estimable,10,outputs\intermediate\lmm_interaction_summary_glass.csv,finite beta count
+glass.cells_bh_q_lt_0.05,"[""B"", ""Microglia_P2RY12_TMEM119""]",outputs\intermediate\glass_direction_consistency.json,glass_significant_cells
+glass.n_cells_bh_q_lt_0.05,2,outputs\intermediate\glass_direction_consistency.json,n_glass_bh_q_lt_0.05
+glass.n_primary_estimable_both,5,outputs\intermediate\glass_direction_consistency.json,n_primary_estimable_both
+glass.sign_flip_vs_discovery_evaluable,"{""NK"": {""discovery_beta"": -0.07344359319202912, ""glass_beta"": 0.06485320615924005, ""flip_sign"": true}, ""Microglia_P2RY12_TMEM119"": {""discovery_beta"": 0.07577177148028941, ""glass_beta"": -0.11038222154094328, ""flip_sign"": true}}",outputs\intermediate\lmm_interaction_summary*.csv,"descriptive, no agreement count"
+cgga.endothelial_by_method,"{""quantiseq"": {""delta_median"": 0.05409844060347191, ""mw_p"": 0.005066272860716241}, ""epic"": {""delta_median"": 0.036905984346071646, ""mw_p"": 0.0014205534020328948}, ""mcpcounter"": {""delta_median"": 4.092777777777778, ""mw_p"": 0.0038653967676900436}}",outputs\intermediate\cgga_crosssectional_stats.csv,cell_family==Endothelial
+cgga.best_primary_mw_q,0.4244898270981728,outputs\intermediate\cgga_crosssectional_stats.csv,min mannwhitney_q_primary_bh
+cgga.best_primary_mw_p,0.09120840341577138,outputs\intermediate\cgga_crosssectional_stats.csv,min mannwhitney_p_2tail
+cgga.n_primary_cells_any_method_q_lt_0.05,0,outputs\intermediate\cgga_crosssectional_stats.csv,derived
+sensitivity.compartment_cells,36696,outputs\intermediate\immune_subclust_audit_immune_subclust.json,compartment.n_cells
+sensitivity.ptprc_present,False,outputs\intermediate\immune_subclust_audit_immune_subclust.json,compartment.ptprc_present
+sensitivity.resolutions,"[0.5, 1.0, 1.5]",outputs\intermediate\immune_subclust_audit_immune_subclust.json,predeclared.resolutions
+sensitivity.evaluable_counts,"{""0.5"": 1, ""1.0"": 2, ""1.5"": 2}",outputs\intermediate\immune_subclust_audit_immune_subclust.json,evaluable_counts
+sensitivity.gate_pass,False,outputs\intermediate\immune_subclust_audit_immune_subclust.json,gate.pass
+sensitivity.gate_rule,>=6/10 at 1.0 AND >=5/10 at both 0.5 and 1.5,outputs\intermediate\immune_subclust_audit_immune_subclust.json,gate.rule
+sensitivity.decision,STOP_subclustering_does_not_recover_family,outputs\intermediate\immune_subclust_audit_immune_subclust.json,gate.decision
+sensitivity.contamination_by_resolution,"{""0.5"": {""non_immune_clusters"": 9, ""total_clusters"": 37}, ""1.0"": {""non_immune_clusters"": 16, ""total_clusters"": 58}, ""1.5"": {""non_immune_clusters"": 19, ""total_clusters"": 66}}",outputs\intermediate\immune_subclust_audit_immune_subclust.json,clusters_per_resolution: non-immune winner count
+sensitivity.evaluable_by_resolution,"{""0.5"": [{""cell_type"": ""CD8_T_cells"", ""evaluable"": false}, {""cell_type"": ""CD4_T_cells_conventional"", ""evaluable"": false}, {""cell_type"": ""T_regulatory_cells_FOXP3"", ""evaluable"": false}, {""cell_type"": ""NK_cells"", ""evaluable"": false}, {""cell_type"": ""B_cells"", ""evaluable"": false}, {""cell_type"": ""Plasma_cells"", ""evaluable"": false}, {""cell_type"": ""Microglia_P2RY12_TMEM119"", ""evaluable"": true}, {""cell_type"": ""Monocyte_derived_macrophages_CD163"", ""evaluable"": false}, {""cell_type"": ""Dendritic_cells"", ""evaluable"": false}, {""cell_type"": ""Neutrophils"", ""evaluable"": false}], ""1.0"": [{""cell_type"": ""CD8_T_cells"", ""evaluable"": false}, {""cell_type"": ""CD4_T_cells_conventional"", ""evaluable"": false}, {""cell_type"": ""T_regulatory_cells_FOXP3"", ""evaluable"": false}, {""cell_type"": ""NK_cells"", ""evaluable"": false}, {""cell_type"": ""B_cells"", ""evaluable"": false}, {""cell_type"": ""Plasma_cells"", ""evaluable"": false}, {""cell_type"": ""Microglia_P2RY12_TMEM119"", ""evaluable"": true}, {""cell_type"": ""Monocyte_derived_macrophages_CD163"", ""evaluable"": true}, {""cell_type"": ""Dendritic_cells"", ""evaluable"": false}, {""cell_type"": ""Neutrophils"", ""evaluable"": false}], ""1.5"": [{""cell_type"": ""CD8_T_cells"", ""evaluable"": false}, {""cell_type"": ""CD4_T_cells_conventional"", ""evaluable"": false}, {""cell_type"": ""T_regulatory_cells_FOXP3"", ""evaluable"": false}, {""cell_type"": ""NK_cells"", ""evaluable"": false}, {""cell_type"": ""B_cells"", ""evaluable"": false}, {""cell_type"": ""Plasma_cells"", ""evaluable"": false}, {""cell_type"": ""Microglia_P2RY12_TMEM119"", ""evaluable"": true}, {""cell_type"": ""Monocyte_derived_macrophages_CD163"", ""evaluable"": true}, {""cell_type"": ""Dendritic_cells"", ""evaluable"": false}, {""cell_type"": ""Neutrophils"", ""evaluable"": false}]}",outputs\intermediate\immune_subclust_evaluability_immune_subclust.csv,evaluable column
+prespec.version,1.0.0,outputs\sec4_prespec.json,version
+prespec.locked_at,2026-09-13T12:29:40+00:00,outputs\sec4_prespec.json,locked_at
+prespec.sha256_json,b7ba4c7bae5c62bd8c9b66ecaab0e4ed87ebd0ef0aa3880e584e4b5feb69f399,outputs\sec4_prespec.json,sha256 of file
+prespec.sha256_md,7d44034e8fba1dca76ceb2dab8b0c42f17e347cbf71b8c94793da8ecb0b5bb58,outputs\sec4_prespec.md,sha256 of file
+permutation.n_permutations,10000,outputs\sec4_prespec.json,d_permutation.n_permutations
+permutation.seed,7331,outputs\sec4_prespec.json,d_permutation.seed
+stage2.gate_pass,False,outputs\intermediate\stage2_annotation_qc.json,stage2_gate_pass
+stage2.n_primary_evaluable,9,outputs\intermediate\stage2_annotation_qc.json,n_primary_evaluable
+stage2.n_cells,221016,outputs\intermediate\stage2_annotation_qc.json,n_cells
+stage2.n_genes,12314,outputs\intermediate\stage2_annotation_qc.json,n_genes
+stage2.kappa_layer1,0.952498411413241,outputs\intermediate\stage2_annotation_qc.json,layer1_kappa
+stage2.kappa_layer2,0.9958892557835214,outputs\intermediate\stage2_annotation_qc.json,layer2_kappa
+stage2.cd3_rule_moved_total,21,outputs\intermediate\stage2_annotation_qc.json,cd3_rule_moved_total
+stage2.n_samples_fraction_table,75,outputs\intermediate\stage2_proportions_per_sample.csv,n rows
+stage2.per_type.CD8_T,"{""n_cells"": 1748, ""n_samples_nonzero"": 51, ""evaluable"": true, ""kappa_binary"": 0.981194899087163, ""auroc"": 0.6585337519645691, ""ambiguous_frac_d0050"": 0.8964530892448512, ""g4i_pass"": false, ""g4ii_pass"": false, ""g5_pass"": false, ""f_bar_primary"": 0.0008331147577675845}",outputs\intermediate\stage2_annotation_qc.json,per_type.CD8_T
+stage2.per_type.CD4_conv,"{""n_cells"": 266, ""n_samples_nonzero"": 57, ""evaluable"": true, ""kappa_binary"": 0.8635628688192059, ""auroc"": 0.9212478399276733, ""ambiguous_frac_d0050"": 0.17669172932330826, ""g4i_pass"": true, ""g4ii_pass"": true, ""g5_pass"": true, ""f_bar_primary"": 0.001000912734680926}",outputs\intermediate\stage2_annotation_qc.json,per_type.CD4_conv
+stage2.per_type.Treg_FOXP3,"{""n_cells"": 398, ""n_samples_nonzero"": 65, ""evaluable"": true, ""kappa_binary"": 0.8351917846959322, ""auroc"": 0.6723807454109192, ""ambiguous_frac_d0050"": 0.1658291457286432, ""g4i_pass"": false, ""g4ii_pass"": false, ""g5_pass"": true, ""f_bar_primary"": 0.0015048866311307089}",outputs\intermediate\stage2_annotation_qc.json,per_type.Treg_FOXP3
+stage2.per_type.NK,"{""n_cells"": 2361, ""n_samples_nonzero"": 74, ""evaluable"": true, ""kappa_binary"": 0.9554146271623498, ""auroc"": 0.4692608118057251, ""ambiguous_frac_d0050"": 0.022871664548919948, ""g4i_pass"": false, ""g4ii_pass"": false, ""g5_pass"": true, ""f_bar_primary"": 0.010499137085745144}",outputs\intermediate\stage2_annotation_qc.json,per_type.NK
+stage2.per_type.B_plasma,"{""n_cells"": 498, ""n_samples_nonzero"": 66, ""evaluable"": true, ""kappa_binary"": 0.9502834689862023, ""auroc"": 0.44889846444129944, ""ambiguous_frac_d0050"": 0.06224899598393574, ""g4i_pass"": false, ""g4ii_pass"": false, ""g5_pass"": true, ""f_bar_primary"": 0.0021217495167927384}",outputs\intermediate\stage2_annotation_qc.json,per_type.B_plasma
+stage2.per_type.Microglia_P2RY12_TMEM119,"{""n_cells"": 9169, ""n_samples_nonzero"": 75, ""evaluable"": true, ""kappa_binary"": 0.9042700455926168, ""auroc"": 0.8684176206588745, ""ambiguous_frac_d0050"": 0.033373323154106224, ""g4i_pass"": true, ""g4ii_pass"": true, ""g5_pass"": true, ""f_bar_primary"": 0.03985009266814419}",outputs\intermediate\stage2_annotation_qc.json,per_type.Microglia_P2RY12_TMEM119
+stage2.per_type.MoMF_CD163,"{""n_cells"": 3307, ""n_samples_nonzero"": 74, ""evaluable"": true, ""kappa_binary"": 0.8328979069548256, ""auroc"": 0.8318881988525391, ""ambiguous_frac_d0050"": 0.06440882975506501, ""g4i_pass"": true, ""g4ii_pass"": true, ""g5_pass"": true, ""f_bar_primary"": 0.013959292811573168}",outputs\intermediate\stage2_annotation_qc.json,per_type.MoMF_CD163
+stage2.per_type.DC,"{""n_cells"": 504, ""n_samples_nonzero"": 60, ""evaluable"": true, ""kappa_binary"": 0.6906450336714987, ""auroc"": 0.757824182510376, ""ambiguous_frac_d0050"": 0.15873015873015872, ""g4i_pass"": true, ""g4ii_pass"": true, ""g5_pass"": true, ""f_bar_primary"": 0.0019106592478239932}",outputs\intermediate\stage2_annotation_qc.json,per_type.DC
+stage2.per_type.Neutrophils,"{""n_cells"": 104, ""n_samples_nonzero"": 33, ""evaluable"": true, ""kappa_binary"": 0.6601263871843897, ""auroc"": 0.7940778136253357, ""ambiguous_frac_d0050"": 0.3076923076923077, ""g4i_pass"": true, ""g4ii_pass"": true, ""g5_pass"": false, ""f_bar_primary"": 0.00032429928765065737}",outputs\intermediate\stage2_annotation_qc.json,per_type.Neutrophils
+sesoi.threshold_pp,5.0,submission\supplementary\stage2_plan.md,7.5 SESOI pre-declared
+sesoi.stage1.NK.f_bar_primary,0.05608163097674362,outputs\intermediate\sn_proportions_per_sample.csv,mean of column NK_cells over 75 samples
+sesoi.stage1.NK.sesoi_arcsin_sqrt,0.09266694951195137,computed: scripts\sesoi_bound.py,stage2_plan.md 7.5 conversion (f_bar + 0.05)
+sesoi.stage1.NK.ci_within_band,False,submission\supplementary\results_numbers.json,"discovery.lmm_by_cell.NK ci_low/ci_high vs [-SESOI,+SESOI]"
+sesoi.stage1.NK.decision_rule_7_5,inconclusive,computed: scripts\sesoi_bound.py,stage2_plan.md 7.5 decision rule
+sesoi.stage1.Microglia_P2RY12_TMEM119.f_bar_primary,0.09725074886581055,outputs\intermediate\sn_proportions_per_sample.csv,mean of column Microglia_P2RY12_TMEM119 over 75 samples
+sesoi.stage1.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt,0.07669495540627008,computed: scripts\sesoi_bound.py,stage2_plan.md 7.5 conversion (f_bar + 0.05)
+sesoi.stage1.Microglia_P2RY12_TMEM119.ci_within_band,False,submission\supplementary\results_numbers.json,"discovery.lmm_by_cell.Microglia_P2RY12_TMEM119 ci_low/ci_high vs [-SESOI,+SESOI]"
+sesoi.stage1.Microglia_P2RY12_TMEM119.decision_rule_7_5,inconclusive,computed: scripts\sesoi_bound.py,stage2_plan.md 7.5 decision rule
+stage2.sensitivity.primary.n_evaluable_of_9,9,outputs\intermediate\stage2_evaluability_variants.json,primary.n_evaluable_of_9
+stage2.sensitivity.delta_0.025.n_evaluable_of_9,9,outputs\intermediate\stage2_evaluability_variants.json,delta_0.025.n_evaluable_of_9
+stage2.sensitivity.delta_0.10.n_evaluable_of_9,9,outputs\intermediate\stage2_evaluability_variants.json,delta_0.10.n_evaluable_of_9
+stage2.sensitivity.cap_1000.n_evaluable_of_9,9,outputs\intermediate\stage2_evaluability_variants.json,cap_1000.n_evaluable_of_9
+stage2.sensitivity.secondary_immune_denominator.n_evaluable_of_9,9,outputs\intermediate\stage2_evaluability_variants.json,secondary_immune_denominator.n_evaluable_of_9
+stage2.g6_concordance.Microglia_P2RY12_TMEM119,0.36323760273340105,outputs\intermediate\stage2_annotation_qc.json,g6_continuity.Microglia_P2RY12_TMEM119 -> Microglia_P2RY12_TMEM119.concordance
+stage2.g6_concordance.NK,0.03567134268537074,outputs\intermediate\stage2_annotation_qc.json,g6_continuity.NK_cells -> NK.concordance
+stage2.g6_concordance.B_plasma,0.0071492403932082215,outputs\intermediate\stage2_annotation_qc.json,g6_continuity.B_cells -> B_plasma.concordance
+stage1.qc_min_genes,300,submission\code\acquire_snrnaseq_discovery.py,"min_genes=300 (cell-level QC threshold, applied on the full gene space)"
+stage1.leiden_resolution,0.8,outputs\intermediate\stage1_obs_diagnostics.json,leiden_key (value 'leiden_r0.8')
+stage1.raw_feature_union,36591,outputs\intermediate\stage1_marker_coverage.json,raw_feature_union
+stage1.panel_genes_absent_from_hvg,17,outputs\intermediate\stage1_marker_coverage.json,summary.n_not_in_hvg_but_in_raw
+stage1.nk_cluster_separation_margin,0.00016660073997289832,outputs\intermediate\stage1_obs_diagnostics.json,clusters[leiden=5].separation_margin (NK_cells vs Oligodendrocytes_OPC)
+stage1.tnk_recoverable_cells,14504,outputs\intermediate\stage1_tnk_raw_abundance.json,total_cells_tnk_candidate
+stage1.tnk_samples_with_cells,66,outputs\intermediate\stage1_tnk_raw_abundance.json,samples_with_ge1_tnk
+cohorts.discovery.n_rt_only_patients,3,submission\supplementary\sec4_prespec.json,f_treatment_lock.any_rt_breakdown.rt_only
+stage2.gate_auroc_min,0.7,submission\supplementary\stage2_plan.addendum_1.md,G4(i) rank-based one-vs-rest AUROC required >= 0.70
+stage2.ambiguity_ceiling,0.2,submission\supplementary\stage2_plan.md,G5 ambiguous fraction <= 20% per type
+stage2.ambiguity_delta_primary,0.05,submission\supplementary\stage2_plan.md,"3.3 delta = 0.05 (pre-declared, not tuned)"
+stage2.ambiguity_delta_sensitivity,"[0.025, 0.1]",submission\supplementary\stage2_plan.md,3.3 pre-declared sensitivity delta = 0.025 and delta = 0.10
+stage2.cap_cells_per_sample_sensitivity,1000,submission\supplementary\stage2_plan.md,"7.4 sensitivity cap 1,000 cells/sample, seed 20260917"
+power.observed.f2_icc60.CD8_T,0.04983901638595669,outputs\intermediate\post_data_power_table.csv,CD8_T.f2_obs_icc60
+power.observed.power_icc60.CD8_T,0.1825,outputs\intermediate\post_data_power_table.csv,CD8_T.power_f2obs_icc60
+power.observed.f2_icc60.NK,0.07239018234787296,outputs\intermediate\post_data_power_table.csv,NK.f2_obs_icc60
+power.observed.power_icc60.NK,0.2275,outputs\intermediate\post_data_power_table.csv,NK.power_f2obs_icc60
+power.observed.f2_icc60.B,0.0036031171379508416,outputs\intermediate\post_data_power_table.csv,B.f2_obs_icc60
+power.observed.power_icc60.B,0.075,outputs\intermediate\post_data_power_table.csv,B.power_f2obs_icc60
+power.observed.f2_icc60.Microglia_P2RY12_TMEM119,0.12527236552602566,outputs\intermediate\post_data_power_table.csv,Microglia_P2RY12_TMEM119.f2_obs_icc60
+power.observed.power_icc60.Microglia_P2RY12_TMEM119,0.34,outputs\intermediate\post_data_power_table.csv,Microglia_P2RY12_TMEM119.power_f2obs_icc60
+power.observed.f2_icc60.MoMF_CD163,0.05822438429506351,outputs\intermediate\post_data_power_table.csv,MoMF_CD163.f2_obs_icc60
+power.observed.power_icc60.MoMF_CD163,0.18625,outputs\intermediate\post_data_power_table.csv,MoMF_CD163.power_f2obs_icc60
+stage2.cap_cells_per_sample_seed,20260917,submission\supplementary\stage2_plan.md,"2.1 / 7.4 per-sample cap seed (Stage 1 cap and the 1,000-cell sensitivity cap)"
+jno.i3.nonmalignant_denominator,"{""median"": 1771.0, ""min"": 489, ""max"": 2872}",outputs\intermediate\jno\i3_i4_i6_report.json,i3_nonmalignant_denominator.denominator_cells (median/min/max cells)
+jno.i3.malignant_share_of_all_cells,0.3903835016469396,outputs\intermediate\jno\i3_i4_i6_report.json,i3_nonmalignant_denominator.malignant_share_of_all_cells
+jno.i4.lineages,"{""lymphoid_T_NK"": {""members"": [""CD8_T"", ""CD4_conv"", ""Treg_FOXP3"", ""NK""], ""n_cells"": 4773, ""n_samples_nonzero"": 75, ""fraction_of_all_cells"": 0.013750135736779238, ""fraction_of_nonmalignant"": 0.022555386499424797, ""evaluable"": true}, ""lymphoid_B"": {""members"": [""B_plasma""], ""n_cells"": 498, ""n_samples_nonzero"": 66, ""fraction_of_all_cells"": 0.0021129691968002316, ""fraction_of_nonmalignant"": 0.00346606301258025, ""evaluable"": true}, ""myeloid"": {""members"": [""Microglia_P2RY12_TMEM119"", ""MoMF_CD163"", ""DC""], ""n_cells"": 12980, ""n_samples_nonzero"": 75, ""fraction_of_all_cells"": 0.056018568791399714, ""fraction_of_nonmalignant"": 0.09189149070397447, ""evaluable"": true}, ""rare"": {""members"": [""Neutrophils""], ""n_cells"": 104, ""n_samples_nonzero"": 33, ""fraction_of_all_cells"": 0.0003257682701704854, ""fraction_of_nonmalignant"": 0.00053438230600809, ""evaluable"": true}}",outputs\intermediate\jno\i3_i4_i6_report.json,i4_lineages.lineages
+jno.i4.n_lineages_evaluable,4,outputs\intermediate\jno\i3_i4_i6_report.json,i4_lineages.n_lineages_evaluable
+jno.i6.author_qc_cross_check,"{""n_samples_matched"": 71, ""pearson_r_mean_pct_mt_vs_author"": 0.7505017084019642, ""pearson_r_mean_n_genes_vs_author"": 0.8939032888517165, ""median_our_over_author_cells"": 0.7423904974016332, ""min_our_over_author_cells"": 0.2457002457002457, ""max_our_over_author_cells"": 2.7803521779425395, ""note"": ""Our cell counts are post-QC and are expected to be at or below the author's rna_cell_number; the ratio is reported, not corrected.""}",outputs\intermediate\jno\i3_i4_i6_report.json,i6_diagnostics.author_qc_cross_check
+jno.i6.per_type_diagnostics,"{""CD8_T"": {""n_cells"": 1748, ""n_genes_median"": 635.0, ""total_counts_median"": 837.5, ""pct_mt_median"": 0.5945311486721039, ""pct_mt_p90"": 5.616405344009399, ""frac_pct_mt_gt_10"": 0.04691075514874142, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 1.2715723514556885, ""pct_rp_p90"": 5.078389501571655, ""doublet_tail_frac"": 0.0005720823798627002, ""doublet_tail_ratio_vs_expected"": 0.011441647597253994, ""ambiguity_frac_d0050"": 0.8964530892448512, ""margin_median"": 0.0}, ""CD4_conv"": {""n_cells"": 266, ""n_genes_median"": 1292.0, ""total_counts_median"": 1992.5, ""pct_mt_median"": 0.5321779251098633, ""pct_mt_p90"": 3.9832730293273926, ""frac_pct_mt_gt_10"": 0.007518796992481203, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 1.217333734035492, ""pct_rp_p90"": 5.143976926803589, ""doublet_tail_frac"": 0.0, ""doublet_tail_ratio_vs_expected"": 0.0, ""ambiguity_frac_d0050"": 0.17669172932330826, ""margin_median"": 0.445225}, ""Treg_FOXP3"": {""n_cells"": 398, ""n_genes_median"": 1403.5, ""total_counts_median"": 2290.0, ""pct_mt_median"": 0.37502869963645935, ""pct_mt_p90"": 2.2131066322326665, ""frac_pct_mt_gt_10"": 0.010050251256281407, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.8920091092586517, ""pct_rp_p90"": 2.646394801139832, ""doublet_tail_frac"": 0.005025125628140704, ""doublet_tail_ratio_vs_expected"": 0.10050251256281398, ""ambiguity_frac_d0050"": 0.1658291457286432, ""margin_median"": 0.14970299999999997}, ""NK"": {""n_cells"": 2361, ""n_genes_median"": 1350.0, ""total_counts_median"": 2134.0, ""pct_mt_median"": 0.3430531919002533, ""pct_mt_p90"": 2.8095734119415283, ""frac_pct_mt_gt_10"": 0.01228293096145701, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.9771986603736877, ""pct_rp_p90"": 3.2484636306762695, ""doublet_tail_frac"": 0.011859381617958492, ""doublet_tail_ratio_vs_expected"": 0.23718763235916962, ""ambiguity_frac_d0050"": 0.022871664548919948, ""margin_median"": 0.369213}, ""B_plasma"": {""n_cells"": 498, ""n_genes_median"": 1764.0, ""total_counts_median"": 3159.5, ""pct_mt_median"": 0.22472502291202545, ""pct_mt_p90"": 2.069664478302002, ""frac_pct_mt_gt_10"": 0.008032128514056224, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.9015232920646667, ""pct_rp_p90"": 3.1101538658142096, ""doublet_tail_frac"": 0.04618473895582329, ""doublet_tail_ratio_vs_expected"": 0.923694779116465, ""ambiguity_frac_d0050"": 0.06224899598393574, ""margin_median"": 0.21842050000000002}, ""Microglia_P2RY12_TMEM119"": {""n_cells"": 9169, ""n_genes_median"": 2043.0, ""total_counts_median"": 3866.0, ""pct_mt_median"": 0.2268385887145996, ""pct_mt_p90"": 1.411337733268738, ""frac_pct_mt_gt_10"": 0.0023993892463736502, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.8113207221031189, ""pct_rp_p90"": 2.365558528900147, ""doublet_tail_frac"": 0.006543788853746319, ""doublet_tail_ratio_vs_expected"": 0.13087577707492626, ""ambiguity_frac_d0050"": 0.033373323154106224, ""margin_median"": 0.868968}, ""MoMF_CD163"": {""n_cells"": 3307, ""n_genes_median"": 2016.0, ""total_counts_median"": 3929.0, ""pct_mt_median"": 0.20256581902503967, ""pct_mt_p90"": 1.3169375896453865, ""frac_pct_mt_gt_10"": 0.003628666465074085, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.7383343577384949, ""pct_rp_p90"": 2.3255813121795654, ""doublet_tail_frac"": 0.008164499546416692, ""doublet_tail_ratio_vs_expected"": 0.16328999092833368, ""ambiguity_frac_d0050"": 0.06440882975506501, ""margin_median"": 0.493188}, ""DC"": {""n_cells"": 504, ""n_genes_median"": 1987.0, ""total_counts_median"": 3783.5, ""pct_mt_median"": 0.2009672373533249, ""pct_mt_p90"": 1.5243146181106566, ""frac_pct_mt_gt_10"": 0.001984126984126984, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.827800840139389, ""pct_rp_p90"": 2.165008211135864, ""doublet_tail_frac"": 0.013888888888888888, ""doublet_tail_ratio_vs_expected"": 0.2777777777777775, ""ambiguity_frac_d0050"": 0.15873015873015872, ""margin_median"": 0.2002255}, ""Neutrophils"": {""n_cells"": 104, ""n_genes_median"": 1251.5, ""total_counts_median"": 1905.0, ""pct_mt_median"": 0.3309648633003235, ""pct_mt_p90"": 2.90643150806427, ""frac_pct_mt_gt_10"": 0.028846153846153848, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.9125100672245026, ""pct_rp_p90"": 4.1120974063873295, ""doublet_tail_frac"": 0.0, ""doublet_tail_ratio_vs_expected"": 0.0, ""ambiguity_frac_d0050"": 0.3076923076923077, ""margin_median"": 0.0779445}, ""Malignant_astrocytes_oligo"": {""n_cells"": 86281, ""n_genes_median"": 2952.0, ""total_counts_median"": 6448.0, ""pct_mt_median"": 0.34837135672569275, ""pct_mt_p90"": 3.062030792236328, ""frac_pct_mt_gt_10"": 0.015866760932302593, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 1.02606201171875, ""pct_rp_p90"": 4.209328651428223, ""doublet_tail_frac"": 0.05813562661536144, ""doublet_tail_ratio_vs_expected"": 1.1627125323072278, ""ambiguity_frac_d0050"": 0.20002086206696723, ""margin_median"": 0.39273}, ""Astrocytes_non_malignant"": {""n_cells"": 36432, ""n_genes_median"": 2784.5, ""total_counts_median"": 6033.0, ""pct_mt_median"": 0.2692084163427353, ""pct_mt_p90"": 3.2384171962738044, ""frac_pct_mt_gt_10"": 0.02659749670619236, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.5908496677875519, ""pct_rp_p90"": 2.652252531051638, ""doublet_tail_frac"": 0.05143829600351339, ""doublet_tail_ratio_vs_expected"": 1.028765920070267, ""ambiguity_frac_d0050"": 0.03820816864295125, ""margin_median"": 0.582493}, ""Oligodendrocytes_OPC"": {""n_cells"": 68934, ""n_genes_median"": 2497.0, ""total_counts_median"": 5209.0, ""pct_mt_median"": 0.3236246109008789, ""pct_mt_p90"": 2.2874218225479126, ""frac_pct_mt_gt_10"": 0.009342269417123626, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.7694432437419891, ""pct_rp_p90"": 3.0329830169677736, ""doublet_tail_frac"": 0.047538224968810744, ""doublet_tail_ratio_vs_expected"": 0.950764499376214, ""ambiguity_frac_d0050"": 0.040183363797255345, ""margin_median"": 0.6865805}, ""Endothelial_cells"": {""n_cells"": 5816, ""n_genes_median"": 2443.5, ""total_counts_median"": 4979.0, ""pct_mt_median"": 0.34793703258037567, ""pct_mt_p90"": 3.115456700325012, ""frac_pct_mt_gt_10"": 0.015474552957359009, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 1.0071218013763428, ""pct_rp_p90"": 4.039704322814941, ""doublet_tail_frac"": 0.0531292984869326, ""doublet_tail_ratio_vs_expected"": 1.062585969738651, ""ambiguity_frac_d0050"": 0.05966299862448418, ""margin_median"": 0.828137}, ""Pericytes_Fibroblasts"": {""n_cells"": 5198, ""n_genes_median"": 3059.0, ""total_counts_median"": 6915.5, ""pct_mt_median"": 0.17090477794408798, ""pct_mt_p90"": 1.8371578097343446, ""frac_pct_mt_gt_10"": 0.007310504040015391, ""frac_pct_mt_gt_20"": 0.0, ""pct_rp_median"": 0.7236608862876892, ""pct_rp_p90"": 3.5995090007781996, ""doublet_tail_frac"": 0.08310888803385917, ""doublet_tail_ratio_vs_expected"": 1.662177760677182, ""ambiguity_frac_d0050"": 0.06233166602539438, ""margin_median"": 0.41265399999999997}}",outputs\intermediate\jno\i3_i4_i6_report.json,"i6_diagnostics.per_type (pct_mt, pct_rp, doublet tail, ambiguity per type)"
+jno.i3.denominator_files,"[""denominators_per_sample_nonmalignant.csv"", ""denominators_per_sample_lineages.csv"", ""lineage_evaluability.csv"", ""celltype_qc_diagnostics.csv""]",outputs\intermediate\jno\i3_i4_i6_report.json,outputs/intermediate/jno/ new files
+jno.reproducibility.max_abs_diff_vs_frozen,9.958396954279358e-17,outputs\intermediate\jno\i3_i4_i6_report.json,reproducibility.max_abs_diff_vs_frozen
+jno.i5.n_myeloid_cells,12980,outputs\intermediate\jno\i5_author_myeloid_report.json,n_myeloid_cells
+jno.i5.n_programmes,14,outputs\intermediate\jno\i5_author_myeloid_report.json,n_programmes
+jno.i5.microglia_agreement_kappa,0.3755198997671095,outputs\intermediate\jno\i5_author_myeloid_report.json,agreement.microglial_program_vs_our_microglia.methodA_kappa
+jno.i5.our_microglia_in_microglial_programme,0.6626676845893773,outputs\intermediate\jno\i5_author_myeloid_report.json,agreement.microglial_program_vs_our_microglia.our_microglia_in_microglial_programme_methodA
+jno.i5.momf_agreement_kappa,0.3616345753983637,outputs\intermediate\jno\i5_author_myeloid_report.json,agreement.bmdm_program_vs_our_momf.methodA_kappa
+jno.i5.our_momf_in_bmdm_programme,0.3453280919262171,outputs\intermediate\jno\i5_author_myeloid_report.json,agreement.bmdm_program_vs_our_momf.our_momf_in_bmdm_programme_methodA
+jno.i5.lowquality_programme_share,0.0637904468412943,outputs\intermediate\jno\i5_author_myeloid_report.json,agreement.lowquality_programme_share.methodA
+jno.i5.ambiguity_frac_methodA,0.17134052388289678,outputs\intermediate\jno\i5_author_myeloid_report.json,agreement.ambiguity_frac_d0050_methodA
+jno.i5.output_files,"[""i5_author_myeloid_crosstab.csv"", ""i5_author_myeloid_per_sample.csv"", ""i5_author_myeloid_report.json""]",outputs\intermediate\jno\i5_author_myeloid_report.json,outputs/intermediate/jno/ I5 files
+jno.i8.types,"[""NK"", ""Microglia_P2RY12_TMEM119""]",outputs\intermediate\jno\i8_tost_report.json,types (keys)
+jno.i8.alpha,0.05,outputs\intermediate\jno\i8_tost_report.json,alpha
+jno.i8.NK.sesoi_arcsin_sqrt,0.09266694951195137,outputs\intermediate\jno\i8_tost_report.json,types.NK.sesoi_arcsin_sqrt
+jno.i8.NK.tost_p,0.38752679358035,outputs\intermediate\jno\i8_tost_report.json,types.NK.tost.tost_p_max
+jno.i8.NK.tost_equivalent,False,outputs\intermediate\jno\i8_tost_report.json,types.NK.tost.equivalent_at_alpha
+jno.i8.NK.ci90_low,-0.18409028909775882,outputs\intermediate\jno\i8_tost_report.json,types.NK.tost.ci90_low
+jno.i8.NK.ci90_high,0.03720310271370057,outputs\intermediate\jno\i8_tost_report.json,types.NK.tost.ci90_high
+jno.i8.NK.rule_7_5_decision,inconclusive,outputs\intermediate\jno\i8_tost_report.json,types.NK.rule_7_5_decision
+jno.i8.NK.verdicts_agree,True,outputs\intermediate\jno\i8_tost_report.json,types.NK.verdicts_agree
+jno.i8.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt,0.07669495540627008,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt
+jno.i8.Microglia_P2RY12_TMEM119.tost_p,0.4930192960102511,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.tost_p_max
+jno.i8.Microglia_P2RY12_TMEM119.tost_equivalent,False,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.equivalent_at_alpha
+jno.i8.Microglia_P2RY12_TMEM119.ci90_low,-0.011005136286513992,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.ci90_low
+jno.i8.Microglia_P2RY12_TMEM119.ci90_high,0.16254867924709282,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.ci90_high
+jno.i8.Microglia_P2RY12_TMEM119.rule_7_5_decision,inconclusive,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.rule_7_5_decision
+jno.i8.Microglia_P2RY12_TMEM119.verdicts_agree,True,outputs\intermediate\jno\i8_tost_report.json,types.Microglia_P2RY12_TMEM119.verdicts_agree
+jno.i7.n_patients_any_rt,20,outputs\intermediate\jno\i7_report.json,n_patients.Any_RT
+jno.i7.n_patients_no_rt,13,outputs\intermediate\jno\i7_report.json,n_patients.No_RT
+jno.i7.max_abs_smd_baseline,1.3142890331709423,outputs\intermediate\jno\i7_report.json,smd.max_abs_smd
+jno.i7.max_abs_smd_variable,TMZ in T1->T2 interval (max across levels),outputs\intermediate\jno\i7_report.json,smd.max_abs_smd_variable
+jno.i7.n_smd_gt_0p10,11,outputs\intermediate\jno\i7_report.json,smd.n_flagged
+jno.i7.smd_surgical_interval,0.640393681670302,outputs\intermediate\jno\i7_report.json,smd.per_variable[Surgical interval T1->T2 (months)]
+jno.i7.smd_purity,0.03897316901654001,outputs\intermediate\jno\i7_report.json,smd.per_variable[Tumour purity (estimate)]
+stage2.confirmatory_secondary.bh_K,9,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,bh_family_K
+stage2.confirmatory_secondary.sesoi_pp,5.0,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,sesoi_pp
+stage2.confirmatory_secondary.CD8_T.beta,0.015857628993402317,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.beta
+stage2.confirmatory_secondary.CD8_T.ci_low,-0.043944151523826754,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.ci95_low
+stage2.confirmatory_secondary.CD8_T.ci_high,0.07565940951063138,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.ci95_high
+stage2.confirmatory_secondary.CD8_T.p,0.603256409858515,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.asym_p
+stage2.confirmatory_secondary.CD8_T.bh_q,0.603256409858515,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.bh_q
+stage2.confirmatory_secondary.CD8_T.sesoi_arcsin_sqrt,0.14430886501365353,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.CD8_T.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.rule_7_5_decision
+stage2.confirmatory_secondary.CD8_T.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest,G5_ambiguity",outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD8_T.caveat.gates_failed
+stage2.confirmatory_secondary.CD4_conv.beta,0.04453619789129406,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.beta
+stage2.confirmatory_secondary.CD4_conv.ci_low,-0.011746936460339634,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.ci95_low
+stage2.confirmatory_secondary.CD4_conv.ci_high,0.10081933224292774,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.ci95_high
+stage2.confirmatory_secondary.CD4_conv.p,0.12092637093814308,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.asym_p
+stage2.confirmatory_secondary.CD4_conv.bh_q,0.21766746768865755,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.bh_q
+stage2.confirmatory_secondary.CD4_conv.sesoi_arcsin_sqrt,0.13905589031982402,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.CD4_conv.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.rule_7_5_decision
+stage2.confirmatory_secondary.CD4_conv.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.CD4_conv.caveat.gates_failed
+stage2.confirmatory_secondary.Treg_FOXP3.beta,-0.05179795822007096,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.beta
+stage2.confirmatory_secondary.Treg_FOXP3.ci_low,-0.10985496626051422,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.ci95_low
+stage2.confirmatory_secondary.Treg_FOXP3.ci_high,0.0062590498203723074,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.ci95_high
+stage2.confirmatory_secondary.Treg_FOXP3.p,0.08034931692401916,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.asym_p
+stage2.confirmatory_secondary.Treg_FOXP3.bh_q,0.1807859630790431,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.bh_q
+stage2.confirmatory_secondary.Treg_FOXP3.sesoi_arcsin_sqrt,0.12410247342586711,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.Treg_FOXP3.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.rule_7_5_decision
+stage2.confirmatory_secondary.Treg_FOXP3.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest",outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Treg_FOXP3.caveat.gates_failed
+stage2.confirmatory_secondary.NK.beta,-0.08867379298404315,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.beta
+stage2.confirmatory_secondary.NK.ci_low,-0.23106042347397407,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.ci95_low
+stage2.confirmatory_secondary.NK.ci_high,0.05371283750588776,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.ci95_high
+stage2.confirmatory_secondary.NK.p,0.22223665648782087,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.asym_p
+stage2.confirmatory_secondary.NK.bh_q,0.25989768247268025,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.bh_q
+stage2.confirmatory_secondary.NK.sesoi_arcsin_sqrt,0.06828526103862709,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.NK.rule_7_5_decision_code,0,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.rule_7_5_decision
+stage2.confirmatory_secondary.NK.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest",outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.NK.caveat.gates_failed
+stage2.confirmatory_secondary.B_plasma.beta,0.06771013340250298,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.beta
+stage2.confirmatory_secondary.B_plasma.ci_low,0.015276892271075586,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.ci95_low
+stage2.confirmatory_secondary.B_plasma.ci_high,0.12014337453393037,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.ci95_high
+stage2.confirmatory_secondary.B_plasma.p,0.011373234736960799,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.asym_p
+stage2.confirmatory_secondary.B_plasma.bh_q,0.0511795563163236,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.bh_q
+stage2.confirmatory_secondary.B_plasma.sesoi_arcsin_sqrt,0.11814523788307274,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.B_plasma.rule_7_5_decision_code,0,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.rule_7_5_decision
+stage2.confirmatory_secondary.B_plasma.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest",outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.B_plasma.caveat.gates_failed
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.beta,-0.13611857310599498,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.beta
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.ci_low,-0.3588619009940579,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.ci95_low
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.ci_high,0.08662475478206794,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.ci95_high
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.p,0.23102016219793797,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.asym_p
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.bh_q,0.25989768247268025,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.bh_q
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt,0.05006983741344495,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.rule_7_5_decision_code,0,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.rule_7_5_decision
+stage2.confirmatory_secondary.Microglia_P2RY12_TMEM119.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Microglia_P2RY12_TMEM119.caveat.gates_failed
+stage2.confirmatory_secondary.MoMF_CD163.beta,0.2366630363298499,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.beta
+stage2.confirmatory_secondary.MoMF_CD163.ci_low,0.08021915946258498,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.ci95_low
+stage2.confirmatory_secondary.MoMF_CD163.ci_high,0.39310691319711477,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.ci95_high
+stage2.confirmatory_secondary.MoMF_CD163.p,0.0030271479962715735,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.asym_p
+stage2.confirmatory_secondary.MoMF_CD163.bh_q,0.027244331966444164,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.bh_q
+stage2.confirmatory_secondary.MoMF_CD163.sesoi_arcsin_sqrt,0.06366795648058465,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.MoMF_CD163.rule_7_5_decision_code,2,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.rule_7_5_decision
+stage2.confirmatory_secondary.MoMF_CD163.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.MoMF_CD163.caveat.gates_failed
+stage2.confirmatory_secondary.DC.beta,0.06298068317567176,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.beta
+stage2.confirmatory_secondary.DC.ci_low,-0.006145889036914473,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.ci95_low
+stage2.confirmatory_secondary.DC.ci_high,0.13210725538825802,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.ci95_high
+stage2.confirmatory_secondary.DC.p,0.07414655469397423,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.asym_p
+stage2.confirmatory_secondary.DC.bh_q,0.1807859630790431,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.bh_q
+stage2.confirmatory_secondary.DC.sesoi_arcsin_sqrt,0.11959433639341627,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.DC.rule_7_5_decision_code,0,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.rule_7_5_decision
+stage2.confirmatory_secondary.DC.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.DC.caveat.gates_failed
+stage2.confirmatory_secondary.Neutrophils.beta,-0.027359057684498086,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.beta
+stage2.confirmatory_secondary.Neutrophils.ci_low,-0.06688747211830323,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.ci95_low
+stage2.confirmatory_secondary.Neutrophils.ci_high,0.012169356749307064,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.ci95_high
+stage2.confirmatory_secondary.Neutrophils.p,0.1749202396797419,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.asym_p
+stage2.confirmatory_secondary.Neutrophils.bh_q,0.25989768247268025,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.bh_q
+stage2.confirmatory_secondary.Neutrophils.sesoi_arcsin_sqrt,0.17299676255654894,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.sesoi_arcsin_sqrt
+stage2.confirmatory_secondary.Neutrophils.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.rule_7_5_decision
+stage2.confirmatory_secondary.Neutrophils.gates_failed,G5_ambiguity,outputs\intermediate\jno\stage2_confirmatory_report_secondary.json,types.Neutrophils.caveat.gates_failed
+stage2.confirmatory.bh_K,9,outputs\intermediate\jno\stage2_confirmatory_report.json,bh_family_K
+stage2.confirmatory.sesoi_pp,5.0,outputs\intermediate\jno\stage2_confirmatory_report.json,sesoi_pp
+stage2.confirmatory.CD8_T.beta,0.005187795218060962,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.beta
+stage2.confirmatory.CD8_T.ci_low,-0.011703824153128236,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.ci95_low
+stage2.confirmatory.CD8_T.ci_high,0.02207941458925016,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.ci95_high
+stage2.confirmatory.CD8_T.p,0.547208149139929,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.asym_p
+stage2.confirmatory.CD8_T.bh_q,0.7035533346084801,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.bh_q
+stage2.confirmatory.CD8_T.sesoi_arcsin_sqrt,0.19854948647133233,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.sesoi_arcsin_sqrt
+stage2.confirmatory.CD8_T.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.rule_7_5_decision
+stage2.confirmatory.CD8_T.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest,G5_ambiguity",outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD8_T.caveat.gates_failed
+stage2.confirmatory.CD4_conv.beta,0.008244662474336565,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.beta
+stage2.confirmatory.CD4_conv.ci_low,-0.008629267517493025,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.ci95_low
+stage2.confirmatory.CD4_conv.ci_high,0.025118592466166156,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.ci95_high
+stage2.confirmatory.CD4_conv.p,0.3382415953978515,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.asym_p
+stage2.confirmatory.CD4_conv.bh_q,0.6088348717161326,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.bh_q
+stage2.confirmatory.CD4_conv.sesoi_arcsin_sqrt,0.1961563952433138,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.sesoi_arcsin_sqrt
+stage2.confirmatory.CD4_conv.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.rule_7_5_decision
+stage2.confirmatory.CD4_conv.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report.json,types.CD4_conv.caveat.gates_failed
+stage2.confirmatory.Treg_FOXP3.beta,-0.003395907898642516,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.beta
+stage2.confirmatory.Treg_FOXP3.ci_low,-0.01798277211944516,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.ci95_low
+stage2.confirmatory.Treg_FOXP3.ci_high,0.011190956322160127,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.ci95_high
+stage2.confirmatory.Treg_FOXP3.p,0.6481806208856071,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.asym_p
+stage2.confirmatory.Treg_FOXP3.bh_q,0.7292031984963081,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.bh_q
+stage2.confirmatory.Treg_FOXP3.sesoi_arcsin_sqrt,0.19013900875636705,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.sesoi_arcsin_sqrt
+stage2.confirmatory.Treg_FOXP3.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.rule_7_5_decision
+stage2.confirmatory.Treg_FOXP3.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest",outputs\intermediate\jno\stage2_confirmatory_report.json,types.Treg_FOXP3.caveat.gates_failed
+stage2.confirmatory.NK.beta,-0.01327875040801646,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.beta
+stage2.confirmatory.NK.ci_low,-0.055325077501365755,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.ci95_low
+stage2.confirmatory.NK.ci_high,0.028767576685332835,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.ci95_high
+stage2.confirmatory.NK.p,0.5359289545302317,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.asym_p
+stage2.confirmatory.NK.bh_q,0.7035533346084801,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.bh_q
+stage2.confirmatory.NK.sesoi_arcsin_sqrt,0.14587044999830662,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.sesoi_arcsin_sqrt
+stage2.confirmatory.NK.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.rule_7_5_decision
+stage2.confirmatory.NK.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest",outputs\intermediate\jno\stage2_confirmatory_report.json,types.NK.caveat.gates_failed
+stage2.confirmatory.B_plasma.beta,0.015573624720649222,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.beta
+stage2.confirmatory.B_plasma.ci_low,-0.003628820630900642,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.ci95_low
+stage2.confirmatory.B_plasma.ci_high,0.034776070072199086,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.ci95_high
+stage2.confirmatory.B_plasma.p,0.11193044226996249,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.asym_p
+stage2.confirmatory.B_plasma.bh_q,0.3357913268098875,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.bh_q
+stage2.confirmatory.B_plasma.sesoi_arcsin_sqrt,0.18425438768021926,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.sesoi_arcsin_sqrt
+stage2.confirmatory.B_plasma.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.rule_7_5_decision
+stage2.confirmatory.B_plasma.gates_failed,"G4_i_own_panel_argmax,G4_ii_one_vs_rest",outputs\intermediate\jno\stage2_confirmatory_report.json,types.B_plasma.caveat.gates_failed
+stage2.confirmatory.Microglia_P2RY12_TMEM119.beta,-0.004124810812004627,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.beta
+stage2.confirmatory.Microglia_P2RY12_TMEM119.ci_low,-0.0789240267878911,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.ci95_low
+stage2.confirmatory.Microglia_P2RY12_TMEM119.ci_high,0.07067440516388185,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.ci95_high
+stage2.confirmatory.Microglia_P2RY12_TMEM119.p,0.9139303094674904,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.asym_p
+stage2.confirmatory.Microglia_P2RY12_TMEM119.bh_q,0.9139303094674904,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.bh_q
+stage2.confirmatory.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt,0.10345556597631458,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt
+stage2.confirmatory.Microglia_P2RY12_TMEM119.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.rule_7_5_decision
+stage2.confirmatory.Microglia_P2RY12_TMEM119.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Microglia_P2RY12_TMEM119.caveat.gates_failed
+stage2.confirmatory.MoMF_CD163.beta,0.060435448946546275,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.beta
+stage2.confirmatory.MoMF_CD163.ci_low,0.00831140786917186,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.ci95_low
+stage2.confirmatory.MoMF_CD163.ci_high,0.11255949002392068,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.ci95_high
+stage2.confirmatory.MoMF_CD163.p,0.023056999347790503,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.asym_p
+stage2.confirmatory.MoMF_CD163.bh_q,0.20751299413011454,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.bh_q
+stage2.confirmatory.MoMF_CD163.sesoi_arcsin_sqrt,0.1372522569389084,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.sesoi_arcsin_sqrt
+stage2.confirmatory.MoMF_CD163.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.rule_7_5_decision
+stage2.confirmatory.MoMF_CD163.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report.json,types.MoMF_CD163.caveat.gates_failed
+stage2.confirmatory.DC.beta,0.021452795566277282,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.beta
+stage2.confirmatory.DC.ci_low,-0.001301568169594966,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.ci95_low
+stage2.confirmatory.DC.ci_high,0.04420715930214953,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.ci95_high
+stage2.confirmatory.DC.p,0.06462369151292485,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.asym_p
+stage2.confirmatory.DC.bh_q,0.29080661180816186,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.bh_q
+stage2.confirmatory.DC.sesoi_arcsin_sqrt,0.18613282365865144,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.sesoi_arcsin_sqrt
+stage2.confirmatory.DC.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.rule_7_5_decision
+stage2.confirmatory.DC.gates_failed,none,outputs\intermediate\jno\stage2_confirmatory_report.json,types.DC.caveat.gates_failed
+stage2.confirmatory.Neutrophils.beta,-0.007173238946552051,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.beta
+stage2.confirmatory.Neutrophils.ci_low,-0.01945742225720116,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.ci95_low
+stage2.confirmatory.Neutrophils.ci_high,0.005110944364097058,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.ci95_high
+stage2.confirmatory.Neutrophils.p,0.25241491440825614,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.asym_p
+stage2.confirmatory.Neutrophils.bh_q,0.5679335574185763,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.bh_q
+stage2.confirmatory.Neutrophils.sesoi_arcsin_sqrt,0.20824697525420371,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.sesoi_arcsin_sqrt
+stage2.confirmatory.Neutrophils.rule_7_5_decision_code,1,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.rule_7_5_decision
+stage2.confirmatory.Neutrophils.gates_failed,G5_ambiguity,outputs\intermediate\jno\stage2_confirmatory_report.json,types.Neutrophils.caveat.gates_failed
+stage2.s11.alpha,0.05,outputs\intermediate\jno\stage2_s11_tost_report.json,alpha
+stage2.s11.n_tost_equivalent_at_alpha,9,outputs\intermediate\jno\stage2_s11_tost_report.json,n_tost_equivalent_at_alpha
+stage2.s11.n_verdicts_agree,9,outputs\intermediate\jno\stage2_s11_tost_report.json,n_verdicts_agree
+stage2.s11.CD8_T.tost_p,8.747774285011883e-112,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD8_T.tost.tost_p_max
+stage2.s11.CD8_T.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD8_T.tost.equivalent_at_alpha
+stage2.s11.CD8_T.ci90_low,-0.008988098628429423,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD8_T.tost.ci90_low
+stage2.s11.CD8_T.ci90_high,0.019363689064551222,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD8_T.tost.ci90_high
+stage2.s11.CD8_T.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD8_T.rule_7_5_decision
+stage2.s11.CD8_T.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD8_T.verdicts_agree
+stage2.s11.CD4_conv.tost_p,6.48835009715414e-106,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD4_conv.tost.tost_p_max
+stage2.s11.CD4_conv.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD4_conv.tost.equivalent_at_alpha
+stage2.s11.CD4_conv.ci90_low,-0.005916385977020227,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD4_conv.tost.ci90_low
+stage2.s11.CD4_conv.ci90_high,0.022405710925693226,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD4_conv.tost.ci90_high
+stage2.s11.CD4_conv.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD4_conv.rule_7_5_decision
+stage2.s11.CD4_conv.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.CD4_conv.verdicts_agree
+stage2.s11.Treg_FOXP3.tost_p,2.212688184578006e-149,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Treg_FOXP3.tost.tost_p_max
+stage2.s11.Treg_FOXP3.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Treg_FOXP3.tost.equivalent_at_alpha
+stage2.s11.Treg_FOXP3.ci90_low,-0.015637590250303767,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Treg_FOXP3.tost.ci90_low
+stage2.s11.Treg_FOXP3.ci90_high,0.008845774453018769,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Treg_FOXP3.tost.ci90_high
+stage2.s11.Treg_FOXP3.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Treg_FOXP3.rule_7_5_decision
+stage2.s11.Treg_FOXP3.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Treg_FOXP3.verdicts_agree
+stage2.s11.NK.tost_p,3.1912739117956335e-10,outputs\intermediate\jno\stage2_s11_tost_report.json,types.NK.tost.tost_p_max
+stage2.s11.NK.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.NK.tost.equivalent_at_alpha
+stage2.s11.NK.ci90_low,-0.04856514044630739,outputs\intermediate\jno\stage2_s11_tost_report.json,types.NK.tost.ci90_low
+stage2.s11.NK.ci90_high,0.02200763963027459,outputs\intermediate\jno\stage2_s11_tost_report.json,types.NK.tost.ci90_high
+stage2.s11.NK.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.NK.rule_7_5_decision
+stage2.s11.NK.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.NK.verdicts_agree
+stage2.s11.B_plasma.tost_p,9.901917985270511e-67,outputs\intermediate\jno\stage2_s11_tost_report.json,types.B_plasma.tost.tost_p_max
+stage2.s11.B_plasma.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.B_plasma.tost.equivalent_at_alpha
+stage2.s11.B_plasma.ci90_low,-0.0005415754217892987,outputs\intermediate\jno\stage2_s11_tost_report.json,types.B_plasma.tost.ci90_low
+stage2.s11.B_plasma.ci90_high,0.031688824863087696,outputs\intermediate\jno\stage2_s11_tost_report.json,types.B_plasma.tost.ci90_high
+stage2.s11.B_plasma.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.B_plasma.rule_7_5_decision
+stage2.s11.B_plasma.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.B_plasma.verdicts_agree
+stage2.s11.Microglia_P2RY12_TMEM119.tost_p,0.004623780023937818,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.tost_p_max
+stage2.s11.Microglia_P2RY12_TMEM119.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.equivalent_at_alpha
+stage2.s11.Microglia_P2RY12_TMEM119.ci90_low,-0.06689829168284603,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.ci90_low
+stage2.s11.Microglia_P2RY12_TMEM119.ci90_high,0.05864867005883683,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Microglia_P2RY12_TMEM119.tost.ci90_high
+stage2.s11.Microglia_P2RY12_TMEM119.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Microglia_P2RY12_TMEM119.rule_7_5_decision
+stage2.s11.Microglia_P2RY12_TMEM119.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Microglia_P2RY12_TMEM119.verdicts_agree
+stage2.s11.MoMF_CD163.tost_p,0.001935669933652892,outputs\intermediate\jno\stage2_s11_tost_report.json,types.MoMF_CD163.tost.tost_p_max
+stage2.s11.MoMF_CD163.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.MoMF_CD163.tost.equivalent_at_alpha
+stage2.s11.MoMF_CD163.ci90_low,0.016691574725507162,outputs\intermediate\jno\stage2_s11_tost_report.json,types.MoMF_CD163.tost.ci90_low
+stage2.s11.MoMF_CD163.ci90_high,0.10417932316758524,outputs\intermediate\jno\stage2_s11_tost_report.json,types.MoMF_CD163.tost.ci90_high
+stage2.s11.MoMF_CD163.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.MoMF_CD163.rule_7_5_decision
+stage2.s11.MoMF_CD163.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.MoMF_CD163.verdicts_agree
+stage2.s11.DC.tost_p,5.6865432677769e-46,outputs\intermediate\jno\stage2_s11_tost_report.json,types.DC.tost.tost_p_max
+stage2.s11.DC.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.DC.tost.equivalent_at_alpha
+stage2.s11.DC.ci90_low,0.002356731549210341,outputs\intermediate\jno\stage2_s11_tost_report.json,types.DC.tost.ci90_low
+stage2.s11.DC.ci90_high,0.04054885958334406,outputs\intermediate\jno\stage2_s11_tost_report.json,types.DC.tost.ci90_high
+stage2.s11.DC.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.DC.rule_7_5_decision
+stage2.s11.DC.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.DC.verdicts_agree
+stage2.s11.Neutrophils.tost_p,3.4569006152559444e-259,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Neutrophils.tost.tost_p_max
+stage2.s11.Neutrophils.tost_equivalent,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Neutrophils.tost.equivalent_at_alpha
+stage2.s11.Neutrophils.ci90_low,-0.017482450560662114,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Neutrophils.tost.ci90_low
+stage2.s11.Neutrophils.ci90_high,0.0031359726675581137,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Neutrophils.tost.ci90_high
+stage2.s11.Neutrophils.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Neutrophils.rule_7_5_decision
+stage2.s11.Neutrophils.verdicts_agree,True,outputs\intermediate\jno\stage2_s11_tost_report.json,types.Neutrophils.verdicts_agree
+stage2.sens.S9_lopo.CD8_T.max_abs_delta_beta,0.004765337330094198,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.CD8_T.max_abs_delta_beta
+stage2.sens.S9_lopo.CD4_conv.max_abs_delta_beta,0.004622639468880264,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.CD4_conv.max_abs_delta_beta
+stage2.sens.S9_lopo.Treg_FOXP3.max_abs_delta_beta,0.003010949360800431,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.Treg_FOXP3.max_abs_delta_beta
+stage2.sens.S9_lopo.NK.max_abs_delta_beta,0.015585663078181648,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.NK.max_abs_delta_beta
+stage2.sens.S9_lopo.B_plasma.max_abs_delta_beta,0.005877262966278725,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.B_plasma.max_abs_delta_beta
+stage2.sens.S9_lopo.Microglia_P2RY12_TMEM119.max_abs_delta_beta,0.021213114906022144,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.Microglia_P2RY12_TMEM119.max_abs_delta_beta
+stage2.sens.S9_lopo.MoMF_CD163.max_abs_delta_beta,0.012782055847163493,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.MoMF_CD163.max_abs_delta_beta
+stage2.sens.S9_lopo.DC.max_abs_delta_beta,0.01011216114617914,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.DC.max_abs_delta_beta
+stage2.sens.S9_lopo.Neutrophils.max_abs_delta_beta,0.004580828546960993,outputs\intermediate\jno\stage2_sensitivity_report.json,s9_lopo.Neutrophils.max_abs_delta_beta
+stage2.sens.S5_stratified_perm.CD8_T_cells.perm_p,0.5868413158684131,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.CD8_T_cells.perm_p_stratified
+stage2.sens.S5_stratified_perm.CD4_T_cells_conventional.perm_p,0.42675732426757323,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.CD4_T_cells_conventional.perm_p_stratified
+stage2.sens.S5_stratified_perm.T_regulatory_cells_FOXP3.perm_p,0.6418358164183582,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.T_regulatory_cells_FOXP3.perm_p_stratified
+stage2.sens.S5_stratified_perm.NK_cells.perm_p,0.5788421157884212,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.NK_cells.perm_p_stratified
+stage2.sens.S5_stratified_perm.B_plasma.perm_p,0.1217878212178782,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.B_plasma.perm_p_stratified
+stage2.sens.S5_stratified_perm.Microglia_P2RY12_TMEM119.perm_p,0.9208079192080791,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.Microglia_P2RY12_TMEM119.perm_p_stratified
+stage2.sens.S5_stratified_perm.Monocyte_derived_macrophages_CD163.perm_p,0.0438956104389561,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.Monocyte_derived_macrophages_CD163.perm_p_stratified
+stage2.sens.S5_stratified_perm.Dendritic_cells.perm_p,0.11888811118888111,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.Dendritic_cells.perm_p_stratified
+stage2.sens.S5_stratified_perm.Neutrophils.perm_p,0.29747025297470253,outputs\intermediate\jno\stage2_sensitivity_report.json,s5_interval_stratified.Neutrophils.perm_p_stratified
+stage2.sens.S1_nonmalignant.CD8_T.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.CD4_conv.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.Treg_FOXP3.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.NK.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.B_plasma.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.Microglia_P2RY12_TMEM119.decision,inconclusive,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.MoMF_CD163.decision,inconclusive,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.DC.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.sens.S1_nonmalignant.Neutrophils.decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\jno\stage2_sensitivity_report.json,summary S1 row rule_7_5_decision
+stage2.robust.CD8_T.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.CD8_T.singular_fit
+stage2.robust.CD8_T.max_abs_dfbeta_interaction,0.004765337330094198,outputs\intermediate\jno\stage2_robustness_report.json,types.CD8_T.max_abs_dfbeta_interaction
+stage2.robust.CD8_T.zero_frac_observed,0.323943661971831,outputs\intermediate\jno\stage2_robustness_report.json,types.CD8_T.zero_frac_observed
+stage2.robust.CD4_conv.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.CD4_conv.singular_fit
+stage2.robust.CD4_conv.max_abs_dfbeta_interaction,0.004622639468880264,outputs\intermediate\jno\stage2_robustness_report.json,types.CD4_conv.max_abs_dfbeta_interaction
+stage2.robust.CD4_conv.zero_frac_observed,0.22535211267605634,outputs\intermediate\jno\stage2_robustness_report.json,types.CD4_conv.zero_frac_observed
+stage2.robust.Treg_FOXP3.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.Treg_FOXP3.singular_fit
+stage2.robust.Treg_FOXP3.max_abs_dfbeta_interaction,0.003010949360800431,outputs\intermediate\jno\stage2_robustness_report.json,types.Treg_FOXP3.max_abs_dfbeta_interaction
+stage2.robust.Treg_FOXP3.zero_frac_observed,0.14084507042253522,outputs\intermediate\jno\stage2_robustness_report.json,types.Treg_FOXP3.zero_frac_observed
+stage2.robust.NK.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.NK.singular_fit
+stage2.robust.NK.max_abs_dfbeta_interaction,0.015585663078181648,outputs\intermediate\jno\stage2_robustness_report.json,types.NK.max_abs_dfbeta_interaction
+stage2.robust.NK.zero_frac_observed,0.014084507042253521,outputs\intermediate\jno\stage2_robustness_report.json,types.NK.zero_frac_observed
+stage2.robust.B_plasma.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.B_plasma.singular_fit
+stage2.robust.B_plasma.max_abs_dfbeta_interaction,0.005877262966278725,outputs\intermediate\jno\stage2_robustness_report.json,types.B_plasma.max_abs_dfbeta_interaction
+stage2.robust.B_plasma.zero_frac_observed,0.11267605633802817,outputs\intermediate\jno\stage2_robustness_report.json,types.B_plasma.zero_frac_observed
+stage2.robust.Microglia_P2RY12_TMEM119.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.Microglia_P2RY12_TMEM119.singular_fit
+stage2.robust.Microglia_P2RY12_TMEM119.max_abs_dfbeta_interaction,0.021213114906022144,outputs\intermediate\jno\stage2_robustness_report.json,types.Microglia_P2RY12_TMEM119.max_abs_dfbeta_interaction
+stage2.robust.Microglia_P2RY12_TMEM119.zero_frac_observed,0.0,outputs\intermediate\jno\stage2_robustness_report.json,types.Microglia_P2RY12_TMEM119.zero_frac_observed
+stage2.robust.MoMF_CD163.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.MoMF_CD163.singular_fit
+stage2.robust.MoMF_CD163.max_abs_dfbeta_interaction,0.012782055847163493,outputs\intermediate\jno\stage2_robustness_report.json,types.MoMF_CD163.max_abs_dfbeta_interaction
+stage2.robust.MoMF_CD163.zero_frac_observed,0.014084507042253521,outputs\intermediate\jno\stage2_robustness_report.json,types.MoMF_CD163.zero_frac_observed
+stage2.robust.DC.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.DC.singular_fit
+stage2.robust.DC.max_abs_dfbeta_interaction,0.01011216114617914,outputs\intermediate\jno\stage2_robustness_report.json,types.DC.max_abs_dfbeta_interaction
+stage2.robust.DC.zero_frac_observed,0.19718309859154928,outputs\intermediate\jno\stage2_robustness_report.json,types.DC.zero_frac_observed
+stage2.robust.Neutrophils.singular_fit,False,outputs\intermediate\jno\stage2_robustness_report.json,types.Neutrophils.singular_fit
+stage2.robust.Neutrophils.max_abs_dfbeta_interaction,0.004580828546960993,outputs\intermediate\jno\stage2_robustness_report.json,types.Neutrophils.max_abs_dfbeta_interaction
+stage2.robust.Neutrophils.zero_frac_observed,0.5633802816901409,outputs\intermediate\jno\stage2_robustness_report.json,types.Neutrophils.zero_frac_observed
+stage2.mde.CD8_T.icc,7.324857730577135e-08,outputs\intermediate\jno\stage2_mde_report.json,types.CD8_T.icc
+stage2.mde.CD8_T.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.CD8_T.mde80_pp
+stage2.mde.CD4_conv.icc,2.5464556547417204e-09,outputs\intermediate\jno\stage2_mde_report.json,types.CD4_conv.icc
+stage2.mde.CD4_conv.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.CD4_conv.mde80_pp
+stage2.mde.Treg_FOXP3.icc,0.40495982017104487,outputs\intermediate\jno\stage2_mde_report.json,types.Treg_FOXP3.icc
+stage2.mde.Treg_FOXP3.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.Treg_FOXP3.mde80_pp
+stage2.mde.NK.icc,7.579278949754314e-09,outputs\intermediate\jno\stage2_mde_report.json,types.NK.icc
+stage2.mde.NK.mde80_pp,1.9241379310344828,outputs\intermediate\jno\stage2_mde_report.json,types.NK.mde80_pp
+stage2.mde.B_plasma.icc,0.17441281668804628,outputs\intermediate\jno\stage2_mde_report.json,types.B_plasma.icc
+stage2.mde.B_plasma.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.B_plasma.mde80_pp
+stage2.mde.Microglia_P2RY12_TMEM119.icc,1.1174927196073743e-10,outputs\intermediate\jno\stage2_mde_report.json,types.Microglia_P2RY12_TMEM119.icc
+stage2.mde.Microglia_P2RY12_TMEM119.mde80_pp,5.138888888888889,outputs\intermediate\jno\stage2_mde_report.json,types.Microglia_P2RY12_TMEM119.mde80_pp
+stage2.mde.MoMF_CD163.icc,1.3573541750446717e-07,outputs\intermediate\jno\stage2_mde_report.json,types.MoMF_CD163.icc
+stage2.mde.MoMF_CD163.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.MoMF_CD163.mde80_pp
+stage2.mde.DC.icc,0.0029744450147003165,outputs\intermediate\jno\stage2_mde_report.json,types.DC.icc
+stage2.mde.DC.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.DC.mde80_pp
+stage2.mde.Neutrophils.icc,0.07951506210422282,outputs\intermediate\jno\stage2_mde_report.json,types.Neutrophils.icc
+stage2.mde.Neutrophils.mde80_pp,1.0,outputs\intermediate\jno\stage2_mde_report.json,types.Neutrophils.mde80_pp
+compartment.posthoc.bh_K,"K=2 (LYMPHOID, MYELOID); NEU_NONIMMUNE is an uncorrected negative control",outputs\intermediate\jno\compartment_posthoc_report.json,bh_fdr_family
+compartment.posthoc.sesoi_pp,5.0,outputs\intermediate\jno\compartment_posthoc_report.json,sesoi_pp
+compartment.posthoc.identity_max_abs_diff,4.85722573273506e-16,outputs\intermediate\jno\compartment_posthoc_report.json,identity_check.max_abs_diff
+compartment.posthoc.LYMPHOID.role,primary,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.role
+compartment.posthoc.LYMPHOID.f_bar,0.0159598007261171,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.f_bar_compartment_armblind_75
+compartment.posthoc.LYMPHOID.beta,-0.002257496116542424,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.beta
+compartment.posthoc.LYMPHOID.ci_low,-0.04623728963997002,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.ci95_low
+compartment.posthoc.LYMPHOID.ci_high,0.04172229740688517,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.ci95_high
+compartment.posthoc.LYMPHOID.p,0.9198635950000864,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.asym_p
+compartment.posthoc.LYMPHOID.bh_q,0.9198635950000864,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.bh_q
+compartment.posthoc.LYMPHOID.sesoi_arcsin_sqrt,0.13306643948579353,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.sesoi_arcsin_sqrt
+compartment.posthoc.LYMPHOID.rule_7_5_decision_code,1,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.rule_7_5_decision
+compartment.posthoc.LYMPHOID.label,POST-HOC,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.LYMPHOID.label
+compartment.posthoc.MYELOID.role,primary,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.role
+compartment.posthoc.MYELOID.f_bar,0.05604434401519201,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.f_bar_compartment_armblind_75
+compartment.posthoc.MYELOID.beta,0.029328168984194672,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.beta
+compartment.posthoc.MYELOID.ci_low,-0.043994369606317196,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.ci95_low
+compartment.posthoc.MYELOID.ci_high,0.10265070757470654,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.ci95_high
+compartment.posthoc.MYELOID.p,0.4330618402198603,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.asym_p
+compartment.posthoc.MYELOID.bh_q,0.8661236804397205,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.bh_q
+compartment.posthoc.MYELOID.sesoi_arcsin_sqrt,0.09268744600253703,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.sesoi_arcsin_sqrt
+compartment.posthoc.MYELOID.rule_7_5_decision_code,0,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.rule_7_5_decision
+compartment.posthoc.MYELOID.label,POST-HOC,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.MYELOID.label
+compartment.posthoc.NEU_NONIMMUNE.role,negative_control,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.role
+compartment.posthoc.NEU_NONIMMUNE.f_bar,0.816483823537849,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.f_bar_compartment_armblind_75
+compartment.posthoc.NEU_NONIMMUNE.beta,0.0009519505027785749,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.beta
+compartment.posthoc.NEU_NONIMMUNE.ci_low,-0.06075461648619503,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.ci95_low
+compartment.posthoc.NEU_NONIMMUNE.ci_high,0.06265851749175218,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.ci95_high
+compartment.posthoc.NEU_NONIMMUNE.p,0.975878463754461,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.asym_p
+compartment.posthoc.NEU_NONIMMUNE.bh_q,null,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.bh_q
+compartment.posthoc.NEU_NONIMMUNE.sesoi_arcsin_sqrt,0.06864686822742616,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.sesoi_arcsin_sqrt
+compartment.posthoc.NEU_NONIMMUNE.rule_7_5_decision_code,1,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.rule_7_5_decision
+compartment.posthoc.NEU_NONIMMUNE.label,POST-HOC,outputs\intermediate\jno\compartment_posthoc_report.json,compartments.NEU_NONIMMUNE.label
+stage2.sens.S2_lineage_of_all_cells.T_NK.beta,-0.008283408347655018,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / T_NK__of_all_cells / beta
+stage2.sens.S2_lineage_of_all_cells.T_NK.ci_low,-0.050674307066785884,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / T_NK__of_all_cells / ci_low
+stage2.sens.S2_lineage_of_all_cells.T_NK.ci_high,0.034107490371475854,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / T_NK__of_all_cells / ci_high
+stage2.sens.S2_lineage_of_all_cells.T_NK.p,0.7017290724318711,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / T_NK__of_all_cells / p
+stage2.sens.S2_lineage_of_all_cells.T_NK.sesoi_arcsin_sqrt,0.13752220818177002,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / T_NK__of_all_cells / sesoi_arcsin_sqrt
+stage2.sens.S2_lineage_of_all_cells.T_NK.rule_7_5_decision,consistent_with_no_clinically_important_interaction,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / T_NK__of_all_cells / rule_7_5_decision
+stage2.sens.S2_lineage_of_immune.T_NK.beta,-0.10386749362852273,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / T_NK__of_immune / beta
+stage2.sens.S2_lineage_of_immune.T_NK.ci_low,-0.2795768828336475,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / T_NK__of_immune / ci_low
+stage2.sens.S2_lineage_of_immune.T_NK.ci_high,0.07184189557660207,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / T_NK__of_immune / ci_high
+stage2.sens.S2_lineage_of_immune.T_NK.p,0.24662008505542365,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / T_NK__of_immune / p
+stage2.sens.S2_lineage_of_immune.T_NK.sesoi_arcsin_sqrt,0.05781329781282096,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / T_NK__of_immune / sesoi_arcsin_sqrt
+stage2.sens.S2_lineage_of_immune.T_NK.rule_7_5_decision,inconclusive,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / T_NK__of_immune / rule_7_5_decision
+stage2.sens.S2_lineage_of_all_cells.Myeloid.beta,0.03012990968279561,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / Myeloid__of_all_cells / beta
+stage2.sens.S2_lineage_of_all_cells.Myeloid.ci_low,-0.04380770869931884,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / Myeloid__of_all_cells / ci_low
+stage2.sens.S2_lineage_of_all_cells.Myeloid.ci_high,0.10406752806491006,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / Myeloid__of_all_cells / ci_high
+stage2.sens.S2_lineage_of_all_cells.Myeloid.p,0.42446782231584657,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / Myeloid__of_all_cells / p
+stage2.sens.S2_lineage_of_all_cells.Myeloid.sesoi_arcsin_sqrt,0.09286638814689568,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / Myeloid__of_all_cells / sesoi_arcsin_sqrt
+stage2.sens.S2_lineage_of_all_cells.Myeloid.rule_7_5_decision,inconclusive,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_all_cells / Myeloid__of_all_cells / rule_7_5_decision
+stage2.sens.S2_lineage_of_immune.Myeloid.beta,0.07429105698175845,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / Myeloid__of_immune / beta
+stage2.sens.S2_lineage_of_immune.Myeloid.ci_low,-0.10859462828520441,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / Myeloid__of_immune / ci_low
+stage2.sens.S2_lineage_of_immune.Myeloid.ci_high,0.25717674224872134,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / Myeloid__of_immune / ci_high
+stage2.sens.S2_lineage_of_immune.Myeloid.p,0.4259341853161065,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / Myeloid__of_immune / p
+stage2.sens.S2_lineage_of_immune.Myeloid.sesoi_arcsin_sqrt,0.05900873871170531,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / Myeloid__of_immune / sesoi_arcsin_sqrt
+stage2.sens.S2_lineage_of_immune.Myeloid.rule_7_5_decision,inconclusive,outputs\intermediate\lmm_interaction_summary_stage2_sensitivity.csv,S2_lineage_of_immune / Myeloid__of_immune / rule_7_5_decision
+compartment.specificity.n_cells,221016,outputs\intermediate\jno\compartment_specificity.json,n_cells
+compartment.specificity.n_genes_scored,12314,outputs\intermediate\jno\compartment_specificity.json,n_genes_scored
+compartment.specificity.median_detected_genes_per_cell,195,outputs\intermediate\jno\compartment_specificity.json,median_detected_genes_per_cell
+compartment.specificity.g4i_bar,0.7,outputs\intermediate\jno\compartment_specificity.json,specificity.<name>.g4i_bar
+compartment.specificity.delta,0.05,outputs\intermediate\jno\compartment_specificity.json,delta
+compartment.specificity.n_immune_compartment,18355,outputs\intermediate\jno\compartment_specificity.json,n_immune_compartment
+compartment.specificity.layer2_argmax_selfcheck_kappa,0.9948657201913449,outputs\intermediate\jno\compartment_specificity.json,layer2_argmax_selfcheck_kappa
+compartment.specificity.layer2_margin_median_immune,0.6488016247749329,outputs\intermediate\jno\compartment_specificity.json,layer2_margin_median_immune
+compartment.specificity.layer2_ambiguous_frac_d0050,0.2364478343775538,outputs\intermediate\jno\compartment_specificity.json,layer2_ambiguous_frac_by_delta
+compartment.specificity.T_NK.immune_rest.n_positive,4773,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.n_positive
+compartment.specificity.T_NK.immune_rest.n_negative,13582,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.n_negative
+compartment.specificity.T_NK.immune_rest.auroc_routing_locked,0.28816303610801697,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.auroc_routing_locked
+compartment.specificity.T_NK.immune_rest.auroc_routing_raw,0.5473631024360657,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.auroc_routing_raw
+compartment.specificity.T_NK.immune_rest.auroc_terminal_locked,0.2827640175819397,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.auroc_terminal_locked
+compartment.specificity.T_NK.immune_rest.auroc_terminal_raw,0.5256842374801636,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.auroc_terminal_raw
+compartment.specificity.T_NK.immune_rest.terminal_raw_mean_in,0.35989901423454285,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.terminal_raw_mean_in
+compartment.specificity.T_NK.immune_rest.terminal_raw_mean_out,0.2919556796550751,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.immune_rest.terminal_raw_mean_out
+compartment.specificity.T_NK.all_cells.n_positive,4773,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.all_cells.n_positive
+compartment.specificity.T_NK.all_cells.n_negative,216243,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.all_cells.n_negative
+compartment.specificity.T_NK.all_cells.auroc_routing_locked,0.6445925235748291,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.all_cells.auroc_routing_locked
+compartment.specificity.T_NK.all_cells.auroc_routing_raw,0.5481950044631958,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.all_cells.auroc_routing_raw
+compartment.specificity.T_NK.all_cells.auroc_terminal_locked,0.6014078259468079,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.all_cells.auroc_terminal_locked
+compartment.specificity.T_NK.all_cells.auroc_terminal_raw,0.41953614354133606,outputs\intermediate\jno\compartment_specificity.json,specificity.T_NK.all_cells.auroc_terminal_raw
+compartment.specificity.LYMPHOID.immune_rest.n_positive,5271,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.n_positive
+compartment.specificity.LYMPHOID.immune_rest.n_negative,13084,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.n_negative
+compartment.specificity.LYMPHOID.immune_rest.auroc_routing_locked,0.2616027891635895,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.auroc_routing_locked
+compartment.specificity.LYMPHOID.immune_rest.auroc_routing_raw,0.4312264621257782,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.auroc_routing_raw
+compartment.specificity.LYMPHOID.immune_rest.auroc_terminal_locked,0.2694339454174042,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.auroc_terminal_locked
+compartment.specificity.LYMPHOID.immune_rest.auroc_terminal_raw,0.5139680504798889,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.auroc_terminal_raw
+compartment.specificity.LYMPHOID.immune_rest.terminal_raw_mean_in,0.3681569993495941,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.terminal_raw_mean_in
+compartment.specificity.LYMPHOID.immune_rest.terminal_raw_mean_out,0.3132399618625641,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.immune_rest.terminal_raw_mean_out
+compartment.specificity.LYMPHOID.all_cells.n_positive,5271,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.all_cells.n_positive
+compartment.specificity.LYMPHOID.all_cells.n_negative,215745,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.all_cells.n_negative
+compartment.specificity.LYMPHOID.all_cells.auroc_routing_locked,0.63834148645401,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.all_cells.auroc_routing_locked
+compartment.specificity.LYMPHOID.all_cells.auroc_routing_raw,0.526947021484375,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.all_cells.auroc_routing_raw
+compartment.specificity.LYMPHOID.all_cells.auroc_terminal_locked,0.6008538007736206,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.all_cells.auroc_terminal_locked
+compartment.specificity.LYMPHOID.all_cells.auroc_terminal_raw,0.42038029432296753,outputs\intermediate\jno\compartment_specificity.json,specificity.LYMPHOID.all_cells.auroc_terminal_raw
+compartment.specificity.MYELOID.immune_rest.n_positive,13084,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.n_positive
+compartment.specificity.MYELOID.immune_rest.n_negative,5271,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.n_negative
+compartment.specificity.MYELOID.immune_rest.auroc_routing_locked,0.9573043584823608,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.auroc_routing_locked
+compartment.specificity.MYELOID.immune_rest.auroc_routing_raw,0.9977648258209229,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.auroc_routing_raw
+compartment.specificity.MYELOID.immune_rest.auroc_terminal_locked,0.9690950512886047,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.auroc_terminal_locked
+compartment.specificity.MYELOID.immune_rest.auroc_terminal_raw,0.9911778569221497,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.auroc_terminal_raw
+compartment.specificity.MYELOID.immune_rest.terminal_raw_mean_in,1.6171172857284546,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.terminal_raw_mean_in
+compartment.specificity.MYELOID.immune_rest.terminal_raw_mean_out,0.0507626086473465,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.immune_rest.terminal_raw_mean_out
+compartment.specificity.MYELOID.all_cells.n_positive,13084,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.all_cells.n_positive
+compartment.specificity.MYELOID.all_cells.n_negative,207932,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.all_cells.n_negative
+compartment.specificity.MYELOID.all_cells.auroc_routing_locked,0.9466775059700012,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.all_cells.auroc_routing_locked
+compartment.specificity.MYELOID.all_cells.auroc_routing_raw,0.9622819423675537,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.all_cells.auroc_routing_raw
+compartment.specificity.MYELOID.all_cells.auroc_terminal_locked,0.9496400356292725,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.all_cells.auroc_terminal_locked
+compartment.specificity.MYELOID.all_cells.auroc_terminal_raw,0.9541510939598083,outputs\intermediate\jno\compartment_specificity.json,specificity.MYELOID.all_cells.auroc_terminal_raw
+compartment.specificity.B_PLASMA.immune_rest.n_positive,498,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.n_positive
+compartment.specificity.B_PLASMA.immune_rest.n_negative,17857,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.n_negative
+compartment.specificity.B_PLASMA.immune_rest.auroc_routing_locked,0.44889846444129944,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.auroc_routing_locked
+compartment.specificity.B_PLASMA.immune_rest.auroc_routing_raw,0.8967810869216919,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.auroc_routing_raw
+compartment.specificity.B_PLASMA.immune_rest.auroc_terminal_locked,0.44889846444129944,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.auroc_terminal_locked
+compartment.specificity.B_PLASMA.immune_rest.auroc_terminal_raw,0.8967810869216919,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.auroc_terminal_raw
+compartment.specificity.B_PLASMA.immune_rest.terminal_raw_mean_in,0.31042996048927307,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.terminal_raw_mean_in
+compartment.specificity.B_PLASMA.immune_rest.terminal_raw_mean_out,0.06219339370727539,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.immune_rest.terminal_raw_mean_out
+compartment.specificity.B_PLASMA.all_cells.n_positive,498,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.all_cells.n_positive
+compartment.specificity.B_PLASMA.all_cells.n_negative,220518,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.all_cells.n_negative
+compartment.specificity.B_PLASMA.all_cells.auroc_routing_locked,0.6787325739860535,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.all_cells.auroc_routing_locked
+compartment.specificity.B_PLASMA.all_cells.auroc_routing_raw,0.9557110071182251,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.all_cells.auroc_routing_raw
+compartment.specificity.B_PLASMA.all_cells.auroc_terminal_locked,0.6787325739860535,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.all_cells.auroc_terminal_locked
+compartment.specificity.B_PLASMA.all_cells.auroc_terminal_raw,0.9557110071182251,outputs\intermediate\jno\compartment_specificity.json,specificity.B_PLASMA.all_cells.auroc_terminal_raw
+basal.sesoi_pp,5.0,outputs\intermediate\jno\basal_fractions.json,types.<type>.sesoi_pp
+basal.CD8_T.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.n_samples_primary
+basal.CD8_T.median_basal_armblind,0.0003333333333333,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.median_basal_armblind
+basal.CD8_T.median_all,0.0004308487720809,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.median_all
+basal.CD8_T.mean_all_75,0.0008331147577675601,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.mean_all_75
+basal.CD8_T.sesoi_arcsin_sqrt_locked,0.19854948647133233,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.sesoi_arcsin_sqrt_locked
+basal.CD8_T.ci90_halfwidth,0.014175893846490322,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.ci90_halfwidth
+basal.CD8_T.margin_utilisation,0.07139728285591469,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.margin_utilisation
+basal.CD8_T.margin_fold_vs_mean,61.01574156960265,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.margin_fold_vs_mean
+basal.CD8_T.margin_fold_vs_median_basal,151.000000000015,outputs\intermediate\jno\basal_fractions.json,types.CD8_T.margin_fold_vs_median_basal
+basal.CD4_conv.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.n_samples_primary
+basal.CD4_conv.median_basal_armblind,0.0006666666666666,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.median_basal_armblind
+basal.CD4_conv.median_all,0.0006666666666666,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.median_all
+basal.CD4_conv.mean_all_75,0.001000912734680896,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.mean_all_75
+basal.CD4_conv.sesoi_arcsin_sqrt_locked,0.1961563952433138,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.sesoi_arcsin_sqrt_locked
+basal.CD4_conv.ci90_halfwidth,0.014161048451356725,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.ci90_halfwidth
+basal.CD4_conv.margin_utilisation,0.07219264217101491,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.margin_utilisation
+basal.CD4_conv.margin_fold_vs_mean,50.9544048822005,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.margin_fold_vs_mean
+basal.CD4_conv.margin_fold_vs_median_basal,76.0000000000075,outputs\intermediate\jno\basal_fractions.json,types.CD4_conv.margin_fold_vs_median_basal
+basal.Treg_FOXP3.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.n_samples_primary
+basal.Treg_FOXP3.median_basal_armblind,0.001,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.median_basal_armblind
+basal.Treg_FOXP3.median_all,0.001,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.median_all
+basal.Treg_FOXP3.mean_all_75,0.0015048866311306746,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.mean_all_75
+basal.Treg_FOXP3.sesoi_arcsin_sqrt_locked,0.19013900875636705,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.sesoi_arcsin_sqrt_locked
+basal.Treg_FOXP3.ci90_halfwidth,0.012241682351661268,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.ci90_halfwidth
+basal.Treg_FOXP3.margin_utilisation,0.0643828030435724,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.margin_utilisation
+basal.Treg_FOXP3.margin_fold_vs_mean,34.22509414708085,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.margin_fold_vs_mean
+basal.Treg_FOXP3.margin_fold_vs_median_basal,51.0,outputs\intermediate\jno\basal_fractions.json,types.Treg_FOXP3.margin_fold_vs_median_basal
+basal.NK.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.NK.n_samples_primary
+basal.NK.median_basal_armblind,0.009,outputs\intermediate\jno\basal_fractions.json,types.NK.median_basal_armblind
+basal.NK.median_all,0.007,outputs\intermediate\jno\basal_fractions.json,types.NK.median_all
+basal.NK.mean_all_75,0.010499137085745113,outputs\intermediate\jno\basal_fractions.json,types.NK.mean_all_75
+basal.NK.sesoi_arcsin_sqrt_locked,0.14587044999830662,outputs\intermediate\jno\basal_fractions.json,types.NK.sesoi_arcsin_sqrt_locked
+basal.NK.ci90_halfwidth,0.03528639003829099,outputs\intermediate\jno\basal_fractions.json,types.NK.ci90_halfwidth
+basal.NK.margin_utilisation,0.24190224982990471,outputs\intermediate\jno\basal_fractions.json,types.NK.margin_utilisation
+basal.NK.margin_fold_vs_mean,5.762296138402268,outputs\intermediate\jno\basal_fractions.json,types.NK.margin_fold_vs_mean
+basal.NK.margin_fold_vs_median_basal,6.555555555555556,outputs\intermediate\jno\basal_fractions.json,types.NK.margin_fold_vs_median_basal
+basal.B_plasma.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.n_samples_primary
+basal.B_plasma.median_basal_armblind,0.0006666666666666,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.median_basal_armblind
+basal.B_plasma.median_all,0.0013333333333333,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.median_all
+basal.B_plasma.mean_all_75,0.0021217495167927067,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.mean_all_75
+basal.B_plasma.sesoi_arcsin_sqrt_locked,0.18425438768021926,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.sesoi_arcsin_sqrt_locked
+basal.B_plasma.ci90_halfwidth,0.016115200142438498,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.ci90_halfwidth
+basal.B_plasma.margin_utilisation,0.08746169003262523,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.margin_utilisation
+basal.B_plasma.margin_fold_vs_mean,24.56545841263173,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.margin_fold_vs_mean
+basal.B_plasma.margin_fold_vs_median_basal,76.0000000000075,outputs\intermediate\jno\basal_fractions.json,types.B_plasma.margin_fold_vs_median_basal
+basal.Microglia_P2RY12_TMEM119.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.n_samples_primary
+basal.Microglia_P2RY12_TMEM119.median_basal_armblind,0.034,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.median_basal_armblind
+basal.Microglia_P2RY12_TMEM119.median_all,0.0296666666666666,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.median_all
+basal.Microglia_P2RY12_TMEM119.mean_all_75,0.039850092668144155,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.mean_all_75
+basal.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt_locked,0.10345556597631458,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.sesoi_arcsin_sqrt_locked
+basal.Microglia_P2RY12_TMEM119.ci90_halfwidth,0.06277348087084143,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.ci90_halfwidth
+basal.Microglia_P2RY12_TMEM119.margin_utilisation,0.6067675555050656,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.margin_utilisation
+basal.Microglia_P2RY12_TMEM119.margin_fold_vs_mean,2.2547022265764918,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.margin_fold_vs_mean
+basal.Microglia_P2RY12_TMEM119.margin_fold_vs_median_basal,2.4705882352941178,outputs\intermediate\jno\basal_fractions.json,types.Microglia_P2RY12_TMEM119.margin_fold_vs_median_basal
+basal.MoMF_CD163.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.n_samples_primary
+basal.MoMF_CD163.median_basal_armblind,0.0046374367622259,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.median_basal_armblind
+basal.MoMF_CD163.median_all,0.0086666666666666,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.median_all
+basal.MoMF_CD163.mean_all_75,0.013959292811573126,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.mean_all_75
+basal.MoMF_CD163.sesoi_arcsin_sqrt_locked,0.1372522569389084,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.sesoi_arcsin_sqrt_locked
+basal.MoMF_CD163.ci90_halfwidth,0.043743874221039036,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.ci90_halfwidth
+basal.MoMF_CD163.margin_utilisation,0.3187115111739811,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.margin_utilisation
+basal.MoMF_CD163.margin_fold_vs_mean,4.581843340842229,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.margin_fold_vs_mean
+basal.MoMF_CD163.margin_fold_vs_median_basal,11.781818181818347,outputs\intermediate\jno\basal_fractions.json,types.MoMF_CD163.margin_fold_vs_median_basal
+basal.DC.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.DC.n_samples_primary
+basal.DC.median_basal_armblind,0.001,outputs\intermediate\jno\basal_fractions.json,types.DC.median_basal_armblind
+basal.DC.median_all,0.0010131712259371,outputs\intermediate\jno\basal_fractions.json,types.DC.median_all
+basal.DC.mean_all_75,0.001910659247823959,outputs\intermediate\jno\basal_fractions.json,types.DC.mean_all_75
+basal.DC.sesoi_arcsin_sqrt_locked,0.18613282365865144,outputs\intermediate\jno\basal_fractions.json,types.DC.sesoi_arcsin_sqrt_locked
+basal.DC.ci90_halfwidth,0.019096064017066858,outputs\intermediate\jno\basal_fractions.json,types.DC.ci90_halfwidth
+basal.DC.margin_utilisation,0.10259374806502203,outputs\intermediate\jno\basal_fractions.json,types.DC.margin_utilisation
+basal.DC.margin_fold_vs_mean,27.168978093265334,outputs\intermediate\jno\basal_fractions.json,types.DC.margin_fold_vs_mean
+basal.DC.margin_fold_vs_median_basal,51.0,outputs\intermediate\jno\basal_fractions.json,types.DC.margin_fold_vs_median_basal
+basal.Neutrophils.n_samples_primary,33,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.n_samples_primary
+basal.Neutrophils.median_basal_armblind,0.0,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.median_basal_armblind
+basal.Neutrophils.median_all,0.0,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.median_all
+basal.Neutrophils.mean_all_75,0.00032429928765064403,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.mean_all_75
+basal.Neutrophils.sesoi_arcsin_sqrt_locked,0.20824697525420371,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.sesoi_arcsin_sqrt_locked
+basal.Neutrophils.ci90_halfwidth,0.010309211614110114,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.ci90_halfwidth
+basal.Neutrophils.margin_utilisation,0.049504736390652615,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.margin_utilisation
+basal.Neutrophils.margin_fold_vs_mean,155.17856869874845,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.margin_fold_vs_mean
+basal.Neutrophils.margin_fold_vs_median_basal,null,outputs\intermediate\jno\basal_fractions.json,types.Neutrophils.margin_fold_vs_median_basal
+attenuation.nsim,200,outputs\intermediate\jno\attenuation_simulation.json,design.nsim
+attenuation.resid_sd_calibrated,0.04574542765735661,outputs\intermediate\jno\attenuation_simulation.json,design.resid_sd_calibrated
+attenuation.tau_sd_calibrated,0.009731319791067896,outputs\intermediate\jno\attenuation_simulation.json,design.tau_sd_calibrated
+attenuation.planted_interaction_arcsin_sqrt,0.13306643948579366,outputs\intermediate\jno\attenuation_simulation.json,design.planted_interaction_arcsin_sqrt
+attenuation.f_bar_anchor,0.01595980072611707,outputs\intermediate\jno\attenuation_simulation.json,design.f_bar_armblind
+attenuation.outcome_error.0p0.beta_mean,0.13220531865834034,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.outcome_error.0p0.attenuation_ratio,0.993528640047927,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.outcome_error.0p0.ci_width,0.08185488424947358,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.outcome_error.0p0.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.outcome_error.0p25.beta_mean,0.13339733630025954,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.outcome_error.0p25.attenuation_ratio,1.0024867037529865,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.outcome_error.0p25.ci_width,0.08344873209521103,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.outcome_error.0p25.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.outcome_error.0p5.beta_mean,0.13325393952599787,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.outcome_error.0p5.attenuation_ratio,1.0014090708440744,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.outcome_error.0p5.ci_width,0.09050136286888982,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.outcome_error.0p5.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.outcome_error.1p0.beta_mean,0.13298734358920414,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.outcome_error.1p0.attenuation_ratio,0.9994055909446802,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.outcome_error.1p0.ci_width,0.1140200111560908,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.outcome_error.1p0.ci_excludes_zero_rate,0.995,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.misclass.0p0.beta_mean,0.13220531865834034,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.misclass.0p0.attenuation_ratio,0.993528640047927,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.misclass.0p0.ci_width,0.08185488424947358,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.misclass.0p0.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.misclass.0p05.beta_mean,0.12014348652751203,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.misclass.0p05.attenuation_ratio,0.9028834542487228,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.misclass.0p05.ci_width,0.09341600726794734,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.misclass.0p05.ci_excludes_zero_rate,0.9899497487437185,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.misclass.0p1.beta_mean,0.10941672375373158,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.misclass.0p1.attenuation_ratio,0.8222713719293064,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.misclass.0p1.ci_width,0.10123771382039497,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.misclass.0p1.ci_excludes_zero_rate,0.9796954314720813,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.misclass.0p2.beta_mean,0.08636208290058144,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.misclass.0p2.attenuation_ratio,0.6490147570965973,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.misclass.0p2.ci_width,0.11436756429731881,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.misclass.0p2.ci_excludes_zero_rate,0.8153846153846154,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p00_dp00.beta_mean,0.13215934093219142,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p00_dp00.attenuation_ratio,0.9931831154639177,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p00_dp00.ci_width,0.08171628947156391,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p00_dp00.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p00_dp10.beta_mean,0.27577050592577934,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p00_dp10.attenuation_ratio,2.0724271799218084,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p00_dp10.ci_width,0.07142989980913876,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p00_dp10.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p00_dp20.beta_mean,0.3855241842197312,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p00_dp20.attenuation_ratio,2.897230779672964,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p00_dp20.ci_width,0.06856682834522963,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p00_dp20.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p10_dp-10.beta_mean,-0.08610581350715485,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p10_dp-10.attenuation_ratio,-0.6470888816135162,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p10_dp-10.ci_width,0.052331714168555594,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p10_dp-10.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p10_dp00.beta_mean,0.057511203392828225,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p10_dp00.attenuation_ratio,0.43219916017192445,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p10_dp00.ci_width,0.033663122755829396,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p10_dp00.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p10_dp10.beta_mean,0.16727200684950616,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p10_dp10.attenuation_ratio,1.2570563058265667,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p10_dp10.ci_width,0.02693792149964673,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p10_dp10.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p10_dp20.beta_mean,0.26359248978940303,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p10_dp20.attenuation_ratio,1.98090886633774,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p10_dp20.ci_width,0.02350451379479609,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p10_dp20.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p20_dp-10.beta_mean,-0.07455313866161366,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p20_dp-10.attenuation_ratio,-0.5602700346511716,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p20_dp-10.ci_width,0.028987626172039174,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p20_dp-10.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p20_dp00.beta_mean,0.0352077008960874,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p20_dp00.attenuation_ratio,0.26458738230420764,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p20_dp00.ci_width,0.02077452291099789,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p20_dp00.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p20_dp10.beta_mean,0.13150272052848666,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p20_dp10.attenuation_ratio,0.9882485849674069,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p20_dp10.ci_width,0.016084161624892325,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p20_dp10.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate
+attenuation.label_noise.m0p20_dp20.beta_mean,0.22128212608947706,outputs\intermediate\jno\attenuation_simulation.json,results.beta_mean
+attenuation.label_noise.m0p20_dp20.attenuation_ratio,1.6629446684270937,outputs\intermediate\jno\attenuation_simulation.json,results.attenuation_ratio
+attenuation.label_noise.m0p20_dp20.ci_width,0.013440519016446328,outputs\intermediate\jno\attenuation_simulation.json,results.ci_width_mean
+attenuation.label_noise.m0p20_dp20.ci_excludes_zero_rate,1.0,outputs\intermediate\jno\attenuation_simulation.json,results.ci_excludes_zero_rate

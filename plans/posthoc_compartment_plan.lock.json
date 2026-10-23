@@ -1,0 +1,18 @@
+{
+  "lock_record_version": 1,
+  "file": "posthoc_compartment_plan.md",
+  "role": "Post-hoc compartment-level re-aggregation of the locked Stage 2 annotation. Moves the estimand from terminal immune type to the annotation level whose pre-declared agreement gate passed (L2, kappa=0.9959). Changes no panel, gene, threshold, delta, resolution, SESOI, model term or existing K=9 family.",
+  "locked_utc": "2026-10-22T20:41:03Z",
+  "sha256": "fac49fcf41bef4be9cd352f64a29bf72313aa26d4c2716652ac2ed7379474a44",
+  "sha256_algorithm": "SHA-256 over the raw bytes of posthoc_compartment_plan.md; verify with Get-FileHash -Algorithm SHA256",
+  "bytes": 6409,
+  "amends": null,
+  "derives_from": {
+    "file": "stage2_plan.md",
+    "sha256": "006d3e47198c8d9bd51170b8ac1ae3e9d9f4c1a2cbf9f2d8155560691ced5e48",
+    "note": "Re-aggregates the frozen Stage 2 per-cell labels; the Stage 2 model, SESOI formula and evaluability rule are reused verbatim."
+  },
+  "locked_before": "Any compartment-level interaction estimate, permutation p-value or equivalence classification had been computed or viewed. The Stage 1 and Stage 2 terminal-type estimates and the Stage 2 annotation gate outcome were already known and this is disclosed in section 1 of the plan.",
+  "authorising_decision": "User, 2026-10-22, aplan.md Step 1 option (compartment level).",
+  "deviation_policy": "Any further change requires a dated, hashed amendment written before the affected computation. Outcome-driven retuning after a compartment estimate has been viewed is prohibited."
+}

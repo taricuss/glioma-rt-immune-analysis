@@ -1,0 +1,161 @@
+{
+  "ran_at": "2026-10-19T15:48:21",
+  "source_accession": "GSE326221",
+  "pilot": null,
+  "n_samples_input": 75,
+  "n_samples_loaded": 75,
+  "n_samples_skipped": 0,
+  "skip_fraction": 0.0,
+  "skipped_samples_n": 0,
+  "n_mtx_samples_in_input": 59,
+  "n_h5_samples_in_input": 16,
+  "final_shape": [
+    221016,
+    2000
+  ],
+  "max_cells_per_sample": 3000,
+  "n_cells_after_qc_precap_total": 437454,
+  "n_cells_postcap_total": 221016,
+  "n_samples_capped": 67,
+  "batch_key_used": "patient_id",
+  "annotation_distribution": {
+    "Malignant_astrocytes_oligo": 84907,
+    "Astrocytes_non_malignant": 57647,
+    "Oligodendrocytes_OPC": 37244,
+    "Microglia_P2RY12_TMEM119": 21658,
+    "NK_cells": 12475,
+    "Endothelial_cells": 4495,
+    "Monocyte_derived_macrophages_CD163": 1144,
+    "B_cells": 1119,
+    "CD8_T_cells": 300,
+    "Pericytes_Fibroblasts": 27
+  },
+  "marker_sets_used": {
+    "Malignant_astrocytes_oligo": [
+      "SOX2",
+      "VIM",
+      "S100B",
+      "GFAP",
+      "OLIG2",
+      "IDH1"
+    ],
+    "Microglia_P2RY12_TMEM119": [
+      "P2RY12",
+      "TMEM119",
+      "CX3CR1",
+      "CSF1R",
+      "IRF8",
+      "AIF1"
+    ],
+    "Monocyte_derived_macrophages_CD163": [
+      "CD163",
+      "MRC1",
+      "MSR1",
+      "CD14",
+      "CCR2",
+      "S100A9",
+      "LYZ"
+    ],
+    "Dendritic_cells": [
+      "FCER1A",
+      "CLEC10A",
+      "CD1C",
+      "CD141",
+      "IRF8",
+      "HLA-DRA"
+    ],
+    "Neutrophils": [
+      "S100A8",
+      "S100A9",
+      "CSF3R",
+      "CXCR1",
+      "CEACAM8",
+      "MPO"
+    ],
+    "CD8_T_cells": [
+      "CD3D",
+      "CD3E",
+      "CD8A",
+      "CD8B",
+      "GZMA",
+      "GZMB",
+      "PRF1",
+      "NKG7"
+    ],
+    "CD4_T_cells_conventional": [
+      "CD3D",
+      "CD3E",
+      "CD4",
+      "IL7R",
+      "CCR7",
+      "LEF1"
+    ],
+    "T_regulatory_cells_FOXP3": [
+      "CD4",
+      "FOXP3",
+      "IL2RA",
+      "CTLA4",
+      "IKZF2",
+      "IKZF4",
+      "TIGIT"
+    ],
+    "NK_cells": [
+      "NCAM1",
+      "KLRD1",
+      "GNLY",
+      "NKG7",
+      "FCGR3A",
+      "KLRF1"
+    ],
+    "B_cells": [
+      "CD19",
+      "CD79A",
+      "CD79B",
+      "MS4A1",
+      "IGHM",
+      "IGHD"
+    ],
+    "Plasma_cells": [
+      "MZB1",
+      "XBP1",
+      "PRDM1",
+      "TNFRSF17",
+      "IGHG1",
+      "IGKC"
+    ],
+    "Oligodendrocytes_OPC": [
+      "OLIG1",
+      "OLIG2",
+      "MBP",
+      "MAG",
+      "MOG",
+      "PLP1",
+      "PDGFRA",
+      "CSPG4"
+    ],
+    "Astrocytes_non_malignant": [
+      "GFAP",
+      "AQP4",
+      "ALDH1L1",
+      "S100B",
+      "GJA1",
+      "CLDN10"
+    ],
+    "Endothelial_cells": [
+      "PECAM1",
+      "VWF",
+      "FLT1",
+      "KDR",
+      "CD34",
+      "ESM1"
+    ],
+    "Pericytes_Fibroblasts": [
+      "RGS5",
+      "PDGFRB",
+      "CSPG4",
+      "COL1A1",
+      "ACTA2",
+      "DES"
+    ]
+  }
+}

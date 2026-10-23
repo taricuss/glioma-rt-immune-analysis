@@ -1,0 +1,25 @@
+{
+  "lock_record_version": 1,
+  "file": "stage2_plan.amendment_2.md",
+  "role": "Amendment 2 to the Stage 2 plan. Relaxes the stop clause of section 5.3 so that the pre-declared second-stage interaction model is fitted, with the failed marker-specificity and ambiguity gates (G4, G5) reported as per-type annotation caveats. Changes no scientific parameter.",
+  "locked_utc": "2026-10-21T19:45:56Z",
+  "sha256": "c52952385895d260f916469aba6ff2e3c617f79b38f91b74d161cd31a5bfde1e",
+  "sha256_algorithm": "SHA-256 over the raw bytes of stage2_plan.amendment_2.md; verify with Get-FileHash -Algorithm SHA256",
+  "bytes": 12707,
+  "amends": {
+    "file": "stage2_plan.md",
+    "sha256": "006d3e47198c8d9bd51170b8ac1ae3e9d9f4c1a2cbf9f2d8155560691ced5e48",
+    "locked_utc": "2026-10-21T08:57:05Z",
+    "clause_superseded": "section 5.3, condition 1 (per-type G1/G3/G4/G5 gates as a study-level stop)",
+    "clause_retained": "section 5.3, conditions 2 and 3 (>=6 of 9 evaluable; CD8_T, NK and Microglia each individually evaluable)"
+  },
+  "locked_before": "Any Stage 2 interaction estimate, permutation p-value, power figure or equivalence classification had been computed or viewed. Stage 1 estimates and the Stage 2 annotation QC gate outcome were already known and this is disclosed in section 2 of the amendment.",
+  "authorising_decision": "User, 2026-10-21, J1 fork in JNOplan_implementation_status.md section 9 - option J1-A 'Amend to v1.2 and estimate'.",
+  "stage1_reference": {
+    "plan": "outputs/sec4_prespec.md / outputs/sec4_prespec.json",
+    "locked": "2026-09-13T12:29:40+00:00",
+    "sha256_prefix": "b7ba4c7bae5c62bd",
+    "note": "Stage 1 pre-specification is unchanged by this plan and by the Stage 2 analysis."
+  },
+  "deviation_policy": "Any further change requires a dated, hashed amendment written before the affected computation. Outcome-driven retuning after a Stage 2 estimate has been viewed is prohibited."
+}

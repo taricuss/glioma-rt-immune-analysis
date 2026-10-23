@@ -1,0 +1,39 @@
+{
+  "status": "completed",
+  "method_tag": "glass_quantiseq",
+  "n_samples": 108,
+  "n_patients": 54,
+  "formula_fixed": "y ~ C(timepoint, Treatment('primary')) * C(treatment_arm, Treatment('No_RT')) + estimate_purity + C(who_grade_initial, Treatment('II')) + age_at_diagnosis + C(codeletion_1p19q, Treatment('non_codel')) + C(mgmt_methylation, Treatment('unmethylated'))",
+  "formula_effective": "y ~ C(timepoint, Treatment('primary')) * C(treatment_arm, Treatment('No_RT')) + C(who_grade_initial, Treatment('II')) + age_at_diagnosis + C(codeletion_1p19q, Treatment('non_codel')) + C(mgmt_methylation, Treatment('unmethylated'))",
+  "covariates_dropped_zero_variance": [
+    "estimate_purity"
+  ],
+  "response_transform": "arcsin_sqrt",
+  "interaction_param_name": "C(timepoint, Treatment('primary'))[T.recurrent]:C(treatment_arm, Treatment('No_RT'))[T.Any_RT]",
+  "bh_fdr_family": "K=10 PRIMARY ONLY, exploratory excluded from correction",
+  "n_converged": 11,
+  "convergence_flags": {
+    "CD8_T": true,
+    "CD4_conv": true,
+    "Treg_FOXP3": true,
+    "NK": true,
+    "B": true,
+    "Plasma": true,
+    "Microglia_P2RY12_TMEM119": true,
+    "MoMF_CD163": true,
+    "DC": true,
+    "Neutrophils": true,
+    "Endothelial": true
+  },
+  "optimizers_used": {
+    "CD8_T": "bfgs",
+    "Treg_FOXP3": "bfgs",
+    "NK": "bfgs",
+    "Plasma": "bfgs",
+    "Microglia_P2RY12_TMEM119": "bfgs",
+    "MoMF_CD163": "bfgs",
+    "DC": "bfgs",
+    "Neutrophils": "bfgs",
+    "Endothelial": "bfgs"
+  }
+}

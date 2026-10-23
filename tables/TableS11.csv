@@ -1,0 +1,30 @@
+Cell type,Family,Method,Any_RT (n),No_RT (n),Delta median (Any_RT - No_RT),Mann-Whitney p (2-tailed),BH q over primary types
+CD8_T,primary,quantiseq,106,23,-0.022,0.159,0.424
+CD8_T,primary,epic,106,23,-0.001,0.673,0.851
+CD8_T,primary,mcpcounter,106,23,-0.158,0.656,0.885
+CD4_conv,primary,quantiseq,106,23,0.019,0.091,0.424
+CD4_conv,primary,epic,106,23,-0.118,0.200,0.543
+CD4_conv,primary,mcpcounter,106,23,-13.130,0.244,0.885
+Treg_FOXP3,primary,quantiseq,106,23,-0.017,0.136,0.424
+Treg_FOXP3,primary,epic,106,23,0.000,,
+Treg_FOXP3,primary,mcpcounter,106,23,0.288,0.691,0.885
+NK,primary,quantiseq,106,23,-0.105,0.520,0.694
+NK,primary,epic,106,23,-0.008,0.710,0.851
+NK,primary,mcpcounter,106,23,0.631,0.440,0.885
+B,primary,quantiseq,106,23,-0.004,0.909,0.909
+B,primary,epic,106,23,-0.010,0.217,0.543
+B,primary,mcpcounter,106,23,-0.447,0.260,0.885
+MoMF_CD163,primary,quantiseq,106,23,0.042,0.660,0.754
+MoMF_CD163,primary,epic,106,23,-0.011,0.851,0.851
+MoMF_CD163,primary,mcpcounter,106,23,-1.184,0.885,0.885
+DC,primary,quantiseq,106,23,-0.017,0.398,0.636
+DC,primary,mcpcounter,106,23,0.061,0.878,0.885
+Neutrophils,primary,quantiseq,106,23,-0.045,0.312,0.624
+Neutrophils,primary,mcpcounter,106,23,0.560,0.794,0.885
+Endothelial,exploratory,quantiseq,106,23,0.054,0.005,
+Endothelial,exploratory,epic,106,23,0.037,0.001,
+Endothelial,exploratory,mcpcounter,106,23,4.093,0.004,
+Fibroblast_pericyte,exploratory,epic,106,23,0.019,0.841,
+Fibroblast_pericyte,exploratory,mcpcounter,106,23,12.899,0.998,
+
+note,"EXPLORATORY cross-sectional comparison; no matched primary tumour, so no interaction can be estimated. MCP-counter returns abundance scores rather than fractions and is descriptive only. BH q applies to the primary family within each method."

@@ -1,0 +1,169 @@
+{
+  "version": "1.0.0",
+  "locked_at": "2026-09-13T12:29:40+00:00",
+  "a_cell_types_primary": [
+    "CD8_T_cells",
+    "CD4_T_cells_conventional",
+    "T_regulatory_cells_FOXP3",
+    "NK_cells",
+    "B_cells",
+    "Plasma_cells",
+    "Microglia_P2RY12_TMEM119",
+    "Monocyte_derived_macrophages_CD163",
+    "Dendritic_cells",
+    "Neutrophils"
+  ],
+  "a_cell_types_exploratory": [
+    "T_cells_exhausted_PDCD1_HAVCR2",
+    "M1_macrophages",
+    "M2_macrophages",
+    "Endothelial_cells",
+    "Fibroblasts_pericytes"
+  ],
+  "b_model_discovery": {
+    "description": "Per-cell-type linear mixed model.  Response Y is arcsin(sqrt(fraction)) — arcsin-square-root is preferred over logit for fractions because the deconvolution output has many exact zeros in low-infiltration glioma samples; logit(0) = -Inf forces a pseudo-count that can distort the interaction coefficient.",
+    "formula_r_style": "arcsin_sqrt_fraction ~ timepoint * treatment_arm   + estimate_purity   + who_grade_initial   + age_at_diagnosis   + codeletion_1p19q   + mgmt_methylation   + (1 | patient_id)",
+    "response_transform": "arcsin_sqrt",
+    "hypothesis_term": "timepoint:treatment_arm",
+    "treatment_definition": "BINARY — Any_RT (n=20) vs No_RT (n=13), exactly per §4.3 lock below.",
+    "timepoint_levels": [
+      "initial",
+      "recurrent"
+    ],
+    "treatment_levels": [
+      "No_RT",
+      "Any_RT"
+    ],
+    "covariates_mandatory": [
+      "estimate_purity",
+      "who_grade_initial",
+      "age_at_diagnosis",
+      "codeletion_1p19q",
+      "mgmt_methylation"
+    ],
+    "random_effect_structure": "(1 | patient_id)",
+    "notes": "Do NOT add chemo as a within-arm covariate: RT-only n=3 cannot support that estimate (plan §4.3 hard rule)."
+  },
+  "b_model_glass": {
+    "description": "Mirror of discovery formula; treatment can be four-level (untreated / TMZ_only / RT_only / RT_TMZ) if per-arm n > 3 after IDH filter.",
+    "formula_r_style": "arcsin_sqrt_fraction ~ timepoint * treatment_arm   + estimate_purity   + who_grade_initial   + age_at_diagnosis   + codeletion_1p19q   + mgmt_methylation   + (1 | patient_id)",
+    "response_transform": "arcsin_sqrt",
+    "hypothesis_term": "timepoint:treatment_arm",
+    "treatment_definition_fallback": "If four-level per-cell n collapses below 3 in any arm, fall back to binary Any_RT/No_RT discovery definition.",
+    "covariates_mandatory": [
+      "estimate_purity",
+      "who_grade_initial",
+      "age_at_diagnosis",
+      "codeletion_1p19q",
+      "mgmt_methylation"
+    ]
+  },
+  "c_multiple_testing": {
+    "family": "CELL_TYPES_PRIMARY",
+    "k_tests": 10,
+    "method": "Benjamini-Hochberg step-up (BH-FDR)",
+    "alpha_family": 0.05,
+    "rejection_threshold_convention": "q-value < 0.05 per cell type within the primary family.",
+    "exploratory_policy": "CELL_TYPES_EXPLORATORY are a separate family.  Never merge them into the primary BH-FDR pass; report raw p + 'EXPLORATORY' label.",
+    "robustness_checks": [
+      "Bonferroni-adjusted p (0.05 / 10 = 0.005) reported alongside BH q as a sensitivity row."
+    ]
+  },
+  "d_permutation": {
+    "units_shuffled": "patient-level treatment labels (timepoints stay paired within patient).",
+    "n_permutations": 10000,
+    "seed": 7331,
+    "how": "For each of 10000 iterations, sample an independent permutation of the length-N_patients treatment vector WITHOUT stratification (no block preservation by subtype — conservative; subtype IS a covariate in the model so residual subtype-balance-drift is already modelled). Fit the exact same LMM formula each time, extract the interaction coefficient, build the two-tailed empirical CDF, compute empirical p = (1 + count(|perm_coef| >= |observed_coef|)) / (1 + n_perm).",
+    "reporting": "For every primary cell type, four p-values appear side-by-side: (1) asymptotic LMM p, (2) LMM Satterthwaite-KE df adjusted p, (3) permutation-based empirical p, (4) BH-FDR q derived from (3). Primary claim uses (4); (1) and (2) shown for reviewers who ask.",
+    "parallelism": "Use joblib loky backend, n_jobs = min(cpu_count, 8)."
+  },
+  "e_mechanistic_markers": {
+    "T_cell_exhaustion": {
+      "trigger_cell_type": "CD8_T_cells",
+      "genes": [
+        "PDCD1",
+        "HAVCR2",
+        "LAG3",
+        "TIGIT",
+        "CTLA4",
+        "TOX",
+        "LAYN"
+      ],
+      "test": "At RECURRENT timepoint, Any_RT vs No_RT DESeq2/limma contrast restricted to CD8+ deconvolution-pseudo-bulk (or snRNA CD8+ cluster if available)."
+    },
+    "T_regulatory_suppression": {
+      "trigger_cell_type": "T_regulatory_cells_FOXP3",
+      "genes": [
+        "FOXP3",
+        "IL2RA",
+        "CTLA4",
+        "TIGIT",
+        "IL10",
+        "TGFB1",
+        "IKZF2",
+        "IKZF4"
+      ],
+      "test": "Same recurrent-only Any_RT vs No_RT design."
+    },
+    "Myeloid_polarization_M1_M2": {
+      "trigger_cell_type_any": [
+        "Microglia_P2RY12_TMEM119",
+        "Monocyte_derived_macrophages_CD163"
+      ],
+      "M1_genes": [
+        "CD80",
+        "CD86",
+        "IL1B",
+        "IL6",
+        "TNF",
+        "NOS2",
+        "IRF5"
+      ],
+      "M2_genes": [
+        "CD163",
+        "MRC1",
+        "MSR1",
+        "ARG1",
+        "IL10",
+        "TGFB1",
+        "CCL22",
+        "CHI3L1"
+      ],
+      "test": "Module score (AddModuleScore in Seurat) per sample, Any_RT vs No_RT at recurrent timepoint, Mann–Whitney U."
+    },
+    "GSEA_restriction": {
+      "allowed_databases": [
+        "MSigDB HALLMARK",
+        "ImmuneSigDB C7 (immunologic signatures) — restricted to sub-collections with keywords: glioma, lymphocyte, tcell, exhaustion, myeloid, radiotherapy."
+      ],
+      "forbidden": "Never run the full MSigDB C2/C5/C7 unrestricted.  Never use KEGG as a primary pathway layer (too coarse)."
+    }
+  },
+  "f_treatment_lock": {
+    "total_patients_in_johnson_cohort": 35,
+    "patients_excluded_treatment_na": 2,
+    "excluded_note": "Patient IDs in this block are to be filled from Johnson et al. Nature 2026 Supplementary Table 1 column 'treatment_between_timepoints' = 'Not Reported' / NA.  The acquire_clinical_metadata.py script reads Supp Table 1 directly and cross-checks these counts.",
+    "n_any_rt": 20,
+    "any_rt_breakdown": {
+      "rt_only": 3,
+      "rt_plus_chemo_confirmed": 16,
+      "rt_plus_chemo_unconfirmed_chemo": 1
+    },
+    "n_no_rt": 13,
+    "no_rt_breakdown": {
+      "chemo_only": 6,
+      "untreated_no_adjuvant": 7
+    },
+    "rule_never_break": "RT-only subgroup (n=3) must NEVER be reported as a standalone inferential test in the primary section.  Descriptive proportions only; any RT-only contrast goes to Appendix labelled 'n-too-small — descriptive only, no p-value reported'.",
+    "same_rule_applies_to_glass_val_if_n_too_small": true
+  },
+  "g_forest_plot": {
+    "x_axis": "Interaction coefficient (timepoint × treatment), arcsin-sqrt-fraction units.",
+    "rows_order": "Same order as CELL_TYPES_PRIMARY.",
+    "two_columns": "Discovery (left) | GLASS validation (right).",
+    "error_bars": "95% profile-likelihood CI for the interaction term; if profile-likelihood fails → 95% Wald CI with explicit footnote.",
+    "diamond": "Fixed-effects meta-analytic pooled estimate across the two cohorts ONLY if I² heterogeneity p > 0.10 (i.e. homogeneous).  If heterogeneous, draw separate circles + no pooled diamond.",
+    "annotation": "Every row carries BH-FDR q-value from the discovery-cohort permutation test."
+  },
+  "integrity_placeholder": "e69cfd7aec4e5adec695a08edc6b5306b3336949ab54e6d34af6e2f2c10757da"
+}

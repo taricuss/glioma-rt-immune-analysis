@@ -1,0 +1,6 @@
+Cohort,Role in this study,Samples (n),Patients or cases (n),Any_RT (n),No_RT (n),Notes
+Discovery snRNA-seq (Johnson et al. 2026; GSE326221 / syn17038081),PRIMARY - pre-specified analysis set,71,33,20,13,75 snRNA-seq samples passed QC; 71 joined to treatment annotation and were modelled. Grade II at initial diagnosis. Per-sample cap 3000 cells.
+"GLASS RNA silver-set (IDH-mutant, RT-annotated, TP+R1 paired)",EXPLORATORY - external direction check,108,54,45,9,Bulk RNA-seq deconvolved with stock published signatures; 45 / 9 paired samples at primary and recurrent. No matched single-nucleus data.
+CGGA mRNAseq_693 (mRNAseq_693 (20200506)),EXPLORATORY - cross-sectional arm,129,not recorded separately,106,23,"IDH-mutant recurrent samples with non-missing treatment; cross-sectional (no matched primary tumour), so no interaction can be estimated. Of 148 IDH-mutant recurrent samples, 129 had non-missing treatment."
+
+note,Counts only; no patient-level or per-sample values are reported. Where a stratum contained fewer than five patients it would be reported as 'fewer than 5'; no reported stratum falls below this. The bulk RNA arm of the EGA Yale DAC was not used (raw reads exceeded local processing capacity and added little over the open single-nucleus arm).

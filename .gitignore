@@ -1,0 +1,31 @@
+# Data, intermediates and checkpoints are never committed: see README.md §3 and §7.
+data/
+outputs/
+logs/
+checkpoints/
+*.h5ad
+*.h5
+
+# Virtual environments
+.dgnc_env/
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Secrets, in case anything is ever dropped here by mistake
+.env
+*.key
+*.pem

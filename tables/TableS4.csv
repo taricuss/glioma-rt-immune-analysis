@@ -1,0 +1,16 @@
+Cell type,r = 0.5,r = 1.0,r = 1.5
+CD8 T cells,not evaluable,not evaluable,not evaluable
+CD4 conventional T cells,not evaluable,not evaluable,not evaluable
+Regulatory T cells (FOXP3),not evaluable,not evaluable,not evaluable
+NK cells,not evaluable,not evaluable,not evaluable
+B cells,not evaluable,not evaluable,not evaluable
+Plasma cells,not evaluable,not evaluable,not evaluable
+Microglia (P2RY12/TMEM119),evaluable,evaluable,evaluable
+Monocyte-derived macrophages (CD163),not evaluable,evaluable,evaluable
+Dendritic cells,not evaluable,not evaluable,not evaluable
+Neutrophils,not evaluable,not evaluable,not evaluable
+Evaluable cell types (n of 10),1,2,2
+Gate threshold (n of 10),5,6,5
+Gate outcome,fail,fail,fail
+
+note,"SENSITIVITY. The compartment comprised 36696 cells (16.6% of all cells); PTPRC was absent from the 2,000-gene highly variable space, so cells outside the annotated immune clusters could not be recovered. The pre-declared gate required at least 6 of 10 cell types at r = 1.0 and at least 5 of 10 at both r = 0.5 and r = 1.5; it failed, and no mechanistic analysis was performed on this annotation."

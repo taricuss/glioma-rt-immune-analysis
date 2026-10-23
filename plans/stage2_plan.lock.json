@@ -1,0 +1,23 @@
+{
+  "lock_record_version": 1,
+  "file": "stage2_plan.md",
+  "role": "Stage 2 (second-stage, post-hoc) analysis plan for the discovery snRNA re-annotation",
+  "locked_utc": "2026-10-21T08:57:05Z",
+  "sha256": "006d3e47198c8d9bd51170b8ac1ae3e9d9f4c1a2cbf9f2d8155560691ced5e48",
+  "sha256_algorithm": "SHA-256 over the raw bytes of stage2_plan.md; verify with Get-FileHash -Algorithm SHA256",
+  "bytes": 22355,
+  "locked_before": "Any Stage 2 interaction estimate had been computed or viewed. Annotation QC gates (G1-G5) and the pass/fail gate in section 5.3 are evaluated before any interaction model is fitted.",
+  "stage1_reference": {
+    "plan": "outputs/sec4_prespec.md / outputs/sec4_prespec.json",
+    "locked": "2026-09-13T12:29:40+00:00",
+    "sha256_prefix": "b7ba4c7bae5c62bd",
+    "note": "Stage 1 pre-specification is unchanged by this plan and by the Stage 2 analysis."
+  },
+  "stop2_decisions_recorded": {
+    "power_figure": "Reported as an approximate Monte-Carlo quantity with nsim disclosed; no Stage 1 number is re-locked.",
+    "b_plasma": "Pooled into a single pre-declared primary type B_plasma.",
+    "stage2_gate": ">=6 of 9 primary types evaluable, and CD8_T, NK and Microglia_P2RY12_TMEM119 each individually evaluable.",
+    "stage1_permutation_null": "Not re-run; both inputs reproduce bit-exactly."
+  },
+  "deviation_policy": "Any change requires a dated addendum with its own SHA-256 written before the affected computation. Outcome-driven retuning after a Stage 2 estimate has been viewed is prohibited."
+}

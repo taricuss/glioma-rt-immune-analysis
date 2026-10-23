@@ -1,0 +1,8 @@
+Cell type,Beta (timepoint x Any_RT),95% CI low,95% CI high,Asymptotic p,BH q (K=10),Permutation p,Status
+CD8 T cells,-0.016,-0.050,0.018,0.365,0.456,0.730,NOT EVALUABLE; descriptive only
+NK cells,-0.073,-0.205,0.058,0.275,0.456,0.358,PRIMARY - evaluable
+B cells,0.008,-0.057,0.073,0.808,0.808,0.783,NOT EVALUABLE; descriptive only
+Microglia (P2RY12/TMEM119),0.076,-0.028,0.179,0.151,0.456,0.193,PRIMARY - evaluable
+Monocyte-derived macrophages (CD163),0.033,-0.033,0.098,0.327,0.456,0.300,NOT EVALUABLE; descriptive only
+
+note,"Model: arcsin-sqrt(fraction) ~ timepoint * treatment_arm + purity + grade + age + 1p19q + (1|patient). Confidence intervals are profile-likelihood (Wald fallback). BH q is the Benjamini-Hochberg value over the 10 primary types; the permutation p is from 10,000 patient-level treatment-label shuffles (seed 7331). Only NK and Microglia are evaluable; rows for B, MoMF and CD8 T cells carry finite model estimates but are below the evaluability threshold and are descriptive only. The remaining five primary types have no discovery estimate and are omitted here (their Stage 2 annotation status is in Table S8)."

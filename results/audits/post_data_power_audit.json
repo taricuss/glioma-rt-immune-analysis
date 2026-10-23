@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-19T17:22:57.417166+00:00",
+  "n_patients": 33,
+  "n_rt": 20,
+  "n_nort": 13,
+  "n_obs": 66,
+  "icc_set": [
+    0.4,
+    0.6,
+    0.7
+  ],
+  "f2_anchors": [
+    0.28,
+    0.4
+  ],
+  "nsim": 800,
+  "seed": 7331,
+  "cells_with_observed_fit": [
+    "CD8_T",
+    "NK",
+    "B",
+    "Microglia_P2RY12_TMEM119",
+    "MoMF_CD163"
+  ],
+  "n_converged_lmm": 6,
+  "design_split_note": "Any_RT/No_RT split (20/13) derived from the merged modelled set, not the full clinical cohort.",
+  "note_icc_unobserved": "Observed ICC is not identifiable from a paired 2-timepoint design; ICC range assumed from glioma immune literature midpoints 0.40/0.60/0.70."
+}

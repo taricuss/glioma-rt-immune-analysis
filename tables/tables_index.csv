@@ -1,0 +1,17 @@
+table_id,title,n_rows,csv,xlsx
+Table1,Cohorts contributing to the analysis,3,Table1.csv,Table1.xlsx
+TableS1,"Post-data power (NSIM = 800, ICC = 0.60)",10,TableS1.csv,TableS1.xlsx
+TableS2,Pre-specification v1.0.0 summary (Stage 1 locked plan),12,TableS2.csv,TableS2.xlsx
+TableS3,Stage 2 locked plan summary,18,TableS3.csv,TableS3.xlsx
+TableS4,Pre-declared immune-subclustering sensitivity analysis (SENSITIVITY),13,TableS4.csv,TableS4.xlsx
+TableS5,Per-cluster diagnostics of the immune-subclustering sensitivity analysis,161,TableS5.csv,TableS5.xlsx
+TableS6,Marker gene sets used for cluster-level annotation,15,TableS6.csv,TableS6.xlsx
+TableS7,Deviations from pre-specification v1.0.0,12,TableS7.csv,TableS7.xlsx
+TableS8,Stage 2 annotation quality-control outcome (STAGE 2),9,TableS8.csv,TableS8.xlsx
+TableS9,Discovery interaction estimates (arcsin-square-root fraction),5,TableS9.csv,TableS9.xlsx
+TableS10,GLASS external-cohort interaction estimates (EXPLORATORY),10,TableS10.csv,TableS10.xlsx
+TableS11,CGGA cross-sectional statistics (EXPLORATORY),27,TableS11.csv,TableS11.xlsx
+TableS12,Stage 2 annotation variants (SENSITIVITY),5,TableS12.csv,TableS12.xlsx
+TableS13,Software versions,86,TableS13.csv,TableS13.xlsx
+TableS14,"Stage 2 sensitivity battery (S1-S11): pre-declared alternative estimands, denominators, interval adjustment, influence and equivalence (STAGE 2 SENSITIVITY)",97,TableS14.csv,TableS14.xlsx
+TableS15,Stage 2 confirmatory interaction estimates with their per-type annotation caveats (STAGE 2),9,TableS15.csv,TableS15.xlsx

@@ -1,0 +1,15 @@
+Item,Value
+Version,1.0.0
+Locked at (UTC),2026-09-13T12:29:40+00:00
+Integrity sha256 (sec4_prespec.json),b7ba4c7bae5c62bd (prefix; full hash in the copied file)
+Integrity sha256 (sec4_prespec.md),7d44034e8fba1dca
+Primary cell types (BH-FDR family K),10
+Exploratory cell types (raw p only),5
+Response transform,arcsin_sqrt of the cell-type fraction
+Hypothesis term,timepoint x treatment_arm (binary Any_RT vs No_RT)
+Random effects,(1 | patient_id)
+Permutation null,"10,000 patient-level treatment-label shuffles, seed 7331"
+Discovery arm sizes,Any_RT 20 patients; No_RT 13 patients
+Forest plot (section 4.5(g)),"profile-likelihood 95% CI; pooled diamond only if I2 p > 0.10 - superseded, see Table 6"
+
+note,The locked pre-specification is copied unmodified into submission/supplementary/. Deviations are listed in Table 6.

@@ -1,0 +1,18 @@
+Cell type / population,Genes (n),Genes
+Malignant_astrocytes_oligo,6,"SOX2, VIM, S100B, GFAP, OLIG2, IDH1"
+Microglia_P2RY12_TMEM119,6,"P2RY12, TMEM119, CX3CR1, CSF1R, IRF8, AIF1"
+Monocyte_derived_macrophages_CD163,7,"CD163, MRC1, MSR1, CD14, CCR2, S100A9, LYZ"
+Dendritic_cells,6,"FCER1A, CLEC10A, CD1C, CD141, IRF8, HLA-DRA"
+Neutrophils,6,"S100A8, S100A9, CSF3R, CXCR1, CEACAM8, MPO"
+CD8_T_cells,8,"CD3D, CD3E, CD8A, CD8B, GZMA, GZMB, PRF1, NKG7"
+CD4_T_cells_conventional,6,"CD3D, CD3E, CD4, IL7R, CCR7, LEF1"
+T_regulatory_cells_FOXP3,7,"CD4, FOXP3, IL2RA, CTLA4, IKZF2, IKZF4, TIGIT"
+NK_cells,6,"NCAM1, KLRD1, GNLY, NKG7, FCGR3A, KLRF1"
+B_cells,6,"CD19, CD79A, CD79B, MS4A1, IGHM, IGHD"
+Plasma_cells,6,"MZB1, XBP1, PRDM1, TNFRSF17, IGHG1, IGKC"
+Oligodendrocytes_OPC,8,"OLIG1, OLIG2, MBP, MAG, MOG, PLP1, PDGFRA, CSPG4"
+Astrocytes_non_malignant,6,"GFAP, AQP4, ALDH1L1, S100B, GJA1, CLDN10"
+Endothelial_cells,6,"PECAM1, VWF, FLT1, KDR, CD34, ESM1"
+Pericytes_Fibroblasts,6,"RGS5, PDGFRB, CSPG4, COL1A1, ACTA2, DES"
+
+note,"Read from scripts/acquire_snrnaseq_discovery.py with the ast module (the module is never imported). Genes absent from the 2,000-gene highly variable space are force-included before annotation."

@@ -1,0 +1,39 @@
+{
+  "cgga_version": "mRNAseq_693 (20200506)",
+  "samples_total_clinical": 693,
+  "samples_idh_mut_recurrent_total": 148,
+  "samples_idh_mut_recurrent_treatment_nonna": 129,
+  "treatment_arm_counts": {
+    "Any_RT": 106,
+    "No_RT": 23
+  },
+  "expression_shape_genes_samples": [
+    23987,
+    129
+  ],
+  "n_methods": 3,
+  "stats_rows": 27,
+  "sign_consistency_overall": {
+    "frac_primary_n_ge7_of_10_same_sign": false,
+    "n_primary_10_with_majority_same_sign": 1
+  },
+  "output_paths": {
+    "clinical_canonical": "[PATH REMOVED]",
+    "deconv_quantiseq": "[PATH REMOVED]",
+    "deconv_epic": "[PATH REMOVED]",
+    "deconv_mcpcounter": "[PATH REMOVED]",
+    "stats": "[PATH REMOVED]"
+  },
+  "sign_consistency_per_cell": {
+    "B": 0.0,
+    "CD4_conv": 0.0,
+    "CD8_T": 0.0,
+    "DC": 0.5,
+    "Endothelial": 0.0,
+    "Fibroblast_pericyte": 0.0,
+    "MoMF_CD163": 0.0,
+    "NK": 0.0,
+    "Neutrophils": 0.0,
+    "Treg_FOXP3": 0.0
+  }
+}

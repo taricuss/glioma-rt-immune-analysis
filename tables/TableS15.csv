@@ -1,0 +1,12 @@
+Cell type,Beta (timepoint x Any_RT),95% CI low,95% CI high,Asymptotic p,BH q (K = 9),Decision (section 7.5 rule),Annotation caveat (Amendment v1.2)
+CD8 T cells,0.005,-0.012,0.022,0.547,0.704,consistent with no clinically important interaction,G4(i) own-panel specificity; G4(ii) one-vs-rest separation; G5 ambiguity
+CD4 conventional T cells,0.008,-0.009,0.025,0.338,0.609,consistent with no clinically important interaction,none
+Regulatory T cells (FOXP3),-0.003,-0.018,0.011,0.648,0.729,consistent with no clinically important interaction,G4(i) own-panel specificity; G4(ii) one-vs-rest separation
+NK cells,-0.013,-0.055,0.029,0.536,0.704,consistent with no clinically important interaction,G4(i) own-panel specificity; G4(ii) one-vs-rest separation
+B cells / plasma cells (pooled),0.016,-0.004,0.035,0.112,0.336,consistent with no clinically important interaction,G4(i) own-panel specificity; G4(ii) one-vs-rest separation
+Microglia (P2RY12/TMEM119),-0.004,-0.079,0.071,0.914,0.914,consistent with no clinically important interaction,none
+Monocyte-derived macrophages (CD163),0.060,0.008,0.113,0.023,0.208,consistent with no clinically important interaction,none
+Dendritic cells,0.021,-0.001,0.044,0.065,0.291,consistent with no clinically important interaction,none; model did not converge
+Neutrophils,-0.007,-0.019,0.005,0.252,0.568,consistent with no clinically important interaction,G5 ambiguity
+
+note,"STAGE 2. The confirmatory section 7.1 model, fitted once on the Stage 2 treatment-blind re-annotation with no term added, removed or re-ordered after any estimate was seen (Amendment v1.2 section 5). Stage 2 is post-hoc, not pre-specified. Confidence intervals are profile-likelihood with a Wald fallback. BH q is over the nine-type confirmatory family (K = 9); the decision uses each type's own SESOI_t on the arcsin-square-root scale. The last column is the per-type consequence of the Stage 2 gate failure reclassified by Amendment v1.2 (quantified in Table S8): it is a marker-specificity or ambiguity caveat, not a coverage caveat. Values read from outputs\intermediate\lmm_interaction_summary_stage2.csv."

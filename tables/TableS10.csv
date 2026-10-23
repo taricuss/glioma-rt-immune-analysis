@@ -1,0 +1,13 @@
+Cell type,Beta (timepoint x Any_RT),95% CI low,95% CI high,Asymptotic p,BH q (K=10),Status
+CD8 T cells,0.011,-0.008,0.031,0.257,0.367,EXPLORATORY
+CD4 conventional T cells,-0.009,-0.051,0.034,0.691,0.768,EXPLORATORY
+Regulatory T cells (FOXP3),0.000,-0.017,0.017,0.979,0.979,EXPLORATORY
+NK cells,0.065,-0.083,0.213,0.390,0.487,EXPLORATORY
+B cells,0.029,0.008,0.051,0.007,0.036,EXPLORATORY - BH q < 0.05
+Plasma cells,0.102,-0.048,0.252,0.182,0.304,EXPLORATORY
+Microglia (P2RY12/TMEM119),-0.110,-0.188,-0.033,0.005,0.036,EXPLORATORY - BH q < 0.05
+Monocyte-derived macrophages (CD163),-0.105,-0.216,0.007,0.066,0.180,EXPLORATORY
+Dendritic cells,-0.026,-0.054,0.002,0.072,0.180,EXPLORATORY
+Neutrophils,-0.060,-0.135,0.015,0.117,0.234,EXPLORATORY
+
+note,"EXPLORATORY. Bulk deconvolution with stock published signatures; no matched single-nucleus reference. Purity was not identifiable in this cohort (a constant proxy was absorbed by the intercept). These estimates are not confirmatory and do not stand as independent evidence for the discovery analysis. In discovery only NK and Microglia were evaluable; both flip sign relative to GLASS, which is why a signed count of agreeing cell types is not used."

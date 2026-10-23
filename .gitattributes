@@ -1,0 +1,9 @@
+# This repository is a provenance artefact: several files are cited by their SHA-256 in the
+# manuscript (see README.md section 6). Disable Git's end-of-line conversion for every path so
+# that a clone reproduces the exact bytes that were hashed.
+#
+# Without this, core.autocrlf would rewrite line endings on checkout and the verification
+# commands in README.md section 6 would fail. Note that the files are not uniformly LF:
+# plans/stage2_plan.md and plans/stage2_plan.amendment_2.md are LF-only, while
+# plans/sec4_prespec.json and plans/sec4_prespec.md are CRLF. Neither form may be altered.
+* -text

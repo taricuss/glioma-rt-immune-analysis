@@ -1,0 +1,3530 @@
+{
+  "label": "SENSITIVITY: annotation deviation from pre-spec v1.0 (immune-compartment subclustering, cap=3000 input unchanged)",
+  "ran_at": "2026-10-20T12:39:40",
+  "script": "scripts/immune_subclust_sensitivity.py",
+  "input_path": "[PATH REMOVED]",
+  "input_sha256": "bc7abef80e064bcaf4fce2c21e91a99ba8e6d477826f6c0cd4d3cc90443a1787",
+  "input_bytes": 327928144,
+  "repo_git_head": null,
+  "compartment": {
+    "rule": "union((a) leiden_r0.8 clusters labelled Microglia/MoMF/NK/B/CD8_T, (b) PTPRC log-norm > 0 in any cluster)",
+    "rule_a_cells": 36696,
+    "rule_b_cells": 0,
+    "overlap_cells": 0,
+    "ptprc_present": false,
+    "rule_b_skipped": true,
+    "n_cells": 36696,
+    "fraction_of_all_cells": 0.166,
+    "seed_clusters": [
+      "2",
+      "5",
+      "36",
+      "42",
+      "45",
+      "47",
+      "50",
+      "51",
+      "52",
+      "53",
+      "54",
+      "55",
+      "57",
+      "60",
+      "61",
+      "64",
+      "65",
+      "67",
+      "69"
+    ],
+    "primary_label_composition": {
+      "Microglia_P2RY12_TMEM119": 21658,
+      "NK_cells": 12475,
+      "Monocyte_derived_macrophages_CD163": 1144,
+      "B_cells": 1119,
+      "CD8_T_cells": 300,
+      "Astrocytes_non_malignant": 0,
+      "Malignant_astrocytes_oligo": 0,
+      "Endothelial_cells": 0,
+      "Oligodendrocytes_OPC": 0,
+      "Pericytes_Fibroblasts": 0
+    }
+  },
+  "predeclared": {
+    "seed": 7331,
+    "resolutions": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "primary_resolution": 1.0,
+    "min_cluster_cells": 50,
+    "min_margin": 0.1,
+    "max_second_over_winner_ratio": 0.5,
+    "min_de_markers": 2,
+    "de_logfc": 0.25,
+    "de_padj": 0.05,
+    "min_mapped_cells": 50,
+    "min_samples_ge10": 10,
+    "harmony_applied": true,
+    "use_rep": "X_pca_harmony",
+    "regress_out": "NOT applied (not part of the pre-declared design)"
+  },
+  "marker_genes_present": {
+    "Malignant_astrocytes_oligo": 6,
+    "Microglia_P2RY12_TMEM119": 6,
+    "Monocyte_derived_macrophages_CD163": 7,
+    "Dendritic_cells": 5,
+    "Neutrophils": 6,
+    "CD8_T_cells": 8,
+    "CD4_T_cells_conventional": 6,
+    "T_regulatory_cells_FOXP3": 7,
+    "NK_cells": 5,
+    "B_cells": 6,
+    "Plasma_cells": 6,
+    "Oligodendrocytes_OPC": 8,
+    "Astrocytes_non_malignant": 6,
+    "Endothelial_cells": 6,
+    "Pericytes_Fibroblasts": 6
+  },
+  "n_cells_total_cap3000": 221016,
+  "n_samples_total_cap3000": 75,
+  "evaluable_counts": {
+    "0.5": 1,
+    "1.0": 2,
+    "1.5": 2
+  },
+  "gate": {
+    "rule": ">=6/10 at 1.0 AND >=5/10 at both 0.5 and 1.5",
+    "pass": false,
+    "decision": "STOP_subclustering_does_not_recover_family"
+  },
+  "clusters_per_resolution": {
+    "0.5": [
+      {
+        "cluster": "0",
+        "n_cells": 8004,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.9006,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.0552,
+        "margin": 0.8454,
+        "ratio": 0.5552,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "IRF8",
+          "TMEM119",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "1",
+        "n_cells": 4208,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 1.3969,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 1.1963,
+        "margin": 0.2005,
+        "ratio": 0.8564,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 8,
+        "de_up_markers": [
+          "PLP1",
+          "OLIG1",
+          "MBP",
+          "OLIG2",
+          "PDGFRA",
+          "MAG",
+          "MOG",
+          "CSPG4"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "2",
+        "n_cells": 3902,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.7472,
+        "second": "Dendritic_cells",
+        "second_score": 0.8841,
+        "margin": 0.8631,
+        "ratio": 0.506,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "MRC1",
+          "CD14",
+          "LYZ"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "3",
+        "n_cells": 3564,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.0621,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.021,
+        "margin": 0.041,
+        "ratio": 0.339,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRA"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "4",
+        "n_cells": 2740,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0177,
+        "second": "B_cells",
+        "second_score": -0.0022,
+        "margin": 0.0199,
+        "ratio": -0.1221,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "5",
+        "n_cells": 2532,
+        "winner": "B_cells",
+        "winner_score": -0.0012,
+        "second": "CD8_T_cells",
+        "second_score": -0.0156,
+        "margin": 0.0143,
+        "ratio": 12.7223,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "6",
+        "n_cells": 1840,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.3204,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.2855,
+        "margin": 0.0349,
+        "ratio": 0.8909,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "7",
+        "n_cells": 1001,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.6549,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9766,
+        "margin": 0.6783,
+        "ratio": 0.5901,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "CSF1R",
+          "IRF8",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "8",
+        "n_cells": 771,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.9309,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3487,
+        "margin": 0.5822,
+        "ratio": 0.6985,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "IRF8",
+          "TMEM119",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "9",
+        "n_cells": 753,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.2296,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.0773,
+        "margin": 0.1522,
+        "ratio": 0.8762,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "MSR1",
+          "CD163",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "10",
+        "n_cells": 752,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.6475,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.5948,
+        "margin": 0.0527,
+        "ratio": 0.968,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "11",
+        "n_cells": 680,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.6696,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.234,
+        "margin": 0.4356,
+        "ratio": 0.7391,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CX3CR1",
+          "CSF1R",
+          "P2RY12",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "12",
+        "n_cells": 467,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.2484,
+        "second": "Dendritic_cells",
+        "second_score": 0.6887,
+        "margin": 1.5597,
+        "ratio": 0.3063,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "13",
+        "n_cells": 464,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.0977,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.914,
+        "margin": 0.1838,
+        "ratio": 0.8326,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "14",
+        "n_cells": 463,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.5158,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.1994,
+        "margin": 0.3163,
+        "ratio": 0.7913,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "MSR1",
+          "CD163",
+          "MRC1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "15",
+        "n_cells": 437,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.2265,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9214,
+        "margin": 1.3052,
+        "ratio": 0.4138,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "TMEM119"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "16",
+        "n_cells": 375,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0335,
+        "second": "B_cells",
+        "second_score": -0.0008,
+        "margin": 0.0343,
+        "ratio": -0.0245,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "17",
+        "n_cells": 343,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 0.9546,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.6738,
+        "margin": 0.2807,
+        "ratio": 0.7059,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "VIM",
+          "GFAP",
+          "SOX2"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "18",
+        "n_cells": 296,
+        "winner": "Dendritic_cells",
+        "winner_score": 1.3769,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3052,
+        "margin": 0.0717,
+        "ratio": 0.9479,
+        "n_markers_in_var": 5,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "HLA-DRA",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "19",
+        "n_cells": 286,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.2328,
+        "second": "CD8_T_cells",
+        "second_score": 0.0379,
+        "margin": 0.1949,
+        "ratio": 0.163,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "GFAP",
+          "AQP4",
+          "S100B"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "20",
+        "n_cells": 270,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0272,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.9815,
+        "margin": 1.0457,
+        "ratio": 0.4841,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "21",
+        "n_cells": 256,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.443,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.864,
+        "margin": 0.579,
+        "ratio": 0.5988,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CX3CR1",
+          "IRF8",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "22",
+        "n_cells": 254,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.04,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0112,
+        "margin": 0.0288,
+        "ratio": 0.2796,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "23",
+        "n_cells": 227,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.7984,
+        "second": "Dendritic_cells",
+        "second_score": 0.8363,
+        "margin": 0.9621,
+        "ratio": 0.465,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "CD14",
+          "LYZ"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "24",
+        "n_cells": 212,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.3275,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 0.253,
+        "margin": 0.0745,
+        "ratio": 0.7726,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "GFAP",
+          "ALDH1L1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "25",
+        "n_cells": 204,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 0.9744,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8092,
+        "margin": 0.1652,
+        "ratio": 0.8305,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "VIM",
+          "GFAP"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "26",
+        "n_cells": 196,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0114,
+        "second": "B_cells",
+        "second_score": -0.0003,
+        "margin": 0.0117,
+        "ratio": -0.0272,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "27",
+        "n_cells": 192,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.1949,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8789,
+        "margin": 0.316,
+        "ratio": 0.7356,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "28",
+        "n_cells": 173,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3299,
+        "second": "Dendritic_cells",
+        "second_score": 0.7015,
+        "margin": 1.6284,
+        "ratio": 0.3011,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "AIF1",
+          "CSF1R"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "29",
+        "n_cells": 164,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.2253,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.1885,
+        "margin": 0.0368,
+        "ratio": 0.8364,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "30",
+        "n_cells": 147,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.0832,
+        "second": "CD8_T_cells",
+        "second_score": 0.0164,
+        "margin": 0.0668,
+        "ratio": 0.1974,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRB"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "31",
+        "n_cells": 128,
+        "winner": "CD8_T_cells",
+        "winner_score": -0.0013,
+        "second": "B_cells",
+        "second_score": -0.005,
+        "margin": 0.0038,
+        "ratio": 3.9558,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "32",
+        "n_cells": 124,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7204,
+        "second": "Dendritic_cells",
+        "second_score": 1.1451,
+        "margin": 0.5753,
+        "ratio": 0.6656,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "33",
+        "n_cells": 118,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7727,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3868,
+        "margin": 0.3858,
+        "ratio": 0.7823,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CX3CR1",
+          "P2RY12",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "34",
+        "n_cells": 87,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0282,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0007,
+        "margin": 0.0275,
+        "ratio": 0.0249,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "35",
+        "n_cells": 42,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0145,
+        "second": "B_cells",
+        "second_score": -0.0038,
+        "margin": 0.0183,
+        "ratio": -0.2619,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "36",
+        "n_cells": 24,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.8086,
+        "second": "Dendritic_cells",
+        "second_score": 0.9778,
+        "margin": 0.8308,
+        "ratio": 0.5406,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD163"
+        ],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      }
+    ],
+    "1.0": [
+      {
+        "cluster": "0",
+        "n_cells": 5986,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0327,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.0741,
+        "margin": 0.9585,
+        "ratio": 0.5284,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "IRF8",
+          "TMEM119",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "1",
+        "n_cells": 2428,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 2.0454,
+        "second": "Dendritic_cells",
+        "second_score": 0.8652,
+        "margin": 1.1802,
+        "ratio": 0.423,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "MRC1",
+          "CD14",
+          "LYZ"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "2",
+        "n_cells": 2414,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.2547,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.0687,
+        "margin": 0.186,
+        "ratio": 0.8518,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "MSR1",
+          "CD163",
+          "CD14",
+          "MRC1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "3",
+        "n_cells": 2371,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0193,
+        "second": "B_cells",
+        "second_score": -0.0021,
+        "margin": 0.0213,
+        "ratio": -0.1076,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "4",
+        "n_cells": 2130,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 1.6593,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 1.3189,
+        "margin": 0.3404,
+        "ratio": 0.7949,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 8,
+        "de_up_markers": [
+          "PLP1",
+          "OLIG1",
+          "MBP",
+          "PDGFRA",
+          "OLIG2",
+          "MAG",
+          "MOG",
+          "CSPG4"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "5",
+        "n_cells": 1736,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.04,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 0.0389,
+        "margin": 0.0011,
+        "ratio": 0.9725,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "RGS5"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "6",
+        "n_cells": 1728,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": -0.0007,
+        "second": "B_cells",
+        "second_score": -0.0014,
+        "margin": 0.0007,
+        "ratio": 1.9235,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "PDGFRB",
+          "ACTA2"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive"
+        ]
+      },
+      {
+        "cluster": "7",
+        "n_cells": 1676,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.0464,
+        "second": "B_cells",
+        "second_score": -0.0016,
+        "margin": 0.048,
+        "ratio": -0.034,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRA"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "8",
+        "n_cells": 1574,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.3662,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.3402,
+        "margin": 0.0261,
+        "ratio": 0.9289,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "9",
+        "n_cells": 1325,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.6669,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 1.2134,
+        "margin": 0.4535,
+        "ratio": 0.7279,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "AIF1",
+          "TMEM119",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "10",
+        "n_cells": 940,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7842,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9509,
+        "margin": 0.8333,
+        "ratio": 0.533,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "CSF1R",
+          "IRF8",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "11",
+        "n_cells": 818,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.6997,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.0899,
+        "margin": 0.6098,
+        "ratio": 0.6412,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CSF1R",
+          "CX3CR1",
+          "P2RY12"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "12",
+        "n_cells": 727,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.4637,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 1.0272,
+        "margin": 0.4365,
+        "ratio": 0.7018,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "IRF8",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "13",
+        "n_cells": 708,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.2784,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 0.9563,
+        "margin": 0.3221,
+        "ratio": 0.748,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "MSR1",
+          "CD163",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "14",
+        "n_cells": 581,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 2.0059,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.4245,
+        "margin": 0.5815,
+        "ratio": 0.7101,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "MRC1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "15",
+        "n_cells": 483,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.4964,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.2063,
+        "margin": 0.2901,
+        "ratio": 0.8061,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "MSR1",
+          "CD163",
+          "MRC1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "16",
+        "n_cells": 455,
+        "winner": "B_cells",
+        "winner_score": -0.0043,
+        "second": "CD8_T_cells",
+        "second_score": -0.013,
+        "margin": 0.0087,
+        "ratio": 3.0441,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "17",
+        "n_cells": 451,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.5131,
+        "second": "Dendritic_cells",
+        "second_score": 1.1663,
+        "margin": 1.3468,
+        "ratio": 0.4641,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CX3CR1",
+          "P2RY12",
+          "CSF1R",
+          "IRF8",
+          "TMEM119"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "18",
+        "n_cells": 438,
+        "winner": "B_cells",
+        "winner_score": -0.0013,
+        "second": "CD8_T_cells",
+        "second_score": -0.0853,
+        "margin": 0.084,
+        "ratio": 67.9904,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "19",
+        "n_cells": 416,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3377,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8843,
+        "margin": 1.4534,
+        "ratio": 0.3783,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "TMEM119"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "20",
+        "n_cells": 393,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.1304,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9355,
+        "margin": 0.1949,
+        "ratio": 0.8276,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "21",
+        "n_cells": 376,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0333,
+        "second": "B_cells",
+        "second_score": -0.0008,
+        "margin": 0.0341,
+        "ratio": -0.0246,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "22",
+        "n_cells": 370,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3449,
+        "second": "Dendritic_cells",
+        "second_score": 0.573,
+        "margin": 1.772,
+        "ratio": 0.2443,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "23",
+        "n_cells": 369,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.6599,
+        "second": "Dendritic_cells",
+        "second_score": 0.8535,
+        "margin": 0.8065,
+        "ratio": 0.5142,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "CD14",
+          "LYZ"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "24",
+        "n_cells": 335,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.4293,
+        "second": "Dendritic_cells",
+        "second_score": 0.7918,
+        "margin": 1.6374,
+        "ratio": 0.3259,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "IRF8"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "25",
+        "n_cells": 329,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.0366,
+        "second": "CD8_T_cells",
+        "second_score": 0.0172,
+        "margin": 0.0194,
+        "ratio": 0.4692,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRB"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "26",
+        "n_cells": 296,
+        "winner": "Dendritic_cells",
+        "winner_score": 1.3769,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3052,
+        "margin": 0.0717,
+        "ratio": 0.9479,
+        "n_markers_in_var": 5,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "HLA-DRA",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "27",
+        "n_cells": 287,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.3502,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8803,
+        "margin": 0.4699,
+        "ratio": 0.652,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "IRF8",
+          "CX3CR1",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "28",
+        "n_cells": 286,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.2328,
+        "second": "CD8_T_cells",
+        "second_score": 0.0379,
+        "margin": 0.1949,
+        "ratio": 0.163,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "GFAP",
+          "AQP4",
+          "S100B"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "29",
+        "n_cells": 272,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0167,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.9756,
+        "margin": 1.041,
+        "ratio": 0.4838,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "30",
+        "n_cells": 262,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0387,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0142,
+        "margin": 0.0245,
+        "ratio": 0.3659,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "31",
+        "n_cells": 252,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.6692,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.5157,
+        "margin": 0.1535,
+        "ratio": 0.908,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CSF1R",
+          "CX3CR1",
+          "IRF8",
+          "P2RY12",
+          "TMEM119"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "32",
+        "n_cells": 231,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 1.1398,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 0.7647,
+        "margin": 0.3751,
+        "ratio": 0.6709,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "GFAP",
+          "AQP4",
+          "ALDH1L1",
+          "S100B",
+          "GJA1",
+          "CLDN10"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "33",
+        "n_cells": 220,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 1.0451,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.7797,
+        "margin": 0.2654,
+        "ratio": 0.7461,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "VIM",
+          "GFAP",
+          "SOX2",
+          "S100B"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "34",
+        "n_cells": 218,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 1.0004,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.7997,
+        "margin": 0.2006,
+        "ratio": 0.7994,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "VIM",
+          "GFAP"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "35",
+        "n_cells": 205,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.1288,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.8107,
+        "margin": 1.3182,
+        "ratio": 0.3808,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "36",
+        "n_cells": 196,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0114,
+        "second": "B_cells",
+        "second_score": -0.0003,
+        "margin": 0.0117,
+        "ratio": -0.0272,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "37",
+        "n_cells": 190,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7389,
+        "second": "Dendritic_cells",
+        "second_score": 1.0998,
+        "margin": 0.639,
+        "ratio": 0.6325,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "38",
+        "n_cells": 187,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0252,
+        "second": "B_cells",
+        "second_score": -0.0024,
+        "margin": 0.0276,
+        "ratio": -0.0948,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "39",
+        "n_cells": 180,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3101,
+        "second": "Dendritic_cells",
+        "second_score": 0.7124,
+        "margin": 1.5976,
+        "ratio": 0.3084,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "AIF1",
+          "CSF1R"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "40",
+        "n_cells": 177,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 2.028,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.7163,
+        "margin": 0.3117,
+        "ratio": 0.8463,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "41",
+        "n_cells": 164,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.2253,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.1885,
+        "margin": 0.0368,
+        "ratio": 0.8364,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "42",
+        "n_cells": 147,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.0832,
+        "second": "CD8_T_cells",
+        "second_score": 0.0164,
+        "margin": 0.0668,
+        "ratio": 0.1974,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRB"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "43",
+        "n_cells": 147,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 0.9512,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.6469,
+        "margin": 0.3043,
+        "ratio": 0.6801,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "GFAP",
+          "VIM"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "44",
+        "n_cells": 139,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.5026,
+        "second": "Dendritic_cells",
+        "second_score": 1.1677,
+        "margin": 0.3349,
+        "ratio": 0.7771,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "45",
+        "n_cells": 137,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.8481,
+        "second": "Dendritic_cells",
+        "second_score": 0.9218,
+        "margin": 0.9263,
+        "ratio": 0.4988,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "46",
+        "n_cells": 136,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.762,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 0.6875,
+        "margin": 0.0745,
+        "ratio": 0.9022,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "GFAP",
+          "ALDH1L1",
+          "AQP4"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "47",
+        "n_cells": 123,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.0012,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9526,
+        "margin": 0.0487,
+        "ratio": 0.9514,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "48",
+        "n_cells": 119,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7624,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3933,
+        "margin": 0.3691,
+        "ratio": 0.7906,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CX3CR1",
+          "P2RY12",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "49",
+        "n_cells": 100,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.8799,
+        "second": "Dendritic_cells",
+        "second_score": 1.1337,
+        "margin": 0.7462,
+        "ratio": 0.6031,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CX3CR1",
+          "CSF1R",
+          "P2RY12"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "50",
+        "n_cells": 94,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.4783,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 0.3498,
+        "margin": 0.1285,
+        "ratio": 0.7313,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "GFAP"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "51",
+        "n_cells": 84,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0568,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.077,
+        "margin": 0.9798,
+        "ratio": 0.5236,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "52",
+        "n_cells": 80,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0165,
+        "second": "B_cells",
+        "second_score": -0.0054,
+        "margin": 0.0218,
+        "ratio": -0.3258,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "53",
+        "n_cells": 60,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 0.892,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 0.5602,
+        "margin": 0.3319,
+        "ratio": 0.628,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "54",
+        "n_cells": 55,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0055,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 0.0033,
+        "margin": 0.0022,
+        "ratio": 0.6052,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "55",
+        "n_cells": 42,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0145,
+        "second": "B_cells",
+        "second_score": -0.0038,
+        "margin": 0.0183,
+        "ratio": -0.2619,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "56",
+        "n_cells": 29,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 1.5243,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 1.0921,
+        "margin": 0.4322,
+        "ratio": 0.7165,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "SOX2",
+          "IDH1",
+          "OLIG2"
+        ],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "57",
+        "n_cells": 24,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.8086,
+        "second": "Dendritic_cells",
+        "second_score": 0.9778,
+        "margin": 0.8308,
+        "ratio": 0.5406,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD163"
+        ],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      }
+    ],
+    "1.5": [
+      {
+        "cluster": "0",
+        "n_cells": 3793,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0497,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9254,
+        "margin": 1.1243,
+        "ratio": 0.4515,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "IRF8",
+          "TMEM119",
+          "AIF1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "1",
+        "n_cells": 2334,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0181,
+        "second": "B_cells",
+        "second_score": -0.0022,
+        "margin": 0.0203,
+        "ratio": -0.1194,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "2",
+        "n_cells": 2005,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 1.6828,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 1.2908,
+        "margin": 0.392,
+        "ratio": 0.767,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 8,
+        "de_up_markers": [
+          "PLP1",
+          "OLIG1",
+          "MBP",
+          "PDGFRA",
+          "OLIG2",
+          "MAG",
+          "MOG",
+          "CSPG4"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "3",
+        "n_cells": 1908,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.2896,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.2426,
+        "margin": 0.047,
+        "ratio": 0.8376,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "4",
+        "n_cells": 1773,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 2.1852,
+        "second": "Dendritic_cells",
+        "second_score": 0.9226,
+        "margin": 1.2626,
+        "ratio": 0.4222,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "MRC1",
+          "CD14",
+          "LYZ"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "5",
+        "n_cells": 1739,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.3665,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 0.9239,
+        "margin": 0.4426,
+        "ratio": 0.6761,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "MSR1",
+          "CD14",
+          "CD163",
+          "MRC1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "6",
+        "n_cells": 1686,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.0006,
+        "second": "B_cells",
+        "second_score": -0.0014,
+        "margin": 0.002,
+        "ratio": -2.1921,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "PDGFRB",
+          "ACTA2"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1"
+        ]
+      },
+      {
+        "cluster": "7",
+        "n_cells": 1643,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.0482,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0478,
+        "margin": 0.0004,
+        "ratio": 0.9922,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "8",
+        "n_cells": 1536,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.0804,
+        "second": "CD8_T_cells",
+        "second_score": -0.001,
+        "margin": 0.0814,
+        "ratio": -0.0129,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRA"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "9",
+        "n_cells": 1344,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7008,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 1.265,
+        "margin": 0.4359,
+        "ratio": 0.7437,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "AIF1",
+          "TMEM119",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "10",
+        "n_cells": 1180,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7335,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.6239,
+        "margin": 0.1096,
+        "ratio": 0.9368,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "IRF8",
+          "TMEM119",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "11",
+        "n_cells": 934,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7149,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9713,
+        "margin": 0.7437,
+        "ratio": 0.5664,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "12",
+        "n_cells": 872,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.5025,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 1.0556,
+        "margin": 0.4469,
+        "ratio": 0.7026,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "AIF1",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "13",
+        "n_cells": 844,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7019,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.1053,
+        "margin": 0.5966,
+        "ratio": 0.6495,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CX3CR1",
+          "CSF1R",
+          "P2RY12"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "14",
+        "n_cells": 688,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.2789,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 0.9573,
+        "margin": 0.3216,
+        "ratio": 0.7485,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "15",
+        "n_cells": 663,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.5942,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9385,
+        "margin": 1.6558,
+        "ratio": 0.3618,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "AIF1",
+          "IRF8",
+          "TMEM119"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "16",
+        "n_cells": 626,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 2.0078,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.4243,
+        "margin": 0.5835,
+        "ratio": 0.7094,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "MRC1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "17",
+        "n_cells": 566,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.44,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.0003,
+        "margin": 0.4397,
+        "ratio": 0.6946,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "18",
+        "n_cells": 492,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.4964,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.2007,
+        "margin": 0.2957,
+        "ratio": 0.8024,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "MSR1",
+          "CD163",
+          "MRC1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "19",
+        "n_cells": 476,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.5045,
+        "second": "Dendritic_cells",
+        "second_score": 1.1622,
+        "margin": 1.3423,
+        "ratio": 0.464,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CX3CR1",
+          "P2RY12",
+          "CSF1R",
+          "IRF8",
+          "TMEM119"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "20",
+        "n_cells": 468,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3504,
+        "second": "Dendritic_cells",
+        "second_score": 0.8734,
+        "margin": 1.4771,
+        "ratio": 0.3716,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1",
+          "IRF8",
+          "AIF1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "21",
+        "n_cells": 445,
+        "winner": "B_cells",
+        "winner_score": -0.0011,
+        "second": "CD8_T_cells",
+        "second_score": -0.0843,
+        "margin": 0.0832,
+        "ratio": 74.7755,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "22",
+        "n_cells": 419,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3354,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8892,
+        "margin": 1.4462,
+        "ratio": 0.3807,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "TMEM119"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "23",
+        "n_cells": 410,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.6579,
+        "second": "Dendritic_cells",
+        "second_score": 0.8412,
+        "margin": 0.8167,
+        "ratio": 0.5074,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "CD14",
+          "LYZ"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "24",
+        "n_cells": 399,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.128,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9416,
+        "margin": 0.1864,
+        "ratio": 0.8347,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "25",
+        "n_cells": 394,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.4888,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9885,
+        "margin": 0.5002,
+        "ratio": 0.664,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "26",
+        "n_cells": 379,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3194,
+        "second": "Dendritic_cells",
+        "second_score": 0.5642,
+        "margin": 1.7552,
+        "ratio": 0.2433,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "27",
+        "n_cells": 377,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0331,
+        "second": "B_cells",
+        "second_score": -0.0008,
+        "margin": 0.0339,
+        "ratio": -0.0246,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "28",
+        "n_cells": 374,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.7806,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.5376,
+        "margin": 0.2431,
+        "ratio": 0.8635,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "MRC1",
+          "CD163",
+          "MSR1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "29",
+        "n_cells": 332,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.0386,
+        "second": "CD8_T_cells",
+        "second_score": 0.0167,
+        "margin": 0.0219,
+        "ratio": 0.4326,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRB"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "30",
+        "n_cells": 300,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.2372,
+        "second": "CD8_T_cells",
+        "second_score": 0.0388,
+        "margin": 0.1984,
+        "ratio": 0.1636,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "GFAP",
+          "AQP4",
+          "S100B"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "31",
+        "n_cells": 297,
+        "winner": "Dendritic_cells",
+        "winner_score": 1.3751,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3069,
+        "margin": 0.0682,
+        "ratio": 0.9504,
+        "n_markers_in_var": 5,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "HLA-DRA",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "32",
+        "n_cells": 287,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.5822,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.4805,
+        "margin": 0.1016,
+        "ratio": 0.9358,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 5,
+        "de_up_markers": [
+          "CX3CR1",
+          "IRF8",
+          "CSF1R",
+          "P2RY12",
+          "TMEM119"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "33",
+        "n_cells": 285,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.3682,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8813,
+        "margin": 0.487,
+        "ratio": 0.6441,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "IRF8",
+          "CX3CR1",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "34",
+        "n_cells": 272,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0139,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.9781,
+        "margin": 1.0357,
+        "ratio": 0.4857,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "35",
+        "n_cells": 262,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0378,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0149,
+        "margin": 0.0229,
+        "ratio": 0.3944,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "36",
+        "n_cells": 226,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0115,
+        "second": "B_cells",
+        "second_score": -0.0059,
+        "margin": 0.0174,
+        "ratio": -0.5166,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "37",
+        "n_cells": 223,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 1.008,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.8193,
+        "margin": 0.1887,
+        "ratio": 0.8128,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "VIM",
+          "GFAP"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "38",
+        "n_cells": 206,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 0.9853,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.7428,
+        "margin": 0.2425,
+        "ratio": 0.7539,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "VIM",
+          "GFAP",
+          "SOX2"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "39",
+        "n_cells": 205,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.1288,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.8107,
+        "margin": 1.3182,
+        "ratio": 0.3808,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "40",
+        "n_cells": 200,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.0183,
+        "second": "CD8_T_cells",
+        "second_score": 0.0111,
+        "margin": 0.0072,
+        "ratio": 0.6062,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "AQP4",
+          "S100B"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "41",
+        "n_cells": 193,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7243,
+        "second": "Dendritic_cells",
+        "second_score": 1.0985,
+        "margin": 0.6258,
+        "ratio": 0.6371,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "42",
+        "n_cells": 188,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0248,
+        "second": "B_cells",
+        "second_score": -0.0024,
+        "margin": 0.0272,
+        "ratio": -0.0959,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "43",
+        "n_cells": 183,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 2.0402,
+        "second": "Microglia_P2RY12_TMEM119",
+        "second_score": 1.7458,
+        "margin": 0.2944,
+        "ratio": 0.8557,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CD163",
+          "MSR1",
+          "CD14"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "44",
+        "n_cells": 180,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.3101,
+        "second": "Dendritic_cells",
+        "second_score": 0.7124,
+        "margin": 1.5976,
+        "ratio": 0.3084,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "P2RY12",
+          "CX3CR1",
+          "AIF1",
+          "CSF1R"
+        ],
+        "passes": true,
+        "flags": []
+      },
+      {
+        "cluster": "45",
+        "n_cells": 171,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 1.4994,
+        "second": "Oligodendrocytes_OPC",
+        "second_score": 1.1814,
+        "margin": 0.3181,
+        "ratio": 0.7879,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 6,
+        "de_up_markers": [
+          "GFAP",
+          "AQP4",
+          "ALDH1L1",
+          "S100B",
+          "GJA1",
+          "CLDN10"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "46",
+        "n_cells": 164,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.2253,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.1885,
+        "margin": 0.0368,
+        "ratio": 0.8364,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "47",
+        "n_cells": 147,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.0832,
+        "second": "CD8_T_cells",
+        "second_score": 0.0164,
+        "margin": 0.0668,
+        "ratio": 0.1974,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PDGFRB"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "48",
+        "n_cells": 147,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 0.9512,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.6469,
+        "margin": 0.3043,
+        "ratio": 0.6801,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "GFAP",
+          "VIM"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "49",
+        "n_cells": 143,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.5009,
+        "second": "Dendritic_cells",
+        "second_score": 1.1459,
+        "margin": 0.355,
+        "ratio": 0.7635,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 2,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "50",
+        "n_cells": 140,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.8531,
+        "second": "Dendritic_cells",
+        "second_score": 0.9403,
+        "margin": 0.9128,
+        "ratio": 0.5074,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "P2RY12",
+          "CSF1R",
+          "CX3CR1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "51",
+        "n_cells": 139,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.7455,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 0.6714,
+        "margin": 0.0741,
+        "ratio": 0.9006,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "GFAP",
+          "ALDH1L1",
+          "AQP4"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "52",
+        "n_cells": 128,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.0258,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 0.9715,
+        "margin": 0.0543,
+        "ratio": 0.947,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CSF1R"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "53",
+        "n_cells": 119,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.7624,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.3933,
+        "margin": 0.3691,
+        "ratio": 0.7906,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CX3CR1",
+          "P2RY12",
+          "CSF1R",
+          "IRF8"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "54",
+        "n_cells": 110,
+        "winner": "Oligodendrocytes_OPC",
+        "winner_score": 0.1366,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0544,
+        "margin": 0.0822,
+        "ratio": 0.3982,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "PLP1"
+        ],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "55",
+        "n_cells": 99,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 1.8856,
+        "second": "Dendritic_cells",
+        "second_score": 1.1351,
+        "margin": 0.7505,
+        "ratio": 0.602,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 3,
+        "de_up_markers": [
+          "CX3CR1",
+          "CSF1R",
+          "P2RY12"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "56",
+        "n_cells": 99,
+        "winner": "B_cells",
+        "winner_score": -0.0047,
+        "second": "CD8_T_cells",
+        "second_score": -0.061,
+        "margin": 0.0563,
+        "ratio": 12.9401,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "possible_doublet",
+          "winner_nonpositive",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "57",
+        "n_cells": 94,
+        "winner": "B_cells",
+        "winner_score": 0.0017,
+        "second": "CD8_T_cells",
+        "second_score": -0.0189,
+        "margin": 0.0206,
+        "ratio": -11.0732,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "58",
+        "n_cells": 84,
+        "winner": "Microglia_P2RY12_TMEM119",
+        "winner_score": 2.0568,
+        "second": "Monocyte_derived_macrophages_CD163",
+        "second_score": 1.077,
+        "margin": 0.9798,
+        "ratio": 0.5236,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 4,
+        "de_up_markers": [
+          "CSF1R",
+          "P2RY12",
+          "CX3CR1",
+          "AIF1"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet"
+        ]
+      },
+      {
+        "cluster": "59",
+        "n_cells": 80,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0165,
+        "second": "B_cells",
+        "second_score": -0.0054,
+        "margin": 0.0218,
+        "ratio": -0.3258,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "60",
+        "n_cells": 79,
+        "winner": "Astrocytes_non_malignant",
+        "winner_score": 0.4955,
+        "second": "Malignant_astrocytes_oligo",
+        "second_score": 0.3832,
+        "margin": 0.1123,
+        "ratio": 0.7734,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "GFAP"
+        ],
+        "passes": false,
+        "flags": [
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "61",
+        "n_cells": 50,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 0.9937,
+        "second": "Dendritic_cells",
+        "second_score": 0.8173,
+        "margin": 0.1764,
+        "ratio": 0.8225,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "62",
+        "n_cells": 25,
+        "winner": "Pericytes_Fibroblasts",
+        "winner_score": 0.1598,
+        "second": "T_regulatory_cells_FOXP3",
+        "second_score": 0.0764,
+        "margin": 0.0834,
+        "ratio": 0.4779,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 0,
+        "de_up_markers": [],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "63",
+        "n_cells": 24,
+        "winner": "CD8_T_cells",
+        "winner_score": 0.0746,
+        "second": "Pericytes_Fibroblasts",
+        "second_score": 0.0283,
+        "margin": 0.0463,
+        "ratio": 0.379,
+        "n_markers_in_var": 8,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD8A"
+        ],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "margin_lt_0.1",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "64",
+        "n_cells": 24,
+        "winner": "Malignant_astrocytes_oligo",
+        "winner_score": 0.9192,
+        "second": "Astrocytes_non_malignant",
+        "second_score": 0.7225,
+        "margin": 0.1967,
+        "ratio": 0.786,
+        "n_markers_in_var": 6,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "GFAP"
+        ],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      },
+      {
+        "cluster": "65",
+        "n_cells": 24,
+        "winner": "Monocyte_derived_macrophages_CD163",
+        "winner_score": 1.8086,
+        "second": "Dendritic_cells",
+        "second_score": 0.9778,
+        "margin": 0.8308,
+        "ratio": 0.5406,
+        "n_markers_in_var": 7,
+        "n_de_up_markers": 1,
+        "de_up_markers": [
+          "CD163"
+        ],
+        "passes": false,
+        "flags": [
+          "cluster_lt50",
+          "possible_doublet",
+          "de_markers_lt2"
+        ]
+      }
+    ]
+  },
+  "contamination_check": {
+    "0.5": {
+      "n_clusters": 37,
+      "n_non_immune_argmax_clusters": 9,
+      "non_immune_winner_counts": {
+        "Oligodendrocytes_OPC": 4,
+        "Malignant_astrocytes_oligo": 2,
+        "Astrocytes_non_malignant": 2,
+        "Pericytes_Fibroblasts": 1
+      },
+      "non_immune_labels": [
+        "Malignant_astrocytes_oligo",
+        "Oligodendrocytes_OPC",
+        "Astrocytes_non_malignant",
+        "Endothelial_cells",
+        "Pericytes_Fibroblasts"
+      ]
+    },
+    "1.0": {
+      "n_clusters": 58,
+      "n_non_immune_argmax_clusters": 16,
+      "non_immune_winner_counts": {
+        "Oligodendrocytes_OPC": 4,
+        "Pericytes_Fibroblasts": 4,
+        "Astrocytes_non_malignant": 4,
+        "Malignant_astrocytes_oligo": 4
+      },
+      "non_immune_labels": [
+        "Malignant_astrocytes_oligo",
+        "Oligodendrocytes_OPC",
+        "Astrocytes_non_malignant",
+        "Endothelial_cells",
+        "Pericytes_Fibroblasts"
+      ]
+    },
+    "1.5": {
+      "n_clusters": 66,
+      "n_non_immune_argmax_clusters": 19,
+      "non_immune_winner_counts": {
+        "Oligodendrocytes_OPC": 6,
+        "Astrocytes_non_malignant": 5,
+        "Pericytes_Fibroblasts": 4,
+        "Malignant_astrocytes_oligo": 4
+      },
+      "non_immune_labels": [
+        "Malignant_astrocytes_oligo",
+        "Oligodendrocytes_OPC",
+        "Astrocytes_non_malignant",
+        "Endothelial_cells",
+        "Pericytes_Fibroblasts"
+      ]
+    }
+  },
+  "notes": [
+    "SENSITIVITY: annotation deviation from pre-spec v1.0 - NOT a primary result.",
+    "All columns of sn_proportions_per_sample_immune_subclust.csv are the full MARKERS key names (15 columns, no aliases).",
+    "Per-sample proportions use each sample's TOTAL cap=3000 cell count over the full 221,016 cells; cells outside the immune compartment belong to no type, so rows do NOT sum to 1.",
+    "regress_out deliberately NOT applied here (the main pipeline applied it).",
+    "Leiden random_state=7331 here vs scanpy default 0 in the main pipeline.",
+    "score_genes and rank_genes_groups use_raw=True on the unscaled log-norm matrix."
+  ],
+  "resource": {
+    "seed": 7331,
+    "free_disk_gb_before": 9.77,
+    "free_disk_gb_after": 9.77,
+    "peak_rss_gb": 1.94,
+    "runtime_s": 282.6,
+    "subset_shape": [
+      36696,
+      2000
+    ]
+  },
+  "outputs": [
+    "sn_proportions_per_sample_immune_subclust.csv",
+    "immune_subclust_evaluability_immune_subclust.csv"
+  ]
+}

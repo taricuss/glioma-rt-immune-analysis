@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "method_tag": "snrna_direct",
+  "n_samples": 71,
+  "n_patients": 33,
+  "formula_fixed": "y ~ C(timepoint, Treatment('primary')) * C(treatment_arm, Treatment('No_RT')) + estimate_purity + C(who_grade_initial, Treatment('II')) + age_at_diagnosis + C(codeletion_1p19q, Treatment('non_codel'))",
+  "formula_effective": "y ~ C(timepoint, Treatment('primary')) * C(treatment_arm, Treatment('No_RT')) + estimate_purity + C(who_grade_initial, Treatment('II')) + age_at_diagnosis + C(codeletion_1p19q, Treatment('non_codel'))",
+  "covariates_dropped_zero_variance": [],
+  "response_transform": "arcsin_sqrt",
+  "interaction_param_name": "C(timepoint, Treatment('primary'))[T.recurrent]:C(treatment_arm, Treatment('No_RT'))[T.Any_RT]",
+  "bh_fdr_family": "K=10 PRIMARY ONLY, exploratory excluded from correction",
+  "n_converged": 6,
+  "convergence_flags": {
+    "CD8_T": true,
+    "NK": true,
+    "B": false,
+    "Microglia_P2RY12_TMEM119": true,
+    "MoMF_CD163": true,
+    "Endothelial": true,
+    "Fibroblast_pericyte": true
+  },
+  "optimizers_used": {
+    "CD8_T": "bfgs",
+    "NK": "bfgs",
+    "B": "bfgs",
+    "Microglia_P2RY12_TMEM119": "bfgs",
+    "Fibroblast_pericyte": "bfgs"
+  }
+}
